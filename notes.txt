@@ -1,0 +1,16 @@
+Make sure to install the xarray and dask the following version - 
+xarray: 2024.6.0
+dask: 2024.6.0
+
+
+Other version does not work 
+The version needs to be matched
+
+
+
+/////////////////////////////////
+band 1 
+band 2 
+band 3 
+band 4 drop it 
+
