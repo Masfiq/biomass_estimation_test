@@ -1,0 +1,15 @@
+https://data.fs.usda.gov/geodata/rastergateway/biomass/ 
+
+https://arxiv.org/html/2406.04928v1 
+
+https://data.csiro.au/collection/csiro:64018 
+
+https://data.fs.usda.gov/geodata/rastergateway/biomass/conus_forest_biomass.php 
+
+https://openreview.net/forum?id=hrWsIC4Cmz 
+
+https://climate.esa.int/en/projects/biomass/ 
+
+https://essd.copernicus.org/preprints/essd-2024-184/essd-2024-184.pdf 
+
+https://www.drivendata.org/competitions/99/biomass-estimation/page/536/ 
