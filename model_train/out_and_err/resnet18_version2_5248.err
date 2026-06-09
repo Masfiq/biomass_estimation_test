@@ -1,0 +1,24 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_3_train.py:19: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_3_train.py", line 607, in <module>
+    model = train_model(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_3_train.py", line 527, in train_model
+    train_loader, val_loader, in_channels, aux_dim = create_dataloaders(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_3_train.py", line 480, in create_dataloaders
+    ds = GEDIHlsPatchDatasetFusion(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_3_train.py", line 270, in __init__
+    self.df = pd.read_csv(self.csv_path)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+srun: error: peregrine0: task 0: Exited with exit code 1

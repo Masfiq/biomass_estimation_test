@@ -1,0 +1,26 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/gedi_download/gedi_download.py:3: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "fiona/_shim.pyx", line 83, in fiona._shim.gdal_open_vector
+  File "fiona/_err.pyx", line 291, in fiona._err.exc_wrap_pointer
+fiona._err.CPLE_OpenFailedError: geojson_files/california_mainland.geojson: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/gedi_download/gedi_download.py", line 55, in <module>
+    poly = gpd.read_file("geojson_files/california_mainland.geojson").geometry
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/geopandas/io/file.py", line 289, in _read_file
+    return _read_file_fiona(
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/geopandas/io/file.py", line 315, in _read_file_fiona
+    with reader(path_or_bytes, **kwargs) as features:
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/fiona/env.py", line 408, in wrapper
+    return f(*args, **kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/fiona/__init__.py", line 264, in open
+    c = Collection(path, mode, driver=driver, encoding=encoding,
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/fiona/collection.py", line 162, in __init__
+    self.session.start(self, **kwargs)
+  File "fiona/ogrext.pyx", line 540, in fiona.ogrext.Session.start
+  File "fiona/_shim.pyx", line 90, in fiona._shim.gdal_open_vector
+fiona.errors.DriverError: geojson_files/california_mainland.geojson: No such file or directory
+srun: error: peregrine1: task 0: Exited with exit code 1

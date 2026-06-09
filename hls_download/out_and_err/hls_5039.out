@@ -1,0 +1,2 @@
+Using workers=15 (SLURM_CPUS_PER_TASK=18)
+Total granules found: 8861

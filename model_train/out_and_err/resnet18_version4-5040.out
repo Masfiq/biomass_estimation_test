@@ -1,0 +1,97 @@
+Tue Mar 31 12:12:57 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   48C    P0             78W /  500W |    1472MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+Sample x_img: torch.Size([12, 3, 3]) in_channels= 12
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([3]) aux_dim= 3
+Sample y: 18.452524185180664
+Epoch 001 | Train MSE 799.5157 MAE 21.8267 | Val MSE 1278.9840 MAE 25.2995
+Epoch 002 | Train MSE 643.8113 MAE 18.5236 | Val MSE 1097.3525 MAE 21.8414
+Epoch 003 | Train MSE 297.4648 MAE 12.5245 | Val MSE 860.4625 MAE 18.3098
+Epoch 004 | Train MSE 298.0137 MAE 12.9446 | Val MSE 700.2990 MAE 17.6531
+Epoch 005 | Train MSE 283.5127 MAE 11.4147 | Val MSE 674.1241 MAE 18.1372
+Epoch 006 | Train MSE 266.1324 MAE 11.2913 | Val MSE 847.4362 MAE 23.3007
+Epoch 007 | Train MSE 263.8285 MAE 11.3137 | Val MSE 833.0227 MAE 23.0759
+Epoch 008 | Train MSE 248.8422 MAE 11.2442 | Val MSE 1731.8488 MAE 36.7192
+Epoch 009 | Train MSE 221.8943 MAE 10.1384 | Val MSE 1352.1401 MAE 31.2723
+Epoch 010 | Train MSE 219.5186 MAE 10.2184 | Val MSE 798.9528 MAE 21.7528
+Epoch 011 | Train MSE 237.4583 MAE 10.9150 | Val MSE 798.4757 MAE 21.9379
+Epoch 012 | Train MSE 226.1693 MAE 10.6413 | Val MSE 953.2368 MAE 25.4836
+Epoch 013 | Train MSE 229.1998 MAE 10.6613 | Val MSE 697.9633 MAE 18.3740
+Epoch 014 | Train MSE 239.3134 MAE 10.4671 | Val MSE 725.0232 MAE 19.5802
+Epoch 015 | Train MSE 223.5488 MAE 10.5823 | Val MSE 1165.2512 MAE 29.4038
+Epoch 016 | Train MSE 241.7500 MAE 10.8575 | Val MSE 668.1503 MAE 18.6722
+Epoch 017 | Train MSE 268.0311 MAE 10.3239 | Val MSE 673.3671 MAE 18.3469
+Epoch 018 | Train MSE 247.7689 MAE 11.6334 | Val MSE 933.3721 MAE 26.0040
+Epoch 019 | Train MSE 254.1470 MAE 11.0174 | Val MSE 769.7500 MAE 19.0261
+Epoch 020 | Train MSE 283.9876 MAE 12.3566 | Val MSE 721.8463 MAE 20.3630
+Epoch 021 | Train MSE 242.6389 MAE 10.8865 | Val MSE 1008.2600 MAE 26.0771
+Epoch 022 | Train MSE 255.4496 MAE 11.7756 | Val MSE 723.8985 MAE 19.8117
+Epoch 023 | Train MSE 266.2026 MAE 11.2883 | Val MSE 787.9087 MAE 17.4176
+Epoch 024 | Train MSE 263.0658 MAE 11.8807 | Val MSE 951.1017 MAE 25.5065
+Epoch 025 | Train MSE 213.3522 MAE 10.6479 | Val MSE 715.2560 MAE 20.3060
+Epoch 026 | Train MSE 215.7596 MAE 9.9859 | Val MSE 834.8950 MAE 22.3094
+Epoch 027 | Train MSE 240.1354 MAE 11.0472 | Val MSE 687.9156 MAE 18.8492
+Epoch 028 | Train MSE 222.1845 MAE 10.9653 | Val MSE 764.4025 MAE 21.4699
+Epoch 029 | Train MSE 267.9782 MAE 11.6158 | Val MSE 838.0755 MAE 24.1098
+Epoch 030 | Train MSE 213.6488 MAE 10.9540 | Val MSE 820.0404 MAE 23.6744
+Epoch 031 | Train MSE 245.0506 MAE 11.0858 | Val MSE 693.1462 MAE 19.8025
+Epoch 032 | Train MSE 233.2871 MAE 10.6726 | Val MSE 819.0071 MAE 22.5667
+Epoch 033 | Train MSE 236.1458 MAE 10.6342 | Val MSE 687.2853 MAE 17.4398
+Epoch 034 | Train MSE 266.6619 MAE 11.8878 | Val MSE 700.9955 MAE 17.6296
+Epoch 035 | Train MSE 225.4491 MAE 9.8890 | Val MSE 679.6557 MAE 18.7285
+Epoch 036 | Train MSE 224.7975 MAE 10.5353 | Val MSE 767.1336 MAE 21.7054
+Epoch 037 | Train MSE 224.2887 MAE 10.5619 | Val MSE 742.6076 MAE 20.3761
+Epoch 038 | Train MSE 249.2721 MAE 10.6959 | Val MSE 767.6915 MAE 20.8329
+Epoch 039 | Train MSE 219.8815 MAE 10.2146 | Val MSE 946.3507 MAE 25.4996
+Epoch 040 | Train MSE 211.1913 MAE 10.2452 | Val MSE 872.3114 MAE 23.2100
+Epoch 041 | Train MSE 225.5217 MAE 10.4920 | Val MSE 785.7354 MAE 21.3227
+Epoch 042 | Train MSE 203.1687 MAE 9.4335 | Val MSE 818.9474 MAE 18.1029
+Epoch 043 | Train MSE 212.4853 MAE 10.3117 | Val MSE 881.7781 MAE 18.4763
+Epoch 044 | Train MSE 197.9457 MAE 10.0077 | Val MSE 1013.9943 MAE 26.7514
+Epoch 045 | Train MSE 220.9333 MAE 10.6494 | Val MSE 679.2843 MAE 17.3905
+Epoch 046 | Train MSE 227.6772 MAE 10.3096 | Val MSE 670.0567 MAE 18.7660
+Epoch 047 | Train MSE 233.2961 MAE 10.4703 | Val MSE 805.5137 MAE 22.6223
+Epoch 048 | Train MSE 217.1643 MAE 10.5473 | Val MSE 1099.7229 MAE 28.5478
+Epoch 049 | Train MSE 208.3821 MAE 10.0153 | Val MSE 980.1932 MAE 25.8258
+Epoch 050 | Train MSE 250.4725 MAE 10.3562 | Val MSE 673.0272 MAE 17.8054
+Epoch 051 | Train MSE 212.1390 MAE 9.9277 | Val MSE 685.6122 MAE 17.1579
+Epoch 052 | Train MSE 212.5616 MAE 9.9971 | Val MSE 685.1163 MAE 17.9402
+Epoch 053 | Train MSE 200.5779 MAE 10.1042 | Val MSE 699.1016 MAE 19.6019
+Epoch 054 | Train MSE 201.6159 MAE 9.9065 | Val MSE 765.3168 MAE 21.0235
+Epoch 055 | Train MSE 202.7247 MAE 9.4919 | Val MSE 823.5667 MAE 22.1204
+Epoch 056 | Train MSE 213.0717 MAE 10.5619 | Val MSE 885.8560 MAE 23.7952
+Epoch 057 | Train MSE 197.4374 MAE 9.6355 | Val MSE 1400.0395 MAE 32.0832
+Epoch 058 | Train MSE 200.1880 MAE 9.9875 | Val MSE 1278.2284 MAE 30.2905
+Epoch 059 | Train MSE 179.0419 MAE 9.8968 | Val MSE 881.6426 MAE 23.4622
+Epoch 060 | Train MSE 203.3837 MAE 9.7614 | Val MSE 1059.2145 MAE 26.4355
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/resnet18_fusion_geohash_month_koppen_withAttentionLayer_field_boundary.pth

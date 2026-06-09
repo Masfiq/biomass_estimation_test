@@ -1,0 +1,15 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_4_train.py:22: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_4_train.py", line 709, in <module>
+    model = train_model(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_4_train.py", line 607, in train_model
+    train_loader, val_loader, in_channels, aux_dim = create_dataloaders(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/resnet18_version_4_train.py", line 577, in create_dataloaders
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True,
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 382, in __init__
+    batch_sampler = BatchSampler(sampler, batch_size, drop_last)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 323, in __init__
+    raise ValueError(
+ValueError: batch_size should be a positive integer value, but got batch_size=(32,)
+srun: error: peregrine1: task 0: Exited with exit code 1

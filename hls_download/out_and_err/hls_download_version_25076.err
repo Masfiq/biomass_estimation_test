@@ -1,0 +1,34 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py:25: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gp
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 154, in process_granule
+    fmask_crop = fmask_small.rio.clip(fsUTM.geometry.values, fsUTM.crs, all_touched=True)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rioxarray/raster_array.py", line 923, in clip
+    raise NoDataInBounds(
+rioxarray.exceptions.NoDataInBounds: No data found in bounds.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 156, in process_granule
+    return j, f"SKIP {granule_id}: NoDataInBounds (field does not intersect FMASK)"
+NameError: name 'granule_id' is not defined
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 317, in <module>
+    main()
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 311, in main
+    j, msg = f.result()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+NameError: name 'granule_id' is not defined
+srun: error: peregrine1: task 0: Exited with exit code 1

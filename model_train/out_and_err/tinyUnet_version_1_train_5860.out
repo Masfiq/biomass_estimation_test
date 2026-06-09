@@ -1,0 +1,104 @@
+Mon May 18 18:03:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   25C    P0             74W /  500W |     718MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Length of the dataframe : 486568
+Sample x_img: torch.Size([12, 3, 3]) in_channels= 12
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([33]) aux_dim= 33
+Sample y: 6.499386787414551
+Epoch 001 | Train MSE 4128.0735 MAE 40.7765 | Val MSE 3789.1948 MAE 39.6490
+Epoch 002 | Train MSE 3663.7248 MAE 37.1622 | Val MSE 4341.4759 MAE 46.6615
+Epoch 003 | Train MSE 3579.3755 MAE 36.4784 | Val MSE 3457.7076 MAE 34.8691
+Epoch 004 | Train MSE 3539.4639 MAE 36.0967 | Val MSE 4004.3236 MAE 42.5854
+Epoch 005 | Train MSE 3452.9626 MAE 35.3399 | Val MSE 3424.1189 MAE 33.7186
+Epoch 006 | Train MSE 3389.8065 MAE 34.8064 | Val MSE 3401.7869 MAE 34.9799
+Epoch 007 | Train MSE 3450.1586 MAE 35.3396 | Val MSE 3380.4425 MAE 33.6357
+Epoch 008 | Train MSE 3375.3531 MAE 34.7256 | Val MSE 3375.0850 MAE 33.5458
+Epoch 009 | Train MSE 3332.7158 MAE 34.3706 | Val MSE 3352.7674 MAE 33.3648
+Epoch 010 | Train MSE 3361.1530 MAE 34.6328 | Val MSE 3368.4791 MAE 33.6232
+Epoch 011 | Train MSE 3319.5385 MAE 34.2769 | Val MSE 3341.2264 MAE 32.9522
+Epoch 012 | Train MSE 3298.2643 MAE 34.1430 | Val MSE 3311.4349 MAE 33.5120
+Epoch 013 | Train MSE 3274.4126 MAE 33.9577 | Val MSE 3304.7768 MAE 33.5638
+Epoch 014 | Train MSE 3272.0805 MAE 33.9959 | Val MSE 3298.4432 MAE 33.9517
+Epoch 015 | Train MSE 3258.6850 MAE 33.8917 | Val MSE 3291.6970 MAE 33.1603
+Epoch 016 | Train MSE 3251.6814 MAE 33.8569 | Val MSE 3280.1255 MAE 33.6696
+Epoch 017 | Train MSE 3224.0584 MAE 33.6815 | Val MSE 3276.5877 MAE 32.6968
+Epoch 018 | Train MSE 3223.6214 MAE 33.6795 | Val MSE 3265.3117 MAE 33.2343
+Epoch 019 | Train MSE 3207.8630 MAE 33.5773 | Val MSE 3302.0401 MAE 32.9188
+Epoch 020 | Train MSE 3203.7829 MAE 33.5560 | Val MSE 3251.8251 MAE 32.8936
+Epoch 021 | Train MSE 3198.2957 MAE 33.5424 | Val MSE 3234.3302 MAE 33.1507
+Epoch 022 | Train MSE 3188.6289 MAE 33.4634 | Val MSE 3254.4315 MAE 33.1525
+Epoch 023 | Train MSE 3181.7974 MAE 33.4627 | Val MSE 3247.0818 MAE 33.2914
+Epoch 024 | Train MSE 3178.3448 MAE 33.4520 | Val MSE 3223.3018 MAE 33.2030
+Epoch 025 | Train MSE 3159.5555 MAE 33.3204 | Val MSE 3217.5980 MAE 33.3223
+Epoch 026 | Train MSE 3153.5258 MAE 33.2791 | Val MSE 3209.8142 MAE 32.8705
+Epoch 027 | Train MSE 3161.0036 MAE 33.3476 | Val MSE 3204.8346 MAE 32.6146
+Epoch 028 | Train MSE 3146.3513 MAE 33.2513 | Val MSE 3203.9079 MAE 33.6681
+Epoch 029 | Train MSE 3134.0404 MAE 33.1660 | Val MSE 3197.7256 MAE 33.0360
+Epoch 030 | Train MSE 3130.7349 MAE 33.1567 | Val MSE 3193.8043 MAE 33.0577
+Epoch 031 | Train MSE 3131.2870 MAE 33.1580 | Val MSE 3196.2114 MAE 32.6586
+Epoch 032 | Train MSE 3118.8738 MAE 33.0749 | Val MSE 3184.1984 MAE 33.0688
+Epoch 033 | Train MSE 3114.9319 MAE 33.0540 | Val MSE 3177.8117 MAE 33.0848
+Epoch 034 | Train MSE 3114.4366 MAE 33.0503 | Val MSE 3174.4650 MAE 32.3941
+Epoch 035 | Train MSE 3112.4539 MAE 33.0519 | Val MSE 3182.1338 MAE 32.9220
+Epoch 036 | Train MSE 3089.9219 MAE 32.8929 | Val MSE 3175.2917 MAE 33.2848
+Epoch 037 | Train MSE 3090.6196 MAE 32.9086 | Val MSE 3177.9544 MAE 33.4049
+Epoch 038 | Train MSE 3089.6122 MAE 32.9102 | Val MSE 3167.7790 MAE 32.5737
+Epoch 039 | Train MSE 3092.1359 MAE 32.9289 | Val MSE 3168.4579 MAE 32.4775
+Epoch 040 | Train MSE 3089.1892 MAE 32.9314 | Val MSE 3163.0272 MAE 33.3724
+Epoch 041 | Train MSE 3086.0530 MAE 32.8995 | Val MSE 3152.6969 MAE 32.8478
+Epoch 042 | Train MSE 3088.7997 MAE 32.9266 | Val MSE 3153.8688 MAE 32.7526
+Epoch 043 | Train MSE 3071.4779 MAE 32.7905 | Val MSE 3152.4158 MAE 32.7531
+Epoch 044 | Train MSE 3066.0945 MAE 32.7569 | Val MSE 3157.1138 MAE 32.0170
+Epoch 045 | Train MSE 3058.7520 MAE 32.7116 | Val MSE 3156.2926 MAE 31.8864
+Epoch 046 | Train MSE 3067.1686 MAE 32.7892 | Val MSE 3146.0807 MAE 32.2337
+Epoch 047 | Train MSE 3054.3530 MAE 32.7132 | Val MSE 3157.7878 MAE 32.1710
+Epoch 048 | Train MSE 3050.1090 MAE 32.6775 | Val MSE 3225.3087 MAE 34.7075
+Epoch 049 | Train MSE 3071.0217 MAE 32.8362 | Val MSE 3164.7149 MAE 32.4103
+Epoch 050 | Train MSE 3058.9266 MAE 32.7365 | Val MSE 3167.4947 MAE 32.9882
+Epoch 051 | Train MSE 3047.4581 MAE 32.6570 | Val MSE 3150.3952 MAE 32.1388
+Epoch 052 | Train MSE 3044.0625 MAE 32.6586 | Val MSE 3135.4504 MAE 32.4700
+Epoch 053 | Train MSE 3036.3968 MAE 32.6062 | Val MSE 3144.9246 MAE 32.8962
+Epoch 054 | Train MSE 3040.5898 MAE 32.6002 | Val MSE 3130.7221 MAE 32.7231
+Epoch 055 | Train MSE 3031.4438 MAE 32.5743 | Val MSE 3148.1451 MAE 33.6717
+Epoch 056 | Train MSE 3024.9447 MAE 32.5212 | Val MSE 3137.6968 MAE 33.1219
+Epoch 057 | Train MSE 3030.4638 MAE 32.5457 | Val MSE 3125.2343 MAE 32.5389
+Epoch 058 | Train MSE 3021.3169 MAE 32.5207 | Val MSE 3125.8220 MAE 32.4825
+Epoch 059 | Train MSE 3016.3989 MAE 32.4785 | Val MSE 3123.9886 MAE 32.8049
+Epoch 060 | Train MSE 3011.6084 MAE 32.4615 | Val MSE 3137.5067 MAE 31.9360
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_fusion_geohash_month_koppen_California_North_10_2021.pth

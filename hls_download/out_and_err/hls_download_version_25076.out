@@ -1,0 +1,3 @@
+Using workers=8 (SLURM_CPUS_PER_TASK=18)
+Total granules found: 8861
+Submitting 8861 granules to the pool...

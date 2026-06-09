@@ -1,0 +1,377 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py:25: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gp
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 5948760-5949897 failed with response_code=503
+ERROR 1: Request for 12799947-12889478 failed with response_code=503
+ERROR 1: Request for 10809845-10810123 failed with response_code=503
+ERROR 1: Request for 17888837-17989372 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 7916982-7918119 failed with response_code=503
+ERROR 1: Request for 15112844-15201461 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 10582975-10607012 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 9954678-10051487 failed with response_code=503
+ERROR 1: Request for 11064927-11162059 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: invalid value encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 12818054-12819191 failed with response_code=503
+ERROR 1: Request for 14480753-14569850 failed with response_code=503
+ERROR 1: Request for 21460826-21550140 failed with response_code=503
+ERROR 1: Request for 15650016-15680955 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 3374461-3468603 failed with response_code=503
+ERROR 1: Request for 21092912-21178304 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 3892990-3894127 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 16825722-16826859 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 13102188-13164197 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 17402790-17497484 failed with response_code=503
+ERROR 1: Request for 3134833-3135401 failed with response_code=503
+ERROR 1: Request for 12871352-12963279 failed with response_code=503
+ERROR 1: Request for 5912332-6108417 failed with response_code=503
+ERROR 1: Request for 19607087-19695235 failed with response_code=503
+ERROR 1: Request for 4044104-4044672 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 9675237-9767891 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 728368-730192 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 15990541-16090473 failed with response_code=503
+ERROR 1: Request for 22538168-22731797 failed with response_code=503
+ERROR 1: Request for 6064760-6065897 failed with response_code=503
+ERROR 1: Request for 19112308-19214953 failed with response_code=503
+ERROR 1: Request for 21150349-21237256 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 23152437-23241111 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 8186218-8279225 failed with response_code=503
+ERROR 1: Request for 12602887-12691871 failed with response_code=503
+ERROR 1: Request for 10455117-10549541 failed with response_code=503
+ERROR 1: Request for 22165848-22361512 failed with response_code=503
+ERROR 1: Request for 7925618-8014185 failed with response_code=503
+ERROR 1: Request for 8321303-8375670 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 7947650-8043480 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 5224126-5327150 failed with response_code=503
+ERROR 1: Request for 5002314-5002882 failed with response_code=503
+ERROR 1: Request for 4961138-4961706 failed with response_code=503
+ERROR 1: Request for 15320363-15411743 failed with response_code=503
+ERROR 1: Request for 10101587-10195208 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 21107415-21170491 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 13712925-13743582 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 13797657-13895032 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+ERROR 1: Request for 6571066-6651935 failed with response_code=503
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/dask/_task_spec.py:759: RuntimeWarning: divide by zero encountered in divide
+  return self.func(*new_argspec)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-03-31T15:23:52.813] error: *** JOB 5039 ON peregrine1 CANCELLED AT 2026-03-31T15:23:52 DUE to SIGNAL Terminated ***
+[2026-03-31T15:23:52.813] error: *** STEP 5039.0 ON peregrine1 CANCELLED AT 2026-03-31T15:23:52 DUE to SIGNAL Terminated ***

@@ -1,0 +1,19 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/gedi_download/gedi_download.py:3: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/gedi_download/gedi_download.py", line 109, in <module>
+    downloaded_files = earthaccess.download(granules, local_path=LOCAL_PATH)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/earthaccess/api.py", line 245, in download
+    return earthaccess.__store__.get(
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/earthaccess/store.py", line 535, in get
+    return self._get(granules, Path(local_path), provider, pqdm_kwargs=pqdm_kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/multimethod/__init__.py", line 350, in __call__
+    return func(*args, **kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/earthaccess/store.py", line 651, in _get_granules
+    return self._download_onprem_granules(
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/earthaccess/store.py", line 717, in _download_onprem_granules
+    directory.mkdir(parents=True, exist_ok=True)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/geojson_files/california_top_half.geojson'
+srun: error: peregrine0: task 0: Exited with exit code 1

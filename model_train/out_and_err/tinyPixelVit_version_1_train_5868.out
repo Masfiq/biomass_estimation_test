@@ -1,0 +1,116 @@
+Mon May 18 19:49:24 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:01:00.0 Off |                  N/A |
+| 36%   25C    P8             21W /  350W |      22MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 3090        Off |   00000000:21:00.0 Off |                  N/A |
+| 38%   24C    P8             13W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 3090        Off |   00000000:4B:00.0 Off |                  N/A |
+| 30%   24C    P8             11W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 3090        Off |   00000000:4C:00.0 Off |                  N/A |
+| 36%   24C    P8             17W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            2108      G   /usr/libexec/Xorg                        10MiB |
+|    1   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
+|    2   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
+|    3   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+
+[KOPPEN DEBUG] KoppenGeigerLookup initialized
+[KOPPEN DEBUG] koppen_tif_path: /tmp/koppen.tif
+[KOPPEN DEBUG] tif exists: True
+[KOPPEN DEBUG] legend_path: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] legend exists: True
+[KOPPEN DEBUG] real class count: 30
+[KOPPEN DEBUG] unknown_index: 30
+[KOPPEN DEBUG] num_classes: 31
+Sample x_img: torch.Size([12, 3, 3]) in_channels= 12
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([33]) aux_dim= 33
+Sample y: 0.9617749452590942
+Epoch 001 | Train MSE 3898.3995 MAE 38.6522 | Val MSE 3596.8183 MAE 36.0208
+Epoch 002 | Train MSE 3532.4684 MAE 35.8519 | Val MSE 3575.5285 MAE 36.4008
+Epoch 003 | Train MSE 3477.0561 MAE 35.4017 | Val MSE 3527.2407 MAE 36.0167
+Epoch 004 | Train MSE 3444.4065 MAE 35.1853 | Val MSE 3515.3060 MAE 36.2756
+Epoch 005 | Train MSE 3427.0339 MAE 35.0294 | Val MSE 3469.7999 MAE 35.4891
+Epoch 006 | Train MSE 3405.3725 MAE 34.8412 | Val MSE 3496.6353 MAE 36.1982
+Epoch 007 | Train MSE 3386.7701 MAE 34.6850 | Val MSE 3457.2030 MAE 35.7035
+Epoch 008 | Train MSE 3372.9961 MAE 34.5593 | Val MSE 3422.5294 MAE 34.8680
+Epoch 009 | Train MSE 3359.4128 MAE 34.4542 | Val MSE 3465.5205 MAE 36.4148
+Epoch 010 | Train MSE 3343.5007 MAE 34.3567 | Val MSE 3403.5091 MAE 35.0860
+Epoch 011 | Train MSE 3328.9093 MAE 34.2540 | Val MSE 3383.8409 MAE 34.5375
+Epoch 012 | Train MSE 3319.7907 MAE 34.2023 | Val MSE 3365.9377 MAE 34.6378
+Epoch 013 | Train MSE 3302.1480 MAE 34.0989 | Val MSE 3378.9954 MAE 35.5350
+Epoch 014 | Train MSE 3288.2220 MAE 34.0160 | Val MSE 3376.4652 MAE 35.5622
+Epoch 015 | Train MSE 3274.8798 MAE 33.9483 | Val MSE 3319.9638 MAE 34.0511
+Epoch 016 | Train MSE 3261.0898 MAE 33.8607 | Val MSE 3348.3762 MAE 35.0212
+Epoch 017 | Train MSE 3245.5806 MAE 33.7613 | Val MSE 3292.5784 MAE 34.3463
+Epoch 018 | Train MSE 3233.5663 MAE 33.6878 | Val MSE 3262.9187 MAE 34.0270
+Epoch 019 | Train MSE 3226.2229 MAE 33.6459 | Val MSE 3300.5375 MAE 34.8725
+Epoch 020 | Train MSE 3219.3870 MAE 33.6083 | Val MSE 3272.7435 MAE 34.5799
+Epoch 021 | Train MSE 3211.6076 MAE 33.5525 | Val MSE 3314.0506 MAE 35.3129
+Epoch 022 | Train MSE 3200.3722 MAE 33.5091 | Val MSE 3241.3849 MAE 34.0239
+Epoch 023 | Train MSE 3195.4311 MAE 33.4753 | Val MSE 3261.1769 MAE 34.6386
+Epoch 024 | Train MSE 3189.4791 MAE 33.4160 | Val MSE 3262.8273 MAE 34.7828
+Epoch 025 | Train MSE 3181.8856 MAE 33.3976 | Val MSE 3206.3179 MAE 33.4760
+Epoch 026 | Train MSE 3179.4852 MAE 33.3565 | Val MSE 3228.1707 MAE 34.2489
+Epoch 027 | Train MSE 3173.7412 MAE 33.3469 | Val MSE 3216.1492 MAE 34.0924
+Epoch 028 | Train MSE 3169.2405 MAE 33.3161 | Val MSE 3235.6197 MAE 34.8099
+Epoch 029 | Train MSE 3167.3713 MAE 33.3053 | Val MSE 3214.2994 MAE 34.4473
+Epoch 030 | Train MSE 3161.6311 MAE 33.2580 | Val MSE 3182.9441 MAE 33.4690
+Epoch 031 | Train MSE 3157.5354 MAE 33.2456 | Val MSE 3182.4027 MAE 33.5425
+Epoch 032 | Train MSE 3155.7941 MAE 33.2103 | Val MSE 3181.4672 MAE 33.2379
+Epoch 033 | Train MSE 3152.0884 MAE 33.2106 | Val MSE 3178.2234 MAE 33.2646
+Epoch 034 | Train MSE 3141.3931 MAE 33.1525 | Val MSE 3175.2266 MAE 33.3919
+Epoch 035 | Train MSE 3140.7069 MAE 33.1494 | Val MSE 3210.0824 MAE 34.6397
+Epoch 036 | Train MSE 3142.6232 MAE 33.1484 | Val MSE 3171.5943 MAE 33.2402
+Epoch 037 | Train MSE 3136.5458 MAE 33.1127 | Val MSE 3160.3554 MAE 33.1848
+Epoch 038 | Train MSE 3133.6906 MAE 33.0978 | Val MSE 3180.2927 MAE 33.7894
+Epoch 039 | Train MSE 3128.1909 MAE 33.0790 | Val MSE 3194.7147 MAE 34.0429
+Epoch 040 | Train MSE 3131.9231 MAE 33.0989 | Val MSE 3161.3762 MAE 33.3640
+Epoch 041 | Train MSE 3120.9182 MAE 33.0422 | Val MSE 3173.7267 MAE 33.2141
+Epoch 042 | Train MSE 3128.6779 MAE 33.0728 | Val MSE 3158.5466 MAE 33.4483
+Epoch 043 | Train MSE 3120.4244 MAE 33.0123 | Val MSE 3181.6293 MAE 33.8591
+Epoch 044 | Train MSE 3118.8712 MAE 33.0080 | Val MSE 3170.7131 MAE 33.8888
+Epoch 045 | Train MSE 3117.6097 MAE 33.0057 | Val MSE 3146.4895 MAE 32.6161
+Epoch 046 | Train MSE 3111.7892 MAE 32.9875 | Val MSE 3173.7002 MAE 33.8982
+Epoch 047 | Train MSE 3111.3866 MAE 32.9742 | Val MSE 3161.9550 MAE 33.6319
+Epoch 048 | Train MSE 3110.5850 MAE 32.9804 | Val MSE 3138.4937 MAE 33.2210
+Epoch 049 | Train MSE 3110.1548 MAE 32.9636 | Val MSE 3158.6265 MAE 33.7602
+Epoch 050 | Train MSE 3106.1838 MAE 32.9386 | Val MSE 3134.0970 MAE 33.1721
+Epoch 051 | Train MSE 3102.0379 MAE 32.9319 | Val MSE 3148.1645 MAE 33.6367
+Epoch 052 | Train MSE 3097.2837 MAE 32.9283 | Val MSE 3127.9473 MAE 33.1779
+Epoch 053 | Train MSE 3096.1300 MAE 32.8957 | Val MSE 3138.1456 MAE 33.4848
+Epoch 054 | Train MSE 3095.7571 MAE 32.8748 | Val MSE 3127.1096 MAE 33.0694
+Epoch 055 | Train MSE 3091.3698 MAE 32.8665 | Val MSE 3132.0305 MAE 33.5876
+Epoch 056 | Train MSE 3091.8332 MAE 32.8899 | Val MSE 3141.3734 MAE 33.5990
+Epoch 057 | Train MSE 3090.4598 MAE 32.8644 | Val MSE 3118.6536 MAE 33.2275
+Epoch 058 | Train MSE 3089.6446 MAE 32.8487 | Val MSE 3124.2248 MAE 33.0863
+Epoch 059 | Train MSE 3081.5232 MAE 32.8462 | Val MSE 3117.2841 MAE 33.3903
+Epoch 060 | Train MSE 3080.7277 MAE 32.8307 | Val MSE 3112.2353 MAE 32.6356
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_California_North_10_2021.pth

@@ -1,0 +1,75 @@
+Tue May 19 09:48:13 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3090        Off |   00000000:01:00.0 Off |                  N/A |
+| 35%   28C    P8             26W /  350W |      22MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA GeForce RTX 3090        Off |   00000000:21:00.0 Off |                  N/A |
+| 38%   24C    P8             11W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   2  NVIDIA GeForce RTX 3090        Off |   00000000:4B:00.0 Off |                  N/A |
+| 30%   23C    P8              8W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   3  NVIDIA GeForce RTX 3090        Off |   00000000:4C:00.0 Off |                  N/A |
+| 36%   24C    P8             16W /  350W |      15MiB /  24576MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            2108      G   /usr/libexec/Xorg                        10MiB |
+|    1   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
+|    2   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
+|    3   N/A  N/A            2108      G   /usr/libexec/Xorg                         4MiB |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+in_channels = 12 aux_dim = 33
+
+=== VAL METRICS ===
+MAE  = 32.5460
+RMSE = 55.0384
+R^2  = 0.4343
+
+Saved summary to: /s/chopin/e/proj/hyperspec/masfiq/models/jsontinyPixelViT_eval_California_North_10_2021.json
+
+=== LAND COVER PERFORMANCE ANALYSIS ===
+Overall MAE  from land-cover eval = 32.5460
+Overall RMSE from land-cover eval = 55.0384
+Overall R^2  from land-cover eval = 0.4343
+
+Per-land-cover results:
+ nlcd_class     n       mae      rmse      bias                    nlcd_name
+         42 44932 49.247982 71.684011 -1.309056             Evergreen Forest
+         52 30438 17.285496 32.163113 -0.067514                  Shrub/Scrub
+         71 12127 23.854625 44.116520  0.172287         Grassland/Herbaceous
+         82  2702  3.658542  5.519504  1.537144             Cultivated Crops
+         81  1784  6.839105 14.568330  4.248237                  Pasture/Hay
+         21  1590 29.814888 44.499474  1.067606        Developed, Open Space
+         95  1364  4.542358  8.008647  3.347326 Emergent Herbaceous Wetlands
+         22   729 18.685450 33.104734  2.977565     Developed, Low Intensity
+         90   501 22.261969 41.661264  0.319854               Woody Wetlands
+         31   440  9.662907 21.230481  4.606793                  Barren Land
+         43   409 57.326363 77.858453 -2.872277                 Mixed Forest
+         41   239 40.268294 54.888372 12.974908             Deciduous Forest
+         23    43 20.115735 28.299187  6.448290  Developed, Medium Intensity
+         11    14 18.939198 24.342107 14.013266                   Open Water
+         24     1  4.875529  4.875529 -4.875529    Developed, High Intensity
+
+Saved land-cover metrics to: /s/chopin/e/proj/hyperspec/masfiq/models/jsontinyPixelViT_eval_California_North_10_2021_landcover_metrics.csv

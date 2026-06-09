@@ -1,0 +1,23 @@
+cp: cannot create regular file '/koppen.tif': Permission denied
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 261, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_shim.pyx", line 78, in rasterio._shim.open_dataset
+  File "rasterio/_err.pyx", line 216, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_OpenFailedError: /koppen.tif: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/resnet18_version_3_agbd_pred.py", line 334, in <module>
+    dataset = GEDIHlsPatchDatasetFusion(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/resnet18_version_3_agbd_pred.py", line 186, in __init__
+    self.koppen_lookup = KoppenGeigerLookup(koppen_tif_path, koppen_legend_path)
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/resnet18_version_3_agbd_pred.py", line 131, in __init__
+    self.src = rasterio.open(koppen_tif_path)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/env.py", line 437, in wrapper
+    return f(*args, **kwds)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/__init__.py", line 220, in open
+    s = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+  File "rasterio/_base.pyx", line 263, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: /koppen.tif: No such file or directory
+srun: error: peregrine0: task 0: Exited with exit code 1

@@ -1,0 +1,65 @@
+Tue May 12 10:40:14 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   25C    P0             50W /  500W |     213MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    1   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+in_channels = 12 aux_dim = 3
+
+=== VAL METRICS ===
+MAE  = 32.7409
+RMSE = 54.6249
+R^2  = 0.4427
+
+Saved summary to: /s/chopin/e/proj/hyperspec/masfiq/models/json/tinyUnet_eval_California_North_10_2021.json
+
+=== LAND COVER PERFORMANCE ANALYSIS ===
+Overall MAE  from land-cover eval = 32.7409
+Overall RMSE from land-cover eval = 54.6249
+Overall R^2  from land-cover eval = 0.4427
+
+Per-land-cover results:
+ nlcd_class     n       mae      rmse      bias                    nlcd_name
+         42 44932 49.542706 71.121656  1.593905             Evergreen Forest
+         52 30438 17.564079 32.128519  0.767242                  Shrub/Scrub
+         71 12127 23.596607 43.503267 -0.914922         Grassland/Herbaceous
+         82  2702  3.238869  5.080214  0.311358             Cultivated Crops
+         81  1784  6.307133 13.953570  3.502094                  Pasture/Hay
+         21  1590 30.576975 44.077063  3.507561        Developed, Open Space
+         95  1364  4.100635  7.411955  2.679243 Emergent Herbaceous Wetlands
+         22   729 20.044341 34.140365  5.796915     Developed, Low Intensity
+         90   501 20.604736 40.534750 -5.083558               Woody Wetlands
+         31   440 12.582699 23.746121  7.993792                  Barren Land
+         43   409 57.382085 77.472382  3.191741                 Mixed Forest
+         41   239 41.467611 54.879898 18.962049             Deciduous Forest
+         23    43 20.617930 27.566060 10.558718  Developed, Medium Intensity
+         11    14 23.839095 28.288773 14.692338                   Open Water
+         24     1  5.336229  5.336229 -5.336229    Developed, High Intensity
+
+Saved land-cover metrics to: /s/chopin/e/proj/hyperspec/masfiq/models/json/tinyUnet_eval_California_North_10_2021_landcover_metrics.csv

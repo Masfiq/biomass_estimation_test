@@ -1,0 +1,57 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py:25: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gp
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 211, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/xarray/backends/lru_cache.py", line 56, in __getitem__
+    value = self._cache[key]
+KeyError: [<function open at 0x7f241b89b7f0>, ('https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/HLSS30.020/HLS.S30.T12TTL.2021108T182909.v2.0/HLS.S30.T12TTL.2021108T182909.v2.0.Fmask.tif',), 'r', (('sharing', False),), '5b1fd0a8-b662-43ec-bc1d-a6f196361afb']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "rasterio/_base.pyx", line 261, in rasterio._base.DatasetBase.__init__
+  File "rasterio/_shim.pyx", line 78, in rasterio._shim.open_dataset
+  File "rasterio/_err.pyx", line 216, in rasterio._err.exc_wrap_pointer
+rasterio._err.CPLE_OpenFailedError: '/vsicurl/https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/HLSS30.020/HLS.S30.T12TTL.2021108T182909.v2.0/HLS.S30.T12TTL.2021108T182909.v2.0.Fmask.tif' does not exist in the file system, and is not recognized as a supported dataset name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 138, in process_granule
+    fmask = _open_band_retry(suffix_to_url["Fmask"], chunk_size)
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 80, in _open_band_retry
+    raise last
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 76, in _open_band_retry
+    return rxr.open_rasterio(url, chunks=chunk_size, masked=True).squeeze("band", drop=True)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rioxarray/_io.py", line 1124, in open_rasterio
+    riods = manager.acquire()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 193, in acquire
+    file, _ = self._acquire_with_cache_info(needs_lock)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/xarray/backends/file_manager.py", line 217, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/env.py", line 437, in wrapper
+    return f(*args, **kwds)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/__init__.py", line 220, in open
+    s = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+  File "rasterio/_base.pyx", line 263, in rasterio._base.DatasetBase.__init__
+rasterio.errors.RasterioIOError: '/vsicurl/https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/HLSS30.020/HLS.S30.T12TTL.2021108T182909.v2.0/HLS.S30.T12TTL.2021108T182909.v2.0.Fmask.tif' does not exist in the file system, and is not recognized as a supported dataset name.
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 317, in <module>
+    main()
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py", line 311, in main
+    j, msg = f.result()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+rasterio.errors.RasterioIOError: '/vsicurl/https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/HLSS30.020/HLS.S30.T12TTL.2021108T182909.v2.0/HLS.S30.T12TTL.2021108T182909.v2.0.Fmask.tif' does not exist in the file system, and is not recognized as a supported dataset name.
+srun: error: peregrine1: task 0: Exited with exit code 1

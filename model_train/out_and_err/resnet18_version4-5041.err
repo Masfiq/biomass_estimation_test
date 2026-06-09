@@ -1,0 +1,2 @@
+/s/chopin/e/proj/hyperspec/masfiq/projenv/bin/python: can't open file '/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/eval_attn_model.py': [Errno 2] No such file or directory
+srun: error: peregrine1: task 0: Exited with exit code 2

@@ -1,0 +1,7 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/hls_download_version_2.py:25: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gp
+usage: hls_download_version_2.py [-h] --geojson GEOJSON --out_dir OUT_DIR
+                                 [--start START] [--end END] [--skip_existing]
+                                 [--no-skip-existing] [--workers WORKERS]
+hls_download_version_2.py: error: the following arguments are required: --geojson, --out_dir
+srun: error: peregrine1: task 0: Exited with exit code 2

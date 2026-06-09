@@ -1,0 +1,67 @@
+Tue Apr  7 11:39:49 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   36C    P0             51W /  500W |     213MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    1   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+in_channels = 12 aux_dim = 3
+
+=== VAL METRICS ===
+MAE  = 25.3360
+RMSE = 28.5090
+R^2  = -1.1393
+
+=== TOP-5 CHANNEL ATTENTION (mean weight) ===
+ B04 : 0.9889
+ B12 : 0.9623
+ B05 : 0.9375
+ B11 : 0.9084
+ B06 : 0.7547
+
+=== MEAN SPATIAL ATTENTION MAP (3x3) ===
+1.000 0.904 0.046
+1.000 0.993 0.920
+0.994 0.004 0.008
+
+=== MEAN FUSION WEIGHTS (img, geo, aux) ===
+img=1.0000, geo=0.0000, aux=0.0000
+
+Saved summary to: /s/chopin/e/proj/hyperspec/masfiq/models/attn_eval_field_boundary.json
+
+=== LAND COVER SENSITIVITY ANALYSIS ===
+Overall MAE  from land-cover eval = 35.8695
+Overall RMSE from land-cover eval = 38.3404
+
+Per-land-cover results:
+ nlcd_class  n       mae      rmse                nlcd_name       bias
+         82 70 36.844737 38.895965         Cultivated Crops  33.606526
+         21  2  0.934328  0.972597    Developed, Open Space   0.934328
+         22  1 37.473846 37.473847 Developed, Low Intensity -37.473846
+
+Saved land-cover metrics to: /s/chopin/e/proj/hyperspec/masfiq/models/attn_eval_field_boundary_landcover_metrics.csv

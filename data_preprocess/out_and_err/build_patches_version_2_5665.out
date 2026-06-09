@@ -1,0 +1,926 @@
+HLS exists: True
+HLS tif count: 6720
+First 5 tif files: [PosixPath('/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_California_north_10_2021_AprilToAugust/HLS.S30.T10TDL.2021232T185921.v2.0_B11_cropped.tif'), PosixPath('/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_California_north_10_2021_AprilToAugust/HLS.S30.T10TGL.2021204T184919.v2.0_B02_cropped.tif'), PosixPath('/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_California_north_10_2021_AprilToAugust/HLS.S30.T10TEL.2021137T185919.v2.0_B11_cropped.tif'), PosixPath('/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_California_north_10_2021_AprilToAugust/HLS.S30.T11TKF.2021164T184919.v2.0_B02_cropped.tif'), PosixPath('/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_California_north_10_2021_AprilToAugust/HLS.L30.T10TDL.2021183T185057.v2.0_B03_cropped.tif')]
+Loading GEDI shots from folder...
+Reading GEDI04_A_2021003083948_O11673_02_T11218_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021004140438_O11692_03_T06050_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021007070555_O11734_02_T06949_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021008123045_O11753_03_T08896_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021011053157_O11795_02_T11371_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021015035754_O11856_02_T07102_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021016092242_O11875_03_T10625_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021019022350_O11917_02_T07255_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021020074838_O11936_03_T06356_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021023005016_O11978_02_T05832_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021024061532_O11997_03_T07779_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021026231743_O12039_02_T09948_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021028044259_O12058_03_T06203_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021034201218_O12161_02_T08372_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021036013730_O12180_03_T07473_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021038183931_O12222_02_T06796_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021042170647_O12283_02_T05373_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021043223156_O12302_03_T10166_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021050140102_O12405_02_T10912_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021051192612_O12424_03_T10013_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021054122806_O12466_02_T09336_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021055175315_O12485_03_T07014_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021058105504_O12527_02_T07913_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021059162011_O12546_03_T08437_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021062092202_O12588_02_T10759_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021063144708_O12607_03_T11283_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021066074852_O12649_02_T09183_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021067131356_O12668_03_T09707_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021070061544_O12710_02_T06337_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021071114049_O12729_03_T06861_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021074044254_O12771_02_T10606_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021075100808_O12790_03_T09554_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021079083527_O12851_03_T10977_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021082013734_O12893_02_T10300_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021086000446_O12954_02_T08724_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021087052958_O12973_03_T06402_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021089223154_O13015_02_T10147_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021091035706_O13034_03_T09095_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021093205912_O13076_02_T05725_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021095022431_O13095_03_T07672_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021097192644_O13137_02_T09841_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021099005200_O13156_03_T06096_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021101175411_O13198_02_T11264_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021102231927_O13217_03_T08789_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021105162139_O13259_02_T08265_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021109144903_O13320_02_T06689_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021117114338_O13442_02_T07959_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021125083754_O13564_02_T02114_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021127131636_O13598_03_T00312_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021129070500_O13625_02_T09076_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021131114340_O13659_03_T01735_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021133053202_O13686_02_T07653_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021135101042_O13720_03_T06004_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021137035902_O13747_02_T10499_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021139083739_O13781_03_T07427_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021141022600_O13808_02_T06077_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021143070450_O13842_03_T05851_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021145005319_O13869_02_T08770_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021147053207_O13903_03_T10120_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021148232035_O13930_02_T02925_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021151035923_O13964_03_T07121_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021152214751_O13991_02_T05771_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021155022637_O14025_03_T09814_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021156201503_O14052_02_T10040_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021159005347_O14086_03_T08391_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021160184212_O14113_02_T07041_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021162232055_O14147_03_T03969_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021164170918_O14174_02_T04348_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021166214800_O14208_03_T08238_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021170201502_O14269_03_T03816_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021174184200_O14330_03_T00970_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021178170957_O14391_03_T10778_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021185084021_O14494_02_T09795_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021186140546_O14513_03_T03204_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021189070812_O14555_02_T09642_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021190123336_O14574_03_T05897_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021193053603_O14616_02_T06643_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021194110124_O14635_03_T07167_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021197040346_O14677_02_T08066_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021198092908_O14696_03_T09860_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021201023127_O14738_02_T07760_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021208232634_O14860_02_T06031_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021212215408_O14921_02_T08724_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021214031925_O14940_03_T06402_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021216202138_O14982_02_T08571_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021218014655_O15001_03_T03403_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021220184906_O15043_02_T09994_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021222001422_O15062_03_T08942_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021224171631_O15104_02_T06842_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021225224147_O15123_03_T05943_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021228154356_O15165_02_T11111_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021229210909_O15184_03_T07366_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021232141145_O15226_02_T08112_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021236123950_O15287_02_T09229_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021238171930_O15321_03_T10426_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021240110837_O15348_02_T08923_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021244093714_O15409_02_T08617_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021246141646_O15443_03_T11237_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021248080547_O15470_02_T09734_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021250124514_O15504_03_T08085_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021254111340_O15565_03_T09202_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021257041703_O15607_02_T04103_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021258094252_O15626_03_T10319_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021261024615_O15668_02_T11065_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021262081203_O15687_03_T07014_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021265011526_O15729_02_T09030_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021266064113_O15748_03_T09401_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021268234402_O15790_02_T05878_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021270050921_O15809_03_T07825_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021274033648_O15870_03_T09095_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021276203857_O15912_02_T07148_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021280190611_O15973_02_T01303_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021282003122_O15992_03_T07519_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021284173321_O16034_02_T08418_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021288160123_O16095_02_T09535_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021292142926_O16156_02_T10805_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021296125720_O16217_02_T10652_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021298173627_O16251_03_T08850_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021304095245_O16339_02_T05924_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021306143139_O16373_03_T05698_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021308082008_O16400_02_T10193_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021312064721_O16461_02_T07194_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021314112602_O16495_03_T06968_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021318095430_O16556_03_T09508_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021322082302_O16617_03_T07932_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021325012555_O16659_02_T07102_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021326065130_O16678_03_T00511_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021332222237_O16781_02_T08219_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021334034801_O16800_03_T08590_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021338021554_O16861_03_T11130_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021340191756_O16903_02_T10453_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021344174509_O16964_02_T08877_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021345231021_O16983_03_T06555_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021348161218_O17025_02_T07454_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021349213730_O17044_03_T10824_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021352143926_O17086_02_T10300_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021357183128_O17166_03_T07978_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021360113141_O17208_02_T06184_02_002_02_V002.h5 ...
+Reading GEDI04_A_2021361165558_O17227_03_T08284_02_002_02_V002.h5 ...
+Total good-quality shots across all files: 19162286
+Shots inside field polygon: 495205
+Indexing HLS granules and bands...
+Total HLS granules found: 840
+Indexing Sentinel-1 scenes...
+Total Sentinel-1 scenes indexed: 13
+Error processing shot 0: cannot unpack non-iterable NoneType object
+Error processing shot 1: cannot unpack non-iterable NoneType object
+Error processing shot 2: cannot unpack non-iterable NoneType object
+Error processing shot 3: cannot unpack non-iterable NoneType object
+Error processing shot 4: cannot unpack non-iterable NoneType object
+Error processing shot 5: cannot unpack non-iterable NoneType object
+Error processing shot 6: cannot unpack non-iterable NoneType object
+Error processing shot 7: cannot unpack non-iterable NoneType object
+Error processing shot 8: cannot unpack non-iterable NoneType object
+Error processing shot 9: cannot unpack non-iterable NoneType object
+Error processing shot 10: cannot unpack non-iterable NoneType object
+Error processing shot 11: cannot unpack non-iterable NoneType object
+Error processing shot 12: cannot unpack non-iterable NoneType object
+Error processing shot 13: cannot unpack non-iterable NoneType object
+Error processing shot 14: cannot unpack non-iterable NoneType object
+Error processing shot 15: cannot unpack non-iterable NoneType object
+Error processing shot 16: cannot unpack non-iterable NoneType object
+Error processing shot 17: cannot unpack non-iterable NoneType object
+Error processing shot 18: cannot unpack non-iterable NoneType object
+Error processing shot 19: cannot unpack non-iterable NoneType object
+Error processing shot 20: cannot unpack non-iterable NoneType object
+Error processing shot 21: cannot unpack non-iterable NoneType object
+Error processing shot 22: cannot unpack non-iterable NoneType object
+Error processing shot 23: cannot unpack non-iterable NoneType object
+Error processing shot 24: cannot unpack non-iterable NoneType object
+Error processing shot 25: cannot unpack non-iterable NoneType object
+Error processing shot 26: cannot unpack non-iterable NoneType object
+Error processing shot 27: cannot unpack non-iterable NoneType object
+Error processing shot 28: cannot unpack non-iterable NoneType object
+Error processing shot 29: cannot unpack non-iterable NoneType object
+Error processing shot 30: cannot unpack non-iterable NoneType object
+Error processing shot 31: cannot unpack non-iterable NoneType object
+Error processing shot 32: cannot unpack non-iterable NoneType object
+Error processing shot 33: cannot unpack non-iterable NoneType object
+Error processing shot 34: cannot unpack non-iterable NoneType object
+Error processing shot 35: cannot unpack non-iterable NoneType object
+Error processing shot 36: cannot unpack non-iterable NoneType object
+Error processing shot 37: cannot unpack non-iterable NoneType object
+Error processing shot 38: cannot unpack non-iterable NoneType object
+Error processing shot 39: cannot unpack non-iterable NoneType object
+Error processing shot 40: cannot unpack non-iterable NoneType object
+Error processing shot 41: cannot unpack non-iterable NoneType object
+Error processing shot 42: cannot unpack non-iterable NoneType object
+Error processing shot 43: cannot unpack non-iterable NoneType object
+Error processing shot 44: cannot unpack non-iterable NoneType object
+Error processing shot 45: cannot unpack non-iterable NoneType object
+Error processing shot 46: cannot unpack non-iterable NoneType object
+Error processing shot 47: cannot unpack non-iterable NoneType object
+Error processing shot 48: cannot unpack non-iterable NoneType object
+Error processing shot 49: cannot unpack non-iterable NoneType object
+Error processing shot 50: cannot unpack non-iterable NoneType object
+Error processing shot 51: cannot unpack non-iterable NoneType object
+Error processing shot 52: cannot unpack non-iterable NoneType object
+Error processing shot 53: cannot unpack non-iterable NoneType object
+Error processing shot 54: cannot unpack non-iterable NoneType object
+Error processing shot 55: cannot unpack non-iterable NoneType object
+Error processing shot 56: cannot unpack non-iterable NoneType object
+Error processing shot 57: cannot unpack non-iterable NoneType object
+Error processing shot 58: cannot unpack non-iterable NoneType object
+Error processing shot 59: cannot unpack non-iterable NoneType object
+Error processing shot 60: cannot unpack non-iterable NoneType object
+Error processing shot 61: cannot unpack non-iterable NoneType object
+Error processing shot 62: cannot unpack non-iterable NoneType object
+Error processing shot 63: cannot unpack non-iterable NoneType object
+Error processing shot 64: cannot unpack non-iterable NoneType object
+Error processing shot 65: cannot unpack non-iterable NoneType object
+Error processing shot 66: cannot unpack non-iterable NoneType object
+Error processing shot 67: cannot unpack non-iterable NoneType object
+Error processing shot 68: cannot unpack non-iterable NoneType object
+Error processing shot 69: cannot unpack non-iterable NoneType object
+Error processing shot 70: cannot unpack non-iterable NoneType object
+Error processing shot 71: cannot unpack non-iterable NoneType object
+Error processing shot 72: cannot unpack non-iterable NoneType object
+Error processing shot 73: cannot unpack non-iterable NoneType object
+Error processing shot 74: cannot unpack non-iterable NoneType object
+Error processing shot 75: cannot unpack non-iterable NoneType object
+Error processing shot 76: cannot unpack non-iterable NoneType object
+Error processing shot 77: cannot unpack non-iterable NoneType object
+Error processing shot 78: cannot unpack non-iterable NoneType object
+Error processing shot 79: cannot unpack non-iterable NoneType object
+Error processing shot 80: cannot unpack non-iterable NoneType object
+Error processing shot 81: cannot unpack non-iterable NoneType object
+Error processing shot 82: cannot unpack non-iterable NoneType object
+Error processing shot 83: cannot unpack non-iterable NoneType object
+Error processing shot 84: cannot unpack non-iterable NoneType object
+Error processing shot 85: cannot unpack non-iterable NoneType object
+Error processing shot 86: cannot unpack non-iterable NoneType object
+Error processing shot 87: cannot unpack non-iterable NoneType object
+Error processing shot 88: cannot unpack non-iterable NoneType object
+Error processing shot 89: cannot unpack non-iterable NoneType object
+Error processing shot 90: cannot unpack non-iterable NoneType object
+Error processing shot 91: cannot unpack non-iterable NoneType object
+Error processing shot 92: cannot unpack non-iterable NoneType object
+Error processing shot 93: cannot unpack non-iterable NoneType object
+Error processing shot 94: cannot unpack non-iterable NoneType object
+Error processing shot 95: cannot unpack non-iterable NoneType object
+Error processing shot 96: cannot unpack non-iterable NoneType object
+Error processing shot 97: cannot unpack non-iterable NoneType object
+Error processing shot 98: cannot unpack non-iterable NoneType object
+Error processing shot 99: cannot unpack non-iterable NoneType object
+Error processing shot 100: cannot unpack non-iterable NoneType object
+Error processing shot 101: cannot unpack non-iterable NoneType object
+Error processing shot 102: cannot unpack non-iterable NoneType object
+Error processing shot 103: cannot unpack non-iterable NoneType object
+Error processing shot 104: cannot unpack non-iterable NoneType object
+Error processing shot 105: cannot unpack non-iterable NoneType object
+Error processing shot 106: cannot unpack non-iterable NoneType object
+Error processing shot 107: cannot unpack non-iterable NoneType object
+Error processing shot 108: cannot unpack non-iterable NoneType object
+Error processing shot 109: cannot unpack non-iterable NoneType object
+Error processing shot 110: cannot unpack non-iterable NoneType object
+Error processing shot 111: cannot unpack non-iterable NoneType object
+Error processing shot 112: cannot unpack non-iterable NoneType object
+Error processing shot 113: cannot unpack non-iterable NoneType object
+Error processing shot 114: cannot unpack non-iterable NoneType object
+Error processing shot 115: cannot unpack non-iterable NoneType object
+Error processing shot 116: cannot unpack non-iterable NoneType object
+Error processing shot 117: cannot unpack non-iterable NoneType object
+Error processing shot 118: cannot unpack non-iterable NoneType object
+Error processing shot 119: cannot unpack non-iterable NoneType object
+Error processing shot 120: cannot unpack non-iterable NoneType object
+Error processing shot 121: cannot unpack non-iterable NoneType object
+Error processing shot 122: cannot unpack non-iterable NoneType object
+Error processing shot 123: cannot unpack non-iterable NoneType object
+Error processing shot 124: cannot unpack non-iterable NoneType object
+Error processing shot 125: cannot unpack non-iterable NoneType object
+Error processing shot 126: cannot unpack non-iterable NoneType object
+Error processing shot 127: cannot unpack non-iterable NoneType object
+Error processing shot 128: cannot unpack non-iterable NoneType object
+Error processing shot 129: cannot unpack non-iterable NoneType object
+Error processing shot 130: cannot unpack non-iterable NoneType object
+Error processing shot 131: cannot unpack non-iterable NoneType object
+Error processing shot 132: cannot unpack non-iterable NoneType object
+Error processing shot 133: cannot unpack non-iterable NoneType object
+Error processing shot 134: cannot unpack non-iterable NoneType object
+Error processing shot 135: cannot unpack non-iterable NoneType object
+Error processing shot 136: cannot unpack non-iterable NoneType object
+Error processing shot 137: cannot unpack non-iterable NoneType object
+Error processing shot 138: cannot unpack non-iterable NoneType object
+Error processing shot 139: cannot unpack non-iterable NoneType object
+Error processing shot 140: cannot unpack non-iterable NoneType object
+Error processing shot 141: cannot unpack non-iterable NoneType object
+Error processing shot 142: cannot unpack non-iterable NoneType object
+Error processing shot 143: cannot unpack non-iterable NoneType object
+Error processing shot 144: cannot unpack non-iterable NoneType object
+Error processing shot 145: cannot unpack non-iterable NoneType object
+Error processing shot 146: cannot unpack non-iterable NoneType object
+Error processing shot 147: cannot unpack non-iterable NoneType object
+Error processing shot 148: cannot unpack non-iterable NoneType object
+Error processing shot 149: cannot unpack non-iterable NoneType object
+Error processing shot 150: cannot unpack non-iterable NoneType object
+Error processing shot 151: cannot unpack non-iterable NoneType object
+Error processing shot 152: cannot unpack non-iterable NoneType object
+Error processing shot 153: cannot unpack non-iterable NoneType object
+Error processing shot 154: cannot unpack non-iterable NoneType object
+Error processing shot 155: cannot unpack non-iterable NoneType object
+Error processing shot 156: cannot unpack non-iterable NoneType object
+Error processing shot 157: cannot unpack non-iterable NoneType object
+Error processing shot 158: cannot unpack non-iterable NoneType object
+Error processing shot 159: cannot unpack non-iterable NoneType object
+Error processing shot 160: cannot unpack non-iterable NoneType object
+Error processing shot 161: cannot unpack non-iterable NoneType object
+Error processing shot 162: cannot unpack non-iterable NoneType object
+Error processing shot 163: cannot unpack non-iterable NoneType object
+Error processing shot 164: cannot unpack non-iterable NoneType object
+Error processing shot 165: cannot unpack non-iterable NoneType object
+Error processing shot 166: cannot unpack non-iterable NoneType object
+Error processing shot 167: cannot unpack non-iterable NoneType object
+Error processing shot 168: cannot unpack non-iterable NoneType object
+Error processing shot 169: cannot unpack non-iterable NoneType object
+Error processing shot 170: cannot unpack non-iterable NoneType object
+Error processing shot 171: cannot unpack non-iterable NoneType object
+Error processing shot 172: cannot unpack non-iterable NoneType object
+Error processing shot 173: cannot unpack non-iterable NoneType object
+Error processing shot 174: cannot unpack non-iterable NoneType object
+Error processing shot 175: cannot unpack non-iterable NoneType object
+Error processing shot 176: cannot unpack non-iterable NoneType object
+Error processing shot 177: cannot unpack non-iterable NoneType object
+Error processing shot 178: cannot unpack non-iterable NoneType object
+Error processing shot 179: cannot unpack non-iterable NoneType object
+Error processing shot 180: cannot unpack non-iterable NoneType object
+Error processing shot 181: cannot unpack non-iterable NoneType object
+Error processing shot 182: cannot unpack non-iterable NoneType object
+Error processing shot 183: cannot unpack non-iterable NoneType object
+Error processing shot 184: cannot unpack non-iterable NoneType object
+Error processing shot 185: cannot unpack non-iterable NoneType object
+Error processing shot 186: cannot unpack non-iterable NoneType object
+Error processing shot 187: cannot unpack non-iterable NoneType object
+Error processing shot 188: cannot unpack non-iterable NoneType object
+Error processing shot 189: cannot unpack non-iterable NoneType object
+Error processing shot 190: cannot unpack non-iterable NoneType object
+Error processing shot 191: cannot unpack non-iterable NoneType object
+Error processing shot 192: cannot unpack non-iterable NoneType object
+Error processing shot 193: cannot unpack non-iterable NoneType object
+Error processing shot 194: cannot unpack non-iterable NoneType object
+Error processing shot 195: cannot unpack non-iterable NoneType object
+Error processing shot 196: cannot unpack non-iterable NoneType object
+Error processing shot 197: cannot unpack non-iterable NoneType object
+Error processing shot 198: cannot unpack non-iterable NoneType object
+Error processing shot 199: cannot unpack non-iterable NoneType object
+Error processing shot 200: cannot unpack non-iterable NoneType object
+Error processing shot 201: cannot unpack non-iterable NoneType object
+Error processing shot 202: cannot unpack non-iterable NoneType object
+Error processing shot 203: cannot unpack non-iterable NoneType object
+Error processing shot 204: cannot unpack non-iterable NoneType object
+Error processing shot 205: cannot unpack non-iterable NoneType object
+Error processing shot 206: cannot unpack non-iterable NoneType object
+Error processing shot 207: cannot unpack non-iterable NoneType object
+Error processing shot 208: cannot unpack non-iterable NoneType object
+Error processing shot 209: cannot unpack non-iterable NoneType object
+Error processing shot 210: cannot unpack non-iterable NoneType object
+Error processing shot 211: cannot unpack non-iterable NoneType object
+Error processing shot 212: cannot unpack non-iterable NoneType object
+Error processing shot 213: cannot unpack non-iterable NoneType object
+Error processing shot 214: cannot unpack non-iterable NoneType object
+Error processing shot 215: cannot unpack non-iterable NoneType object
+Error processing shot 216: cannot unpack non-iterable NoneType object
+Error processing shot 217: cannot unpack non-iterable NoneType object
+Error processing shot 218: cannot unpack non-iterable NoneType object
+Error processing shot 219: cannot unpack non-iterable NoneType object
+Error processing shot 220: cannot unpack non-iterable NoneType object
+Error processing shot 221: cannot unpack non-iterable NoneType object
+Error processing shot 222: cannot unpack non-iterable NoneType object
+Error processing shot 223: cannot unpack non-iterable NoneType object
+Error processing shot 224: cannot unpack non-iterable NoneType object
+Error processing shot 225: cannot unpack non-iterable NoneType object
+Error processing shot 226: cannot unpack non-iterable NoneType object
+Error processing shot 227: cannot unpack non-iterable NoneType object
+Error processing shot 228: cannot unpack non-iterable NoneType object
+Error processing shot 229: cannot unpack non-iterable NoneType object
+Error processing shot 230: cannot unpack non-iterable NoneType object
+Error processing shot 231: cannot unpack non-iterable NoneType object
+Error processing shot 232: cannot unpack non-iterable NoneType object
+Error processing shot 233: cannot unpack non-iterable NoneType object
+Error processing shot 234: cannot unpack non-iterable NoneType object
+Error processing shot 235: cannot unpack non-iterable NoneType object
+Error processing shot 236: cannot unpack non-iterable NoneType object
+Error processing shot 237: cannot unpack non-iterable NoneType object
+Error processing shot 238: cannot unpack non-iterable NoneType object
+Error processing shot 239: cannot unpack non-iterable NoneType object
+Error processing shot 240: cannot unpack non-iterable NoneType object
+Error processing shot 241: cannot unpack non-iterable NoneType object
+Error processing shot 242: cannot unpack non-iterable NoneType object
+Error processing shot 243: cannot unpack non-iterable NoneType object
+Error processing shot 244: cannot unpack non-iterable NoneType object
+Error processing shot 245: cannot unpack non-iterable NoneType object
+Error processing shot 246: cannot unpack non-iterable NoneType object
+Error processing shot 247: cannot unpack non-iterable NoneType object
+Error processing shot 248: cannot unpack non-iterable NoneType object
+Error processing shot 249: cannot unpack non-iterable NoneType object
+Error processing shot 250: cannot unpack non-iterable NoneType object
+Error processing shot 251: cannot unpack non-iterable NoneType object
+Error processing shot 252: cannot unpack non-iterable NoneType object
+Error processing shot 253: cannot unpack non-iterable NoneType object
+Error processing shot 254: cannot unpack non-iterable NoneType object
+Error processing shot 255: cannot unpack non-iterable NoneType object
+Error processing shot 256: cannot unpack non-iterable NoneType object
+Error processing shot 257: cannot unpack non-iterable NoneType object
+Error processing shot 258: cannot unpack non-iterable NoneType object
+Error processing shot 259: cannot unpack non-iterable NoneType object
+Error processing shot 260: cannot unpack non-iterable NoneType object
+Error processing shot 261: cannot unpack non-iterable NoneType object
+Error processing shot 262: cannot unpack non-iterable NoneType object
+Error processing shot 263: cannot unpack non-iterable NoneType object
+Error processing shot 264: cannot unpack non-iterable NoneType object
+Error processing shot 265: cannot unpack non-iterable NoneType object
+Error processing shot 266: cannot unpack non-iterable NoneType object
+Error processing shot 267: cannot unpack non-iterable NoneType object
+Error processing shot 268: cannot unpack non-iterable NoneType object
+Error processing shot 269: cannot unpack non-iterable NoneType object
+Error processing shot 270: cannot unpack non-iterable NoneType object
+Error processing shot 271: cannot unpack non-iterable NoneType object
+Error processing shot 272: cannot unpack non-iterable NoneType object
+Error processing shot 273: cannot unpack non-iterable NoneType object
+Error processing shot 274: cannot unpack non-iterable NoneType object
+Error processing shot 275: cannot unpack non-iterable NoneType object
+Error processing shot 276: cannot unpack non-iterable NoneType object
+Error processing shot 277: cannot unpack non-iterable NoneType object
+Error processing shot 278: cannot unpack non-iterable NoneType object
+Error processing shot 279: cannot unpack non-iterable NoneType object
+Error processing shot 280: cannot unpack non-iterable NoneType object
+Error processing shot 281: cannot unpack non-iterable NoneType object
+Error processing shot 282: cannot unpack non-iterable NoneType object
+Error processing shot 283: cannot unpack non-iterable NoneType object
+Error processing shot 284: cannot unpack non-iterable NoneType object
+Error processing shot 285: cannot unpack non-iterable NoneType object
+Error processing shot 286: cannot unpack non-iterable NoneType object
+Error processing shot 287: cannot unpack non-iterable NoneType object
+Error processing shot 288: cannot unpack non-iterable NoneType object
+Error processing shot 289: cannot unpack non-iterable NoneType object
+Error processing shot 290: cannot unpack non-iterable NoneType object
+Error processing shot 291: cannot unpack non-iterable NoneType object
+Error processing shot 292: cannot unpack non-iterable NoneType object
+Error processing shot 293: cannot unpack non-iterable NoneType object
+Error processing shot 294: cannot unpack non-iterable NoneType object
+Error processing shot 295: cannot unpack non-iterable NoneType object
+Error processing shot 296: cannot unpack non-iterable NoneType object
+Error processing shot 297: cannot unpack non-iterable NoneType object
+Error processing shot 298: cannot unpack non-iterable NoneType object
+Error processing shot 299: cannot unpack non-iterable NoneType object
+Error processing shot 300: cannot unpack non-iterable NoneType object
+Error processing shot 301: cannot unpack non-iterable NoneType object
+Error processing shot 302: cannot unpack non-iterable NoneType object
+Error processing shot 303: cannot unpack non-iterable NoneType object
+Error processing shot 304: cannot unpack non-iterable NoneType object
+Error processing shot 305: cannot unpack non-iterable NoneType object
+Error processing shot 306: cannot unpack non-iterable NoneType object
+Error processing shot 307: cannot unpack non-iterable NoneType object
+Error processing shot 308: cannot unpack non-iterable NoneType object
+Error processing shot 309: cannot unpack non-iterable NoneType object
+Error processing shot 310: cannot unpack non-iterable NoneType object
+Error processing shot 311: cannot unpack non-iterable NoneType object
+Error processing shot 312: cannot unpack non-iterable NoneType object
+Error processing shot 313: cannot unpack non-iterable NoneType object
+Error processing shot 314: cannot unpack non-iterable NoneType object
+Error processing shot 315: cannot unpack non-iterable NoneType object
+Error processing shot 316: cannot unpack non-iterable NoneType object
+Error processing shot 317: cannot unpack non-iterable NoneType object
+Error processing shot 318: cannot unpack non-iterable NoneType object
+Error processing shot 319: cannot unpack non-iterable NoneType object
+Error processing shot 320: cannot unpack non-iterable NoneType object
+Error processing shot 321: cannot unpack non-iterable NoneType object
+Error processing shot 322: cannot unpack non-iterable NoneType object
+Error processing shot 323: cannot unpack non-iterable NoneType object
+Error processing shot 324: cannot unpack non-iterable NoneType object
+Error processing shot 325: cannot unpack non-iterable NoneType object
+Error processing shot 326: cannot unpack non-iterable NoneType object
+Error processing shot 327: cannot unpack non-iterable NoneType object
+Error processing shot 328: cannot unpack non-iterable NoneType object
+Error processing shot 329: cannot unpack non-iterable NoneType object
+Error processing shot 330: cannot unpack non-iterable NoneType object
+Error processing shot 331: cannot unpack non-iterable NoneType object
+Error processing shot 332: cannot unpack non-iterable NoneType object
+Error processing shot 333: cannot unpack non-iterable NoneType object
+Error processing shot 334: cannot unpack non-iterable NoneType object
+Error processing shot 335: cannot unpack non-iterable NoneType object
+Error processing shot 336: cannot unpack non-iterable NoneType object
+Error processing shot 337: cannot unpack non-iterable NoneType object
+Error processing shot 338: cannot unpack non-iterable NoneType object
+Error processing shot 339: cannot unpack non-iterable NoneType object
+Error processing shot 340: cannot unpack non-iterable NoneType object
+Error processing shot 341: cannot unpack non-iterable NoneType object
+Error processing shot 342: cannot unpack non-iterable NoneType object
+Error processing shot 343: cannot unpack non-iterable NoneType object
+Error processing shot 344: cannot unpack non-iterable NoneType object
+Error processing shot 345: cannot unpack non-iterable NoneType object
+Error processing shot 346: cannot unpack non-iterable NoneType object
+Error processing shot 347: cannot unpack non-iterable NoneType object
+Error processing shot 348: cannot unpack non-iterable NoneType object
+Error processing shot 349: cannot unpack non-iterable NoneType object
+Error processing shot 350: cannot unpack non-iterable NoneType object
+Error processing shot 351: cannot unpack non-iterable NoneType object
+Error processing shot 352: cannot unpack non-iterable NoneType object
+Error processing shot 353: cannot unpack non-iterable NoneType object
+Error processing shot 354: cannot unpack non-iterable NoneType object
+Error processing shot 355: cannot unpack non-iterable NoneType object
+Error processing shot 356: cannot unpack non-iterable NoneType object
+Error processing shot 357: cannot unpack non-iterable NoneType object
+Error processing shot 358: cannot unpack non-iterable NoneType object
+Error processing shot 359: cannot unpack non-iterable NoneType object
+Error processing shot 360: cannot unpack non-iterable NoneType object
+Error processing shot 361: cannot unpack non-iterable NoneType object
+Error processing shot 362: cannot unpack non-iterable NoneType object
+Error processing shot 363: cannot unpack non-iterable NoneType object
+Error processing shot 364: cannot unpack non-iterable NoneType object
+Error processing shot 365: cannot unpack non-iterable NoneType object
+Error processing shot 366: cannot unpack non-iterable NoneType object
+Error processing shot 367: cannot unpack non-iterable NoneType object
+Error processing shot 368: cannot unpack non-iterable NoneType object
+Error processing shot 369: cannot unpack non-iterable NoneType object
+Error processing shot 370: cannot unpack non-iterable NoneType object
+Error processing shot 371: cannot unpack non-iterable NoneType object
+Error processing shot 372: cannot unpack non-iterable NoneType object
+Error processing shot 373: cannot unpack non-iterable NoneType object
+Error processing shot 374: cannot unpack non-iterable NoneType object
+Error processing shot 375: cannot unpack non-iterable NoneType object
+Error processing shot 376: cannot unpack non-iterable NoneType object
+Error processing shot 377: cannot unpack non-iterable NoneType object
+Error processing shot 378: cannot unpack non-iterable NoneType object
+Error processing shot 379: cannot unpack non-iterable NoneType object
+Error processing shot 380: cannot unpack non-iterable NoneType object
+Error processing shot 381: cannot unpack non-iterable NoneType object
+Error processing shot 382: cannot unpack non-iterable NoneType object
+Error processing shot 383: cannot unpack non-iterable NoneType object
+Error processing shot 384: cannot unpack non-iterable NoneType object
+Error processing shot 385: cannot unpack non-iterable NoneType object
+Error processing shot 386: cannot unpack non-iterable NoneType object
+Error processing shot 387: cannot unpack non-iterable NoneType object
+Error processing shot 388: cannot unpack non-iterable NoneType object
+Error processing shot 389: cannot unpack non-iterable NoneType object
+Error processing shot 390: cannot unpack non-iterable NoneType object
+Error processing shot 391: cannot unpack non-iterable NoneType object
+Error processing shot 392: cannot unpack non-iterable NoneType object
+Error processing shot 393: cannot unpack non-iterable NoneType object
+Error processing shot 394: cannot unpack non-iterable NoneType object
+Error processing shot 395: cannot unpack non-iterable NoneType object
+Error processing shot 396: cannot unpack non-iterable NoneType object
+Error processing shot 397: cannot unpack non-iterable NoneType object
+Error processing shot 398: cannot unpack non-iterable NoneType object
+Error processing shot 399: cannot unpack non-iterable NoneType object
+Error processing shot 400: cannot unpack non-iterable NoneType object
+Error processing shot 401: cannot unpack non-iterable NoneType object
+Error processing shot 402: cannot unpack non-iterable NoneType object
+Error processing shot 403: cannot unpack non-iterable NoneType object
+Error processing shot 404: cannot unpack non-iterable NoneType object
+Error processing shot 405: cannot unpack non-iterable NoneType object
+Error processing shot 406: cannot unpack non-iterable NoneType object
+Error processing shot 407: cannot unpack non-iterable NoneType object
+Error processing shot 408: cannot unpack non-iterable NoneType object
+Error processing shot 409: cannot unpack non-iterable NoneType object
+Error processing shot 410: cannot unpack non-iterable NoneType object
+Error processing shot 411: cannot unpack non-iterable NoneType object
+Error processing shot 412: cannot unpack non-iterable NoneType object
+Error processing shot 413: cannot unpack non-iterable NoneType object
+Error processing shot 414: cannot unpack non-iterable NoneType object
+Error processing shot 415: cannot unpack non-iterable NoneType object
+Error processing shot 416: cannot unpack non-iterable NoneType object
+Error processing shot 417: cannot unpack non-iterable NoneType object
+Error processing shot 418: cannot unpack non-iterable NoneType object
+Error processing shot 419: cannot unpack non-iterable NoneType object
+Error processing shot 420: cannot unpack non-iterable NoneType object
+Error processing shot 421: cannot unpack non-iterable NoneType object
+Error processing shot 422: cannot unpack non-iterable NoneType object
+Error processing shot 423: cannot unpack non-iterable NoneType object
+Error processing shot 424: cannot unpack non-iterable NoneType object
+Error processing shot 425: cannot unpack non-iterable NoneType object
+Error processing shot 426: cannot unpack non-iterable NoneType object
+Error processing shot 427: cannot unpack non-iterable NoneType object
+Error processing shot 428: cannot unpack non-iterable NoneType object
+Error processing shot 429: cannot unpack non-iterable NoneType object
+Error processing shot 430: cannot unpack non-iterable NoneType object
+Error processing shot 431: cannot unpack non-iterable NoneType object
+Error processing shot 432: cannot unpack non-iterable NoneType object
+Error processing shot 433: cannot unpack non-iterable NoneType object
+Error processing shot 434: cannot unpack non-iterable NoneType object
+Error processing shot 435: cannot unpack non-iterable NoneType object
+Error processing shot 436: cannot unpack non-iterable NoneType object
+Error processing shot 437: cannot unpack non-iterable NoneType object
+Error processing shot 438: cannot unpack non-iterable NoneType object
+Error processing shot 439: cannot unpack non-iterable NoneType object
+Error processing shot 440: cannot unpack non-iterable NoneType object
+Error processing shot 441: cannot unpack non-iterable NoneType object
+Error processing shot 442: cannot unpack non-iterable NoneType object
+Error processing shot 443: cannot unpack non-iterable NoneType object
+Error processing shot 444: cannot unpack non-iterable NoneType object
+Error processing shot 445: cannot unpack non-iterable NoneType object
+Error processing shot 446: cannot unpack non-iterable NoneType object
+Error processing shot 447: cannot unpack non-iterable NoneType object
+Error processing shot 448: cannot unpack non-iterable NoneType object
+Error processing shot 449: cannot unpack non-iterable NoneType object
+Error processing shot 450: cannot unpack non-iterable NoneType object
+Error processing shot 451: cannot unpack non-iterable NoneType object
+Error processing shot 452: cannot unpack non-iterable NoneType object
+Error processing shot 453: cannot unpack non-iterable NoneType object
+Error processing shot 454: cannot unpack non-iterable NoneType object
+Error processing shot 455: cannot unpack non-iterable NoneType object
+Error processing shot 456: cannot unpack non-iterable NoneType object
+Error processing shot 457: cannot unpack non-iterable NoneType object
+Error processing shot 458: cannot unpack non-iterable NoneType object
+Error processing shot 459: cannot unpack non-iterable NoneType object
+Error processing shot 460: cannot unpack non-iterable NoneType object
+Error processing shot 461: cannot unpack non-iterable NoneType object
+Error processing shot 462: cannot unpack non-iterable NoneType object
+Error processing shot 463: cannot unpack non-iterable NoneType object
+Error processing shot 464: cannot unpack non-iterable NoneType object
+Error processing shot 465: cannot unpack non-iterable NoneType object
+Error processing shot 466: cannot unpack non-iterable NoneType object
+Error processing shot 467: cannot unpack non-iterable NoneType object
+Error processing shot 468: cannot unpack non-iterable NoneType object
+Error processing shot 469: cannot unpack non-iterable NoneType object
+Error processing shot 470: cannot unpack non-iterable NoneType object
+Error processing shot 471: cannot unpack non-iterable NoneType object
+Error processing shot 472: cannot unpack non-iterable NoneType object
+Error processing shot 473: cannot unpack non-iterable NoneType object
+Error processing shot 474: cannot unpack non-iterable NoneType object
+Error processing shot 475: cannot unpack non-iterable NoneType object
+Error processing shot 476: cannot unpack non-iterable NoneType object
+Error processing shot 477: cannot unpack non-iterable NoneType object
+Error processing shot 478: cannot unpack non-iterable NoneType object
+Error processing shot 479: cannot unpack non-iterable NoneType object
+Error processing shot 480: cannot unpack non-iterable NoneType object
+Error processing shot 481: cannot unpack non-iterable NoneType object
+Error processing shot 482: cannot unpack non-iterable NoneType object
+Error processing shot 483: cannot unpack non-iterable NoneType object
+Error processing shot 484: cannot unpack non-iterable NoneType object
+Error processing shot 485: cannot unpack non-iterable NoneType object
+Error processing shot 486: cannot unpack non-iterable NoneType object
+Error processing shot 487: cannot unpack non-iterable NoneType object
+Error processing shot 488: cannot unpack non-iterable NoneType object
+Error processing shot 489: cannot unpack non-iterable NoneType object
+Error processing shot 490: cannot unpack non-iterable NoneType object
+Error processing shot 491: cannot unpack non-iterable NoneType object
+Error processing shot 492: cannot unpack non-iterable NoneType object
+Error processing shot 493: cannot unpack non-iterable NoneType object
+Error processing shot 494: cannot unpack non-iterable NoneType object
+Error processing shot 495: cannot unpack non-iterable NoneType object
+Error processing shot 496: cannot unpack non-iterable NoneType object
+Error processing shot 497: cannot unpack non-iterable NoneType object
+Error processing shot 498: cannot unpack non-iterable NoneType object
+Error processing shot 499: cannot unpack non-iterable NoneType object
+Error processing shot 500: cannot unpack non-iterable NoneType object
+Error processing shot 501: cannot unpack non-iterable NoneType object
+Error processing shot 502: cannot unpack non-iterable NoneType object
+Error processing shot 503: cannot unpack non-iterable NoneType object
+Error processing shot 504: cannot unpack non-iterable NoneType object
+Error processing shot 505: cannot unpack non-iterable NoneType object
+Error processing shot 506: cannot unpack non-iterable NoneType object
+Error processing shot 507: cannot unpack non-iterable NoneType object
+Error processing shot 508: cannot unpack non-iterable NoneType object
+Error processing shot 509: cannot unpack non-iterable NoneType object
+Error processing shot 510: cannot unpack non-iterable NoneType object
+Error processing shot 511: cannot unpack non-iterable NoneType object
+Error processing shot 512: cannot unpack non-iterable NoneType object
+Error processing shot 513: cannot unpack non-iterable NoneType object
+Error processing shot 514: cannot unpack non-iterable NoneType object
+Error processing shot 515: cannot unpack non-iterable NoneType object
+Error processing shot 516: cannot unpack non-iterable NoneType object
+Error processing shot 517: cannot unpack non-iterable NoneType object
+Error processing shot 518: cannot unpack non-iterable NoneType object
+Error processing shot 519: cannot unpack non-iterable NoneType object
+Error processing shot 520: cannot unpack non-iterable NoneType object
+Error processing shot 521: cannot unpack non-iterable NoneType object
+Error processing shot 522: cannot unpack non-iterable NoneType object
+Error processing shot 523: cannot unpack non-iterable NoneType object
+Error processing shot 524: cannot unpack non-iterable NoneType object
+Error processing shot 525: cannot unpack non-iterable NoneType object
+Error processing shot 526: cannot unpack non-iterable NoneType object
+Error processing shot 527: cannot unpack non-iterable NoneType object
+Error processing shot 528: cannot unpack non-iterable NoneType object
+Error processing shot 529: cannot unpack non-iterable NoneType object
+Error processing shot 530: cannot unpack non-iterable NoneType object
+Error processing shot 531: cannot unpack non-iterable NoneType object
+Error processing shot 532: cannot unpack non-iterable NoneType object
+Error processing shot 533: cannot unpack non-iterable NoneType object
+Error processing shot 534: cannot unpack non-iterable NoneType object
+Error processing shot 535: cannot unpack non-iterable NoneType object
+Error processing shot 536: cannot unpack non-iterable NoneType object
+Error processing shot 537: cannot unpack non-iterable NoneType object
+Error processing shot 538: cannot unpack non-iterable NoneType object
+Error processing shot 539: cannot unpack non-iterable NoneType object
+Error processing shot 540: cannot unpack non-iterable NoneType object
+Error processing shot 541: cannot unpack non-iterable NoneType object
+Error processing shot 542: cannot unpack non-iterable NoneType object
+Error processing shot 543: cannot unpack non-iterable NoneType object
+Error processing shot 544: cannot unpack non-iterable NoneType object
+Error processing shot 545: cannot unpack non-iterable NoneType object
+Error processing shot 546: cannot unpack non-iterable NoneType object
+Error processing shot 547: cannot unpack non-iterable NoneType object
+Error processing shot 548: cannot unpack non-iterable NoneType object
+Error processing shot 549: cannot unpack non-iterable NoneType object
+Error processing shot 550: cannot unpack non-iterable NoneType object
+Error processing shot 551: cannot unpack non-iterable NoneType object
+Error processing shot 552: cannot unpack non-iterable NoneType object
+Error processing shot 553: cannot unpack non-iterable NoneType object
+Error processing shot 554: cannot unpack non-iterable NoneType object
+Error processing shot 555: cannot unpack non-iterable NoneType object
+Error processing shot 556: cannot unpack non-iterable NoneType object
+Error processing shot 557: cannot unpack non-iterable NoneType object
+Error processing shot 558: cannot unpack non-iterable NoneType object
+Error processing shot 559: cannot unpack non-iterable NoneType object
+Error processing shot 560: cannot unpack non-iterable NoneType object
+Error processing shot 561: cannot unpack non-iterable NoneType object
+Error processing shot 562: cannot unpack non-iterable NoneType object
+Error processing shot 563: cannot unpack non-iterable NoneType object
+Error processing shot 564: cannot unpack non-iterable NoneType object
+Error processing shot 565: cannot unpack non-iterable NoneType object
+Error processing shot 566: cannot unpack non-iterable NoneType object
+Error processing shot 567: cannot unpack non-iterable NoneType object
+Error processing shot 568: cannot unpack non-iterable NoneType object
+Error processing shot 569: cannot unpack non-iterable NoneType object
+Error processing shot 570: cannot unpack non-iterable NoneType object
+Error processing shot 571: cannot unpack non-iterable NoneType object
+Error processing shot 572: cannot unpack non-iterable NoneType object
+Error processing shot 573: cannot unpack non-iterable NoneType object
+Error processing shot 574: cannot unpack non-iterable NoneType object
+Error processing shot 575: cannot unpack non-iterable NoneType object
+Error processing shot 576: cannot unpack non-iterable NoneType object
+Error processing shot 577: cannot unpack non-iterable NoneType object
+Error processing shot 578: cannot unpack non-iterable NoneType object
+Error processing shot 579: cannot unpack non-iterable NoneType object
+Error processing shot 580: cannot unpack non-iterable NoneType object
+Error processing shot 581: cannot unpack non-iterable NoneType object
+Error processing shot 582: cannot unpack non-iterable NoneType object
+Error processing shot 583: cannot unpack non-iterable NoneType object
+Error processing shot 584: cannot unpack non-iterable NoneType object
+Error processing shot 585: cannot unpack non-iterable NoneType object
+Error processing shot 586: cannot unpack non-iterable NoneType object
+Error processing shot 587: cannot unpack non-iterable NoneType object
+Error processing shot 588: cannot unpack non-iterable NoneType object
+Error processing shot 589: cannot unpack non-iterable NoneType object
+Error processing shot 590: cannot unpack non-iterable NoneType object
+Error processing shot 591: cannot unpack non-iterable NoneType object
+Error processing shot 592: cannot unpack non-iterable NoneType object
+Error processing shot 593: cannot unpack non-iterable NoneType object
+Error processing shot 594: cannot unpack non-iterable NoneType object
+Error processing shot 595: cannot unpack non-iterable NoneType object
+Error processing shot 596: cannot unpack non-iterable NoneType object
+Error processing shot 597: cannot unpack non-iterable NoneType object
+Error processing shot 598: cannot unpack non-iterable NoneType object
+Error processing shot 599: cannot unpack non-iterable NoneType object
+Error processing shot 600: cannot unpack non-iterable NoneType object
+Error processing shot 601: cannot unpack non-iterable NoneType object
+Error processing shot 602: cannot unpack non-iterable NoneType object
+Error processing shot 603: cannot unpack non-iterable NoneType object
+Error processing shot 604: cannot unpack non-iterable NoneType object
+Error processing shot 605: cannot unpack non-iterable NoneType object
+Error processing shot 606: cannot unpack non-iterable NoneType object
+Error processing shot 607: cannot unpack non-iterable NoneType object
+Error processing shot 608: cannot unpack non-iterable NoneType object
+Error processing shot 609: cannot unpack non-iterable NoneType object
+Error processing shot 610: cannot unpack non-iterable NoneType object
+Error processing shot 611: cannot unpack non-iterable NoneType object
+Error processing shot 612: cannot unpack non-iterable NoneType object
+Error processing shot 613: cannot unpack non-iterable NoneType object
+Error processing shot 614: cannot unpack non-iterable NoneType object
+Error processing shot 615: cannot unpack non-iterable NoneType object
+Error processing shot 616: cannot unpack non-iterable NoneType object
+Error processing shot 617: cannot unpack non-iterable NoneType object
+Error processing shot 618: cannot unpack non-iterable NoneType object
+Error processing shot 619: cannot unpack non-iterable NoneType object
+Error processing shot 620: cannot unpack non-iterable NoneType object
+Error processing shot 621: cannot unpack non-iterable NoneType object
+Error processing shot 622: cannot unpack non-iterable NoneType object
+Error processing shot 623: cannot unpack non-iterable NoneType object
+Error processing shot 624: cannot unpack non-iterable NoneType object
+Error processing shot 625: cannot unpack non-iterable NoneType object
+Error processing shot 626: cannot unpack non-iterable NoneType object
+Error processing shot 627: cannot unpack non-iterable NoneType object
+Error processing shot 628: cannot unpack non-iterable NoneType object
+Error processing shot 629: cannot unpack non-iterable NoneType object
+Error processing shot 630: cannot unpack non-iterable NoneType object
+Error processing shot 631: cannot unpack non-iterable NoneType object
+Error processing shot 632: cannot unpack non-iterable NoneType object
+Error processing shot 633: cannot unpack non-iterable NoneType object
+Error processing shot 634: cannot unpack non-iterable NoneType object
+Error processing shot 635: cannot unpack non-iterable NoneType object
+Error processing shot 636: cannot unpack non-iterable NoneType object
+Error processing shot 637: cannot unpack non-iterable NoneType object
+Error processing shot 638: cannot unpack non-iterable NoneType object
+Error processing shot 639: cannot unpack non-iterable NoneType object
+Error processing shot 640: cannot unpack non-iterable NoneType object
+Error processing shot 641: cannot unpack non-iterable NoneType object
+Error processing shot 642: cannot unpack non-iterable NoneType object
+Error processing shot 643: cannot unpack non-iterable NoneType object
+Error processing shot 644: cannot unpack non-iterable NoneType object
+Error processing shot 645: cannot unpack non-iterable NoneType object
+Error processing shot 646: cannot unpack non-iterable NoneType object
+Error processing shot 647: cannot unpack non-iterable NoneType object
+Error processing shot 648: cannot unpack non-iterable NoneType object
+Error processing shot 649: cannot unpack non-iterable NoneType object
+Error processing shot 650: cannot unpack non-iterable NoneType object
+Error processing shot 651: cannot unpack non-iterable NoneType object
+Error processing shot 652: cannot unpack non-iterable NoneType object
+Error processing shot 653: cannot unpack non-iterable NoneType object
+Error processing shot 654: cannot unpack non-iterable NoneType object
+Error processing shot 655: cannot unpack non-iterable NoneType object
+Error processing shot 656: cannot unpack non-iterable NoneType object
+Error processing shot 657: cannot unpack non-iterable NoneType object
+Error processing shot 658: cannot unpack non-iterable NoneType object
+Error processing shot 659: cannot unpack non-iterable NoneType object
+Error processing shot 660: cannot unpack non-iterable NoneType object
+Error processing shot 661: cannot unpack non-iterable NoneType object
+Error processing shot 662: cannot unpack non-iterable NoneType object
+Error processing shot 663: cannot unpack non-iterable NoneType object
+Error processing shot 664: cannot unpack non-iterable NoneType object
+Error processing shot 665: cannot unpack non-iterable NoneType object
+Error processing shot 666: cannot unpack non-iterable NoneType object
+Error processing shot 667: cannot unpack non-iterable NoneType object
+Error processing shot 668: cannot unpack non-iterable NoneType object
+Error processing shot 669: cannot unpack non-iterable NoneType object
+Error processing shot 670: cannot unpack non-iterable NoneType object
+Error processing shot 671: cannot unpack non-iterable NoneType object
+Error processing shot 672: cannot unpack non-iterable NoneType object
+Error processing shot 673: cannot unpack non-iterable NoneType object
+Error processing shot 674: cannot unpack non-iterable NoneType object
+Error processing shot 675: cannot unpack non-iterable NoneType object
+Error processing shot 676: cannot unpack non-iterable NoneType object
+Error processing shot 677: cannot unpack non-iterable NoneType object
+Error processing shot 678: cannot unpack non-iterable NoneType object
+Error processing shot 679: cannot unpack non-iterable NoneType object
+Error processing shot 680: cannot unpack non-iterable NoneType object
+Error processing shot 681: cannot unpack non-iterable NoneType object
+Error processing shot 682: cannot unpack non-iterable NoneType object
+Error processing shot 683: cannot unpack non-iterable NoneType object
+Error processing shot 684: cannot unpack non-iterable NoneType object
+Error processing shot 685: cannot unpack non-iterable NoneType object
+Error processing shot 686: cannot unpack non-iterable NoneType object
+Error processing shot 687: cannot unpack non-iterable NoneType object
+Error processing shot 688: cannot unpack non-iterable NoneType object
+Error processing shot 689: cannot unpack non-iterable NoneType object
+Error processing shot 690: cannot unpack non-iterable NoneType object
+Error processing shot 691: cannot unpack non-iterable NoneType object
+Error processing shot 692: cannot unpack non-iterable NoneType object
+Error processing shot 693: cannot unpack non-iterable NoneType object
+Error processing shot 694: cannot unpack non-iterable NoneType object
+Error processing shot 695: cannot unpack non-iterable NoneType object
+Error processing shot 696: cannot unpack non-iterable NoneType object
+Error processing shot 697: cannot unpack non-iterable NoneType object
+Error processing shot 698: cannot unpack non-iterable NoneType object
+Error processing shot 699: cannot unpack non-iterable NoneType object
+Error processing shot 700: cannot unpack non-iterable NoneType object
+Error processing shot 701: cannot unpack non-iterable NoneType object
+Error processing shot 702: cannot unpack non-iterable NoneType object
+Error processing shot 703: cannot unpack non-iterable NoneType object
+Error processing shot 704: cannot unpack non-iterable NoneType object
+Error processing shot 705: cannot unpack non-iterable NoneType object
+Error processing shot 706: cannot unpack non-iterable NoneType object
+Error processing shot 707: cannot unpack non-iterable NoneType object
+Error processing shot 708: cannot unpack non-iterable NoneType object
+Error processing shot 709: cannot unpack non-iterable NoneType object
+Error processing shot 710: cannot unpack non-iterable NoneType object
+Error processing shot 711: cannot unpack non-iterable NoneType object
+Error processing shot 712: cannot unpack non-iterable NoneType object
+Error processing shot 713: cannot unpack non-iterable NoneType object
+Error processing shot 714: cannot unpack non-iterable NoneType object
+Error processing shot 715: cannot unpack non-iterable NoneType object
+Error processing shot 716: cannot unpack non-iterable NoneType object
+Error processing shot 717: cannot unpack non-iterable NoneType object
+Error processing shot 718: cannot unpack non-iterable NoneType object
+Error processing shot 719: cannot unpack non-iterable NoneType object
+Error processing shot 720: cannot unpack non-iterable NoneType object
+Error processing shot 721: cannot unpack non-iterable NoneType object
+Error processing shot 722: cannot unpack non-iterable NoneType object
+Error processing shot 723: cannot unpack non-iterable NoneType object
+Error processing shot 724: cannot unpack non-iterable NoneType object
+Error processing shot 725: cannot unpack non-iterable NoneType object
+Error processing shot 726: cannot unpack non-iterable NoneType object
+Error processing shot 727: cannot unpack non-iterable NoneType object
+Error processing shot 728: cannot unpack non-iterable NoneType object
+Error processing shot 729: cannot unpack non-iterable NoneType object
+Error processing shot 730: cannot unpack non-iterable NoneType object
+Error processing shot 731: cannot unpack non-iterable NoneType object
+Error processing shot 732: cannot unpack non-iterable NoneType object
+Error processing shot 733: cannot unpack non-iterable NoneType object
+Error processing shot 734: cannot unpack non-iterable NoneType object
+Error processing shot 735: cannot unpack non-iterable NoneType object
+Error processing shot 736: cannot unpack non-iterable NoneType object
+Error processing shot 737: cannot unpack non-iterable NoneType object
+Error processing shot 738: cannot unpack non-iterable NoneType object
+Error processing shot 739: cannot unpack non-iterable NoneType object
+Error processing shot 740: cannot unpack non-iterable NoneType object
+Error processing shot 741: cannot unpack non-iterable NoneType object
+Error processing shot 742: cannot unpack non-iterable NoneType object
+Error processing shot 743: cannot unpack non-iterable NoneType object
+Error processing shot 744: cannot unpack non-iterable NoneType object
+Error processing shot 745: cannot unpack non-iterable NoneType object
+Error processing shot 746: cannot unpack non-iterable NoneType object
+Error processing shot 747: cannot unpack non-iterable NoneType object
+Error processing shot 748: cannot unpack non-iterable NoneType object
+Error processing shot 749: cannot unpack non-iterable NoneType object
+Error processing shot 750: cannot unpack non-iterable NoneType object
+Error processing shot 751: cannot unpack non-iterable NoneType object
+Error processing shot 752: cannot unpack non-iterable NoneType object
+Error processing shot 753: cannot unpack non-iterable NoneType object
+Error processing shot 754: cannot unpack non-iterable NoneType object
+Error processing shot 755: cannot unpack non-iterable NoneType object
+Error processing shot 756: cannot unpack non-iterable NoneType object
+Error processing shot 757: cannot unpack non-iterable NoneType object
+Error processing shot 758: cannot unpack non-iterable NoneType object
+Error processing shot 759: cannot unpack non-iterable NoneType object
+Error processing shot 760: cannot unpack non-iterable NoneType object
+Error processing shot 761: cannot unpack non-iterable NoneType object
+Error processing shot 762: cannot unpack non-iterable NoneType object
+Error processing shot 763: cannot unpack non-iterable NoneType object
+Error processing shot 764: cannot unpack non-iterable NoneType object
+Error processing shot 765: cannot unpack non-iterable NoneType object
+Error processing shot 766: cannot unpack non-iterable NoneType object
+Error processing shot 767: cannot unpack non-iterable NoneType object
+Error processing shot 768: cannot unpack non-iterable NoneType object
+Error processing shot 769: cannot unpack non-iterable NoneType object
+Error processing shot 770: cannot unpack non-iterable NoneType object
+Error processing shot 771: cannot unpack non-iterable NoneType object
+Error processing shot 772: cannot unpack non-iterable NoneType object
+Error processing shot 773: cannot unpack non-iterable NoneType object
+Error processing shot 774: cannot unpack non-iterable NoneType object
+Error processing shot 775: cannot unpack non-iterable NoneType object
+Error processing shot 776: cannot unpack non-iterable NoneType object
