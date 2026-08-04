@@ -1,0 +1,64 @@
+Sun Jul 26 13:20:04 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   38C    P0            116W /  500W |    4110MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Gridmet dir added 
+
+Sentinel-1 dir added
+
+
+[S1 DEBUG] Sentinel1Lookup initialized
+[S1 DEBUG] sentinel1_dir: /s/chopin/e/proj/hyperspec/masfiq/dataset/sentinel_1_data/sentinel_1_data_california_north_10_2021_April_toAugust
+[S1 DEBUG] sentinel1_dir exists: True
+[S1 DEBUG] Total Sentinel-1 measurement tif files found: 26
+[S1 DEBUG] Number of Sentinel-1 scenes with VV/VH: 13
+Sample x_img: torch.Size([14, 5, 5]) in_channels= 14
+Sample S1_VV patch: tensor([[0.7364, 0.7492, 0.7253, 0.6977, 0.7373],
+        [0.7337, 0.7399, 0.6750, 0.6694, 0.7204],
+        [0.7337, 0.7442, 0.6764, 0.6325, 0.6722],
+        [0.7272, 0.7602, 0.7183, 0.6651, 0.6636],
+        [0.7213, 0.7556, 0.7111, 0.6680, 0.6868]])
+Sample S1_VH patch: tensor([[0.6680, 0.6804, 0.6497, 0.5826, 0.5187],
+        [0.6361, 0.6513, 0.6325, 0.6020, 0.5774],
+        [0.6129, 0.6378, 0.6464, 0.6464, 0.6210],
+        [0.6497, 0.6361, 0.6325, 0.6481, 0.6129],
+        [0.6561, 0.6210, 0.5800, 0.6042, 0.5691]])
+Sample S1_VV center: 0.6763633489608765
+Sample S1_VH center: 0.6464128494262695
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([39]) aux_dim= 39
+Sample y: 2.179750680923462

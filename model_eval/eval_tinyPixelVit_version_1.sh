@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=eval_tinypixelvit
-#SBATCH --partition=kestrel-gpu
+#SBATCH --partition=peregrine-gpu
 #SBATCH --qos=gpu_short
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu:3090:1
+#SBATCH --gres=gpu:nvidia_a100_3g.40gb:1
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=64G
 #SBATCH --time=23:30:00
@@ -14,15 +14,17 @@
 ####################################################### edit these
 PYTHON_FILE="eval_tinyPixelVit_version_1.py"
 
-CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_California_california_north_10_2021_whole_year_metadata.csv"
+#CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_California_california_north_10_2021_whole_year_metadata.csv"
+CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_3.csv"
 
-CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_California_North_10_2021.pth"
+#CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_California_North_10_2021.pth"
+CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_version_3_California_North_10_2021.pth"
 
 VAL_FRAC=0.2
 SEED=42
 BATCH_SIZE=256
 
-OUT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/jsontinyPixelViT_eval_California_North_10_2021.json"
+OUT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/json/tinyPixelViT_version_1_eval_version_3.json"
 
 ########################################################
 
@@ -42,6 +44,4 @@ export KOPPEN_TIF="${SCRATCH_DIR}/koppen.tif"
 
 nvidia-smi
 
-# srun python -u "${PYTHON_FILE}" --csv "${CSV_PATH}" --ckpt "${CKPT_PATH}" --val-frac "${VAL_FRAC}" --seed "${SEED}" --batch-size "${BATCH_SIZE}" --out "${OUT_PATH}"
-
-python -u "${PYTHON_FILE}" --csv "${CSV_PATH}" --ckpt "${CKPT_PATH}" --val-frac "${VAL_FRAC}" --seed "${SEED}" --batch-size "${BATCH_SIZE}" --out "${OUT_PATH}" # for kestrel-gpu
+srun python -u "${PYTHON_FILE}" --csv "${CSV_PATH}" --ckpt "${CKPT_PATH}" --val-frac "${VAL_FRAC}" --seed "${SEED}" --batch-size "${BATCH_SIZE}" --out "${OUT_PATH}"

@@ -1,0 +1,143 @@
+Thu Jul 16 15:56:12 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   29C    P0             69W /  500W |     720MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Sample x_img: torch.Size([12, 3, 3]) in_channels= 12
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([33]) aux_dim= 33
+Sample y: 3.3321456909179688
+Epoch 001 | Train MSE 1.2449 MAE 0.8597 | Val MSE 0.8222 MAE 0.7394
+Epoch 002 | Train MSE 0.8405 MAE 0.7351 | Val MSE 0.7562 MAE 0.6907
+Epoch 003 | Train MSE 0.8001 MAE 0.7138 | Val MSE 0.7347 MAE 0.6834
+Epoch 004 | Train MSE 0.7761 MAE 0.7004 | Val MSE 0.7149 MAE 0.6747
+Epoch 005 | Train MSE 0.7627 MAE 0.6932 | Val MSE 0.7059 MAE 0.6642
+Epoch 006 | Train MSE 0.7522 MAE 0.6878 | Val MSE 0.7015 MAE 0.6594
+Epoch 007 | Train MSE 0.7398 MAE 0.6810 | Val MSE 0.6969 MAE 0.6550
+Epoch 008 | Train MSE 0.7318 MAE 0.6757 | Val MSE 0.6880 MAE 0.6519
+Epoch 009 | Train MSE 0.7274 MAE 0.6738 | Val MSE 0.6813 MAE 0.6518
+Epoch 010 | Train MSE 0.7177 MAE 0.6686 | Val MSE 0.6823 MAE 0.6500
+Epoch 011 | Train MSE 0.7130 MAE 0.6656 | Val MSE 0.6855 MAE 0.6500
+Epoch 012 | Train MSE 0.7069 MAE 0.6632 | Val MSE 0.6904 MAE 0.6575
+Epoch 013 | Train MSE 0.6993 MAE 0.6587 | Val MSE 0.6900 MAE 0.6487
+Epoch 014 | Train MSE 0.6940 MAE 0.6563 | Val MSE 0.6945 MAE 0.6607
+Epoch 015 | Train MSE 0.6874 MAE 0.6519 | Val MSE 0.6756 MAE 0.6482
+Epoch 016 | Train MSE 0.6851 MAE 0.6512 | Val MSE 0.6700 MAE 0.6411
+Epoch 017 | Train MSE 0.6800 MAE 0.6485 | Val MSE 0.6670 MAE 0.6384
+Epoch 018 | Train MSE 0.6741 MAE 0.6457 | Val MSE 0.6578 MAE 0.6367
+Epoch 019 | Train MSE 0.6744 MAE 0.6456 | Val MSE 0.6666 MAE 0.6376
+Epoch 020 | Train MSE 0.6668 MAE 0.6410 | Val MSE 0.6574 MAE 0.6361
+Epoch 021 | Train MSE 0.6650 MAE 0.6409 | Val MSE 0.6637 MAE 0.6372
+Epoch 022 | Train MSE 0.6608 MAE 0.6376 | Val MSE 0.6509 MAE 0.6324
+Epoch 023 | Train MSE 0.6557 MAE 0.6359 | Val MSE 0.6581 MAE 0.6379
+Epoch 024 | Train MSE 0.6521 MAE 0.6339 | Val MSE 0.6620 MAE 0.6417
+Epoch 025 | Train MSE 0.6476 MAE 0.6319 | Val MSE 0.6761 MAE 0.6497
+Epoch 026 | Train MSE 0.6462 MAE 0.6303 | Val MSE 0.6615 MAE 0.6403
+Epoch 027 | Train MSE 0.6416 MAE 0.6285 | Val MSE 0.6480 MAE 0.6272
+Epoch 028 | Train MSE 0.6386 MAE 0.6269 | Val MSE 0.6453 MAE 0.6280
+Epoch 029 | Train MSE 0.6354 MAE 0.6248 | Val MSE 0.6493 MAE 0.6292
+Epoch 030 | Train MSE 0.6317 MAE 0.6223 | Val MSE 0.6473 MAE 0.6283
+Epoch 031 | Train MSE 0.6296 MAE 0.6221 | Val MSE 0.6504 MAE 0.6296
+Epoch 032 | Train MSE 0.6274 MAE 0.6196 | Val MSE 0.6540 MAE 0.6337
+Epoch 033 | Train MSE 0.6242 MAE 0.6183 | Val MSE 0.6489 MAE 0.6280
+Epoch 034 | Train MSE 0.6226 MAE 0.6181 | Val MSE 0.6445 MAE 0.6235
+Epoch 035 | Train MSE 0.6169 MAE 0.6155 | Val MSE 0.6662 MAE 0.6367
+Epoch 036 | Train MSE 0.6170 MAE 0.6150 | Val MSE 0.6532 MAE 0.6282
+Epoch 037 | Train MSE 0.6114 MAE 0.6115 | Val MSE 0.6423 MAE 0.6248
+Epoch 038 | Train MSE 0.6097 MAE 0.6108 | Val MSE 0.6399 MAE 0.6196
+Epoch 039 | Train MSE 0.6066 MAE 0.6090 | Val MSE 0.6456 MAE 0.6251
+Epoch 040 | Train MSE 0.6038 MAE 0.6076 | Val MSE 0.6409 MAE 0.6210
+Epoch 041 | Train MSE 0.6020 MAE 0.6069 | Val MSE 0.6536 MAE 0.6296
+Epoch 042 | Train MSE 0.5987 MAE 0.6045 | Val MSE 0.6638 MAE 0.6364
+Epoch 043 | Train MSE 0.5973 MAE 0.6041 | Val MSE 0.6428 MAE 0.6208
+Epoch 044 | Train MSE 0.5936 MAE 0.6022 | Val MSE 0.6461 MAE 0.6255
+Epoch 045 | Train MSE 0.5935 MAE 0.6021 | Val MSE 0.6441 MAE 0.6254
+Epoch 046 | Train MSE 0.5917 MAE 0.6007 | Val MSE 0.6501 MAE 0.6238
+Epoch 047 | Train MSE 0.5888 MAE 0.5993 | Val MSE 0.6389 MAE 0.6204
+Epoch 048 | Train MSE 0.5877 MAE 0.5987 | Val MSE 0.6415 MAE 0.6205
+Epoch 049 | Train MSE 0.5860 MAE 0.5975 | Val MSE 0.6411 MAE 0.6198
+Epoch 050 | Train MSE 0.5830 MAE 0.5964 | Val MSE 0.6497 MAE 0.6241
+Epoch 051 | Train MSE 0.5797 MAE 0.5942 | Val MSE 0.6453 MAE 0.6202
+Epoch 052 | Train MSE 0.5792 MAE 0.5938 | Val MSE 0.6475 MAE 0.6245
+Epoch 053 | Train MSE 0.5763 MAE 0.5920 | Val MSE 0.6620 MAE 0.6361
+Epoch 054 | Train MSE 0.5745 MAE 0.5913 | Val MSE 0.6457 MAE 0.6189
+Epoch 055 | Train MSE 0.5714 MAE 0.5893 | Val MSE 0.6447 MAE 0.6202
+Epoch 056 | Train MSE 0.5724 MAE 0.5900 | Val MSE 0.6409 MAE 0.6210
+Epoch 057 | Train MSE 0.5662 MAE 0.5862 | Val MSE 0.6701 MAE 0.6383
+Epoch 058 | Train MSE 0.5667 MAE 0.5869 | Val MSE 0.6445 MAE 0.6263
+Epoch 059 | Train MSE 0.5649 MAE 0.5851 | Val MSE 0.6518 MAE 0.6301
+Epoch 060 | Train MSE 0.5608 MAE 0.5833 | Val MSE 0.6422 MAE 0.6186
+Epoch 061 | Train MSE 0.5610 MAE 0.5834 | Val MSE 0.6419 MAE 0.6203
+Epoch 062 | Train MSE 0.5594 MAE 0.5828 | Val MSE 0.6457 MAE 0.6217
+Epoch 063 | Train MSE 0.5574 MAE 0.5815 | Val MSE 0.6381 MAE 0.6187
+Epoch 064 | Train MSE 0.5553 MAE 0.5800 | Val MSE 0.6369 MAE 0.6139
+Epoch 065 | Train MSE 0.5533 MAE 0.5793 | Val MSE 0.6451 MAE 0.6209
+Epoch 066 | Train MSE 0.5516 MAE 0.5781 | Val MSE 0.6412 MAE 0.6226
+Epoch 067 | Train MSE 0.5507 MAE 0.5772 | Val MSE 0.6416 MAE 0.6166
+Epoch 068 | Train MSE 0.5485 MAE 0.5758 | Val MSE 0.6464 MAE 0.6267
+Epoch 069 | Train MSE 0.5462 MAE 0.5749 | Val MSE 0.6398 MAE 0.6192
+Epoch 070 | Train MSE 0.5438 MAE 0.5732 | Val MSE 0.6436 MAE 0.6180
+Epoch 071 | Train MSE 0.5439 MAE 0.5733 | Val MSE 0.6457 MAE 0.6152
+Epoch 072 | Train MSE 0.5417 MAE 0.5723 | Val MSE 0.6422 MAE 0.6195
+Epoch 073 | Train MSE 0.5400 MAE 0.5713 | Val MSE 0.6504 MAE 0.6181
+Epoch 074 | Train MSE 0.5391 MAE 0.5705 | Val MSE 0.6400 MAE 0.6187
+Epoch 075 | Train MSE 0.5370 MAE 0.5689 | Val MSE 0.6547 MAE 0.6290
+Epoch 076 | Train MSE 0.5341 MAE 0.5676 | Val MSE 0.6343 MAE 0.6140
+Epoch 077 | Train MSE 0.5340 MAE 0.5672 | Val MSE 0.6489 MAE 0.6189
+Epoch 078 | Train MSE 0.5328 MAE 0.5660 | Val MSE 0.6434 MAE 0.6206
+Epoch 079 | Train MSE 0.5321 MAE 0.5665 | Val MSE 0.6445 MAE 0.6145
+Epoch 080 | Train MSE 0.5304 MAE 0.5655 | Val MSE 0.6421 MAE 0.6187
+Epoch 081 | Train MSE 0.5283 MAE 0.5638 | Val MSE 0.6456 MAE 0.6162
+Epoch 082 | Train MSE 0.5276 MAE 0.5633 | Val MSE 0.6496 MAE 0.6249
+Epoch 083 | Train MSE 0.5253 MAE 0.5620 | Val MSE 0.6564 MAE 0.6252
+Epoch 084 | Train MSE 0.5232 MAE 0.5611 | Val MSE 0.6441 MAE 0.6154
+Epoch 085 | Train MSE 0.5228 MAE 0.5606 | Val MSE 0.6417 MAE 0.6143
+Epoch 086 | Train MSE 0.5213 MAE 0.5599 | Val MSE 0.6389 MAE 0.6167
+Epoch 087 | Train MSE 0.5203 MAE 0.5590 | Val MSE 0.6515 MAE 0.6175
+Epoch 088 | Train MSE 0.5180 MAE 0.5574 | Val MSE 0.6432 MAE 0.6179
+Epoch 089 | Train MSE 0.5162 MAE 0.5566 | Val MSE 0.6434 MAE 0.6170
+Epoch 090 | Train MSE 0.5171 MAE 0.5571 | Val MSE 0.6482 MAE 0.6206
+Epoch 091 | Train MSE 0.5150 MAE 0.5557 | Val MSE 0.6628 MAE 0.6229
+Epoch 092 | Train MSE 0.5138 MAE 0.5551 | Val MSE 0.6567 MAE 0.6225
+Epoch 093 | Train MSE 0.5112 MAE 0.5532 | Val MSE 0.6435 MAE 0.6193
+Epoch 094 | Train MSE 0.5096 MAE 0.5520 | Val MSE 0.6417 MAE 0.6173
+Epoch 095 | Train MSE 0.5089 MAE 0.5520 | Val MSE 0.6485 MAE 0.6188
+Epoch 096 | Train MSE 0.5075 MAE 0.5515 | Val MSE 0.6443 MAE 0.6154
+Epoch 097 | Train MSE 0.5069 MAE 0.5507 | Val MSE 0.6478 MAE 0.6140
+Epoch 098 | Train MSE 0.5049 MAE 0.5492 | Val MSE 0.6457 MAE 0.6161
+Epoch 099 | Train MSE 0.5047 MAE 0.5494 | Val MSE 0.6515 MAE 0.6156
+Epoch 100 | Train MSE 0.5024 MAE 0.5481 | Val MSE 0.6513 MAE 0.6158
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_fusion_geohash_month_koppen_withAttentionLayer_version_3_California_North_10_2021.pth

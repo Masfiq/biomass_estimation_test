@@ -57,15 +57,17 @@ from rasterio.errors import RasterioIOError
 
 
 ################################## CHANGE VALUE HERE 
-CSV_PATH = "/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_California_california_north_10_2021_whole_year_metadata.csv"
+#CSV_PATH = "/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_California_california_north_10_2021_whole_year_metadata.csv"
+CSV_PATH = "/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_3.csv"
 
 
-NUM_EPOCHS=60
+NUM_EPOCHS=100
 BATCH_SIZE=32
 LEARNING_RATE=1e-4
 GEOHASH_PRESITION=7
 
-OUTPUT_PATH = Path("/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_California_North_10_2021.pth")
+#OUTPUT_PATH = Path("/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_California_North_10_2021.pth")
+OUTPUT_PATH = Path("/s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_fusion_geohash_month_koppen_version_3_California_North_10_2021.pth")
 
 
 
@@ -829,7 +831,7 @@ def create_dataloaders(csv_path, batch_size=32, val_frac=0.2, geohash_precision=
     # creating an object of the GEDIHlsPatchDatasetFusion class
     ds = GEDIHlsPatchDatasetFusion(
         csv_path,
-        target_col="agbd_center",
+        target_col="agbd_log",
         geohash_precision=7,
         koppen_tif_path=koppen_tif,
         koppen_legend_path=legend

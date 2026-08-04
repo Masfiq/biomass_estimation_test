@@ -1,0 +1,2168 @@
+Mon Jul 27 12:38:22 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   33C    P0             75W /  500W |    3828MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+[MEM] startup: use=0.4G peak=0.4G limit=n/a anon=0.4G file=0.0G slab=0.0G
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Gridmet dir added 
+
+[GRIDMET] loaded subset cube (6, 365, 36, 126) (39.7 MB) lat 41.025..42.483 lon -124.725..-119.517
+Sentinel-1 dir added
+
+
+[S1 DEBUG] Sentinel1Lookup initialized
+[S1 DEBUG] sentinel1_dir: /s/chopin/e/proj/hyperspec/masfiq/dataset/sentinel_1_data/sentinel_1_data_california_north_10_2021_April_toAugust
+[S1 DEBUG] sentinel1_dir exists: True
+[S1 DEBUG] Total Sentinel-1 measurement tif files found: 26
+[S1 DEBUG] Number of Sentinel-1 scenes with VV/VH: 13
+[LOADER] train workers=4 val workers=2 persistent=False prefetch=2
+Sample x_img: torch.Size([14, 5, 5]) in_channels= 14
+Sample S1_VV patch: tensor([[0.7364, 0.7492, 0.7253, 0.6977, 0.7373],
+        [0.7337, 0.7399, 0.6750, 0.6694, 0.7204],
+        [0.7337, 0.7442, 0.6764, 0.6325, 0.6722],
+        [0.7272, 0.7602, 0.7183, 0.6651, 0.6636],
+        [0.7213, 0.7556, 0.7111, 0.6680, 0.6868]])
+Sample S1_VH patch: tensor([[0.6680, 0.6804, 0.6497, 0.5826, 0.5187],
+        [0.6361, 0.6513, 0.6325, 0.6020, 0.5774],
+        [0.6129, 0.6378, 0.6464, 0.6464, 0.6210],
+        [0.6497, 0.6361, 0.6325, 0.6481, 0.6129],
+        [0.6561, 0.6210, 0.5800, 0.6042, 0.5691]])
+Sample S1_VV center: 0.6763633489608765
+Sample S1_VH center: 0.6464128494262695
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([39]) aux_dim= 39
+Sample y: 2.179750680923462
+[MEM] ep001 train-start: use=0.8G peak=0.8G limit=n/a anon=0.6G file=0.2G slab=0.0G
+[MEM] ep001 batch 1: use=1.4G peak=1.4G limit=n/a anon=1.2G file=0.2G slab=0.0G
+[MEM] ep001 batch 2: use=2.4G peak=2.4G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep001 batch 3: use=2.4G peak=2.4G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep001 batch 4: use=2.4G peak=2.4G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep001 batch 5: use=2.5G peak=2.5G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep001 batch 500: use=2.9G peak=2.9G limit=n/a anon=2.7G file=0.2G slab=0.0G
+[MEM] ep001 batch 1000: use=3.0G peak=3.0G limit=n/a anon=2.7G file=0.2G slab=0.0G
+[MEM] ep001 batch 1500: use=3.0G peak=3.0G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep001 batch 2000: use=3.0G peak=3.0G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep001 batch 2500: use=3.1G peak=3.1G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep001 batch 3000: use=3.1G peak=3.1G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep001 batch 3500: use=3.1G peak=3.1G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep001 batch 4000: use=3.1G peak=3.1G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep001 batch 4500: use=3.1G peak=3.1G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep001 batch 5000: use=3.2G peak=3.2G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep001 batch 5500: use=3.2G peak=3.2G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep001 batch 6000: use=3.2G peak=3.2G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep001 val-start: use=1.5G peak=3.2G limit=n/a anon=1.3G file=0.2G slab=0.0G
+[MEM] end epoch 001: use=1.6G peak=3.2G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 001 | Train Huber 0.5723 MAE 0.9625 | Val Huber 0.3824 MAE 0.7479 | LR 1.00e-05
+[MEM] ep002 train-start: use=1.6G peak=3.2G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep002 batch 1: use=2.4G peak=3.2G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep002 batch 2: use=2.4G peak=3.2G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep002 batch 3: use=2.5G peak=3.2G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep002 batch 4: use=2.5G peak=3.2G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep002 batch 5: use=2.8G peak=3.2G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep002 batch 500: use=3.0G peak=3.2G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep002 batch 1000: use=3.1G peak=3.2G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep002 batch 1500: use=3.1G peak=3.2G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep002 batch 2000: use=3.1G peak=3.2G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep002 batch 2500: use=3.2G peak=3.2G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep002 batch 3000: use=3.2G peak=3.2G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 3500: use=3.2G peak=3.2G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 4000: use=3.2G peak=3.2G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep002 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 002: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 002 | Train Huber 0.4017 MAE 0.7743 | Val Huber 0.3630 MAE 0.7249 | LR 1.00e-05
+[MEM] ep003 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep003 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep003 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep003 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep003 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep003 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep003 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep003 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep003 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep003 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep003 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep003 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 003: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 003 | Train Huber 0.3780 MAE 0.7445 | Val Huber 0.3437 MAE 0.7011 | LR 1.00e-05
+[MEM] ep004 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep004 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep004 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep004 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep004 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep004 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep004 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep004 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep004 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep004 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep004 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep004 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep004 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 004: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 004 | Train Huber 0.3647 MAE 0.7271 | Val Huber 0.3422 MAE 0.7011 | LR 1.00e-05
+[MEM] ep005 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep005 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep005 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep005 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep005 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep005 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep005 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep005 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep005 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep005 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep005 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep005 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep005 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 005: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 005 | Train Huber 0.3553 MAE 0.7144 | Val Huber 0.3367 MAE 0.6889 | LR 1.00e-05
+[MEM] ep006 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep006 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep006 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep006 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep006 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep006 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep006 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep006 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep006 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep006 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep006 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep006 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep006 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 006: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 006 | Train Huber 0.3477 MAE 0.7046 | Val Huber 0.3302 MAE 0.6842 | LR 1.00e-05
+[MEM] ep007 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep007 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep007 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep007 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep007 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep007 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep007 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep007 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep007 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep007 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep007 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep007 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep007 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 007: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 007 | Train Huber 0.3401 MAE 0.6948 | Val Huber 0.3287 MAE 0.6785 | LR 1.00e-05
+[MEM] ep008 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep008 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep008 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep008 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep008 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep008 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep008 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep008 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep008 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep008 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep008 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep008 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep008 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 008: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 008 | Train Huber 0.3336 MAE 0.6863 | Val Huber 0.3287 MAE 0.6794 | LR 1.00e-05
+[MEM] ep009 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep009 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep009 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep009 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep009 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep009 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep009 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep009 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep009 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep009 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep009 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep009 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep009 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 009: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 009 | Train Huber 0.3291 MAE 0.6805 | Val Huber 0.3273 MAE 0.6744 | LR 1.00e-05
+[MEM] ep010 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep010 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep010 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep010 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep010 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep010 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep010 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep010 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep010 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep010 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep010 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 010: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 010 | Train Huber 0.3232 MAE 0.6727 | Val Huber 0.3306 MAE 0.6838 | LR 1.00e-05
+[MEM] ep011 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep011 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep011 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep011 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep011 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep011 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep011 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep011 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep011 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep011 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep011 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 011: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 011 | Train Huber 0.3188 MAE 0.6669 | Val Huber 0.3243 MAE 0.6732 | LR 1.00e-05
+[MEM] ep012 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep012 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep012 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep012 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep012 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep012 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep012 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep012 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep012 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep012 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep012 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep012 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep012 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 012: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 012 | Train Huber 0.3134 MAE 0.6595 | Val Huber 0.3289 MAE 0.6792 | LR 1.00e-05
+[MEM] ep013 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep013 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep013 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep013 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep013 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep013 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep013 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep013 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep013 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep013 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep013 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep013 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep013 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 013: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 013 | Train Huber 0.3087 MAE 0.6534 | Val Huber 0.3246 MAE 0.6733 | LR 1.00e-05
+[MEM] ep014 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep014 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep014 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep014 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep014 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep014 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep014 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep014 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep014 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep014 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep014 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep014 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep014 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 014: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 014 | Train Huber 0.3052 MAE 0.6483 | Val Huber 0.3308 MAE 0.6769 | LR 1.00e-05
+[MEM] ep015 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep015 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep015 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep015 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep015 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep015 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep015 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep015 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep015 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep015 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep015 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep015 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep015 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 015: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 015 | Train Huber 0.3006 MAE 0.6424 | Val Huber 0.3248 MAE 0.6716 | LR 1.00e-05
+[MEM] ep016 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep016 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep016 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep016 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep016 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep016 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep016 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep016 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep016 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep016 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep016 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep016 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep016 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 016: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 016 | Train Huber 0.2975 MAE 0.6380 | Val Huber 0.3315 MAE 0.6771 | LR 1.00e-05
+[MEM] ep017 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep017 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep017 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep017 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep017 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep017 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep017 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep017 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep017 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep017 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep017 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep017 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep017 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 017: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 017 | Train Huber 0.2946 MAE 0.6334 | Val Huber 0.3288 MAE 0.6774 | LR 5.00e-06
+[MEM] ep018 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep018 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep018 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep018 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep018 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep018 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep018 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep018 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep018 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep018 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep018 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep018 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep018 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 018: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 018 | Train Huber 0.2837 MAE 0.6185 | Val Huber 0.3273 MAE 0.6734 | LR 5.00e-06
+[MEM] ep019 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep019 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep019 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep019 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep019 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep019 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep019 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep019 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep019 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep019 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep019 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep019 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep019 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 019: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 019 | Train Huber 0.2795 MAE 0.6127 | Val Huber 0.3265 MAE 0.6744 | LR 5.00e-06
+[MEM] ep020 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep020 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep020 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep020 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep020 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep020 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep020 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep020 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep020 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep020 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep020 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep020 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep020 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 020: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 020 | Train Huber 0.2765 MAE 0.6082 | Val Huber 0.3294 MAE 0.6766 | LR 5.00e-06
+[MEM] ep021 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep021 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep021 batch 3: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep021 batch 4: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep021 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep021 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep021 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep021 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep021 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep021 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep021 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep021 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 021: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 021 | Train Huber 0.2744 MAE 0.6051 | Val Huber 0.3281 MAE 0.6740 | LR 5.00e-06
+[MEM] ep022 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep022 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep022 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep022 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep022 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep022 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep022 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep022 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep022 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep022 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep022 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep022 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep022 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 022: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 022 | Train Huber 0.2720 MAE 0.6018 | Val Huber 0.3299 MAE 0.6761 | LR 5.00e-06
+[MEM] ep023 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep023 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep023 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep023 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep023 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep023 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep023 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep023 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep023 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep023 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep023 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 023: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 023 | Train Huber 0.2707 MAE 0.5998 | Val Huber 0.3298 MAE 0.6756 | LR 2.50e-06
+[MEM] ep024 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep024 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep024 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep024 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep024 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep024 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep024 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep024 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep024 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep024 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep024 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 024: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 024 | Train Huber 0.2663 MAE 0.5931 | Val Huber 0.3310 MAE 0.6774 | LR 2.50e-06
+[MEM] ep025 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep025 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep025 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep025 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep025 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep025 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep025 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep025 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep025 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep025 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep025 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep025 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep025 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 025: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 025 | Train Huber 0.2626 MAE 0.5881 | Val Huber 0.3302 MAE 0.6775 | LR 2.50e-06
+[MEM] ep026 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep026 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep026 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep026 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep026 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep026 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep026 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep026 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep026 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep026 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep026 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep026 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep026 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 026: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 026 | Train Huber 0.2613 MAE 0.5858 | Val Huber 0.3308 MAE 0.6786 | LR 2.50e-06
+[MEM] ep027 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep027 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep027 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep027 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep027 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep027 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep027 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep027 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep027 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep027 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep027 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep027 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep027 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 027: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 027 | Train Huber 0.2606 MAE 0.5845 | Val Huber 0.3302 MAE 0.6754 | LR 2.50e-06
+[MEM] ep028 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep028 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep028 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep028 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep028 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep028 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep028 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep028 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep028 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep028 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep028 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep028 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep028 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 028: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 028 | Train Huber 0.2591 MAE 0.5827 | Val Huber 0.3323 MAE 0.6788 | LR 2.50e-06
+[MEM] ep029 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep029 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep029 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep029 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep029 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep029 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep029 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep029 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep029 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep029 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep029 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep029 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 029: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 029 | Train Huber 0.2588 MAE 0.5820 | Val Huber 0.3312 MAE 0.6782 | LR 1.25e-06
+[MEM] ep030 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep030 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep030 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep030 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep030 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep030 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep030 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep030 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep030 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep030 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep030 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep030 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep030 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 030: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 030 | Train Huber 0.2552 MAE 0.5767 | Val Huber 0.3316 MAE 0.6778 | LR 1.25e-06
+[MEM] ep031 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep031 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep031 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep031 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep031 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep031 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep031 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep031 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep031 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep031 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep031 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep031 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep031 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 031: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 031 | Train Huber 0.2545 MAE 0.5753 | Val Huber 0.3315 MAE 0.6774 | LR 1.25e-06
+[MEM] ep032 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep032 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 2: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep032 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep032 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep032 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep032 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep032 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep032 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep032 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep032 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep032 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 032: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 032 | Train Huber 0.2541 MAE 0.5747 | Val Huber 0.3319 MAE 0.6790 | LR 1.25e-06
+[MEM] ep033 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep033 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 2: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep033 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep033 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep033 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep033 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep033 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep033 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep033 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep033 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep033 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 033: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 033 | Train Huber 0.2536 MAE 0.5743 | Val Huber 0.3313 MAE 0.6793 | LR 1.25e-06
+[MEM] ep034 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep034 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep034 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep034 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep034 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep034 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep034 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep034 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep034 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep034 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep034 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep034 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep034 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 034: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 034 | Train Huber 0.2528 MAE 0.5731 | Val Huber 0.3321 MAE 0.6787 | LR 1.25e-06
+[MEM] ep035 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep035 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep035 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep035 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep035 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep035 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep035 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep035 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep035 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep035 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep035 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep035 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep035 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 035: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 035 | Train Huber 0.2525 MAE 0.5725 | Val Huber 0.3320 MAE 0.6784 | LR 6.25e-07
+[MEM] ep036 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep036 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep036 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep036 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep036 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep036 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep036 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep036 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep036 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep036 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep036 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep036 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep036 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 036: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 036 | Train Huber 0.2512 MAE 0.5705 | Val Huber 0.3319 MAE 0.6781 | LR 6.25e-07
+[MEM] ep037 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep037 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep037 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep037 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep037 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep037 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep037 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep037 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep037 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep037 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep037 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep037 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep037 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 037: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 037 | Train Huber 0.2499 MAE 0.5682 | Val Huber 0.3336 MAE 0.6800 | LR 6.25e-07
+[MEM] ep038 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep038 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep038 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep038 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep038 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep038 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep038 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep038 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep038 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep038 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep038 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep038 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep038 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 038: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 038 | Train Huber 0.2502 MAE 0.5689 | Val Huber 0.3326 MAE 0.6782 | LR 6.25e-07
+[MEM] ep039 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep039 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep039 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep039 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep039 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep039 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep039 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep039 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep039 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep039 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep039 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep039 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep039 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 039: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 039 | Train Huber 0.2494 MAE 0.5677 | Val Huber 0.3320 MAE 0.6782 | LR 6.25e-07
+[MEM] ep040 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep040 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep040 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep040 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep040 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep040 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep040 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep040 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep040 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep040 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep040 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep040 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep040 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 040: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 040 | Train Huber 0.2496 MAE 0.5677 | Val Huber 0.3326 MAE 0.6787 | LR 6.25e-07
+[MEM] ep041 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep041 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep041 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep041 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep041 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep041 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep041 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep041 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep041 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep041 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep041 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep041 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep041 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 041: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 041 | Train Huber 0.2489 MAE 0.5671 | Val Huber 0.3321 MAE 0.6782 | LR 3.13e-07
+[MEM] ep042 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep042 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep042 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep042 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep042 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep042 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep042 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep042 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep042 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep042 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep042 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep042 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep042 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 042: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 042 | Train Huber 0.2487 MAE 0.5668 | Val Huber 0.3328 MAE 0.6792 | LR 3.13e-07
+[MEM] ep043 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep043 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep043 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep043 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep043 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep043 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep043 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep043 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep043 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep043 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep043 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep043 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep043 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 043: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 043 | Train Huber 0.2483 MAE 0.5657 | Val Huber 0.3326 MAE 0.6794 | LR 3.13e-07
+[MEM] ep044 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep044 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep044 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep044 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep044 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep044 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep044 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep044 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep044 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep044 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep044 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 044: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 044 | Train Huber 0.2483 MAE 0.5661 | Val Huber 0.3326 MAE 0.6794 | LR 3.13e-07
+[MEM] ep045 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep045 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep045 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep045 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep045 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep045 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep045 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep045 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep045 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep045 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep045 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep045 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep045 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 045: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 045 | Train Huber 0.2483 MAE 0.5661 | Val Huber 0.3322 MAE 0.6789 | LR 3.13e-07
+[MEM] ep046 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep046 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep046 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep046 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep046 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep046 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep046 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep046 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep046 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep046 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep046 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep046 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep046 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 046: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 046 | Train Huber 0.2483 MAE 0.5663 | Val Huber 0.3328 MAE 0.6794 | LR 3.13e-07
+[MEM] ep047 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep047 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep047 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep047 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep047 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep047 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep047 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep047 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep047 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep047 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep047 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep047 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep047 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 047: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 047 | Train Huber 0.2469 MAE 0.5644 | Val Huber 0.3329 MAE 0.6789 | LR 1.56e-07
+[MEM] ep048 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep048 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep048 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep048 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep048 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep048 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep048 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep048 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep048 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep048 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep048 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep048 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep048 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 048: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 048 | Train Huber 0.2474 MAE 0.5645 | Val Huber 0.3326 MAE 0.6789 | LR 1.56e-07
+[MEM] ep049 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep049 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep049 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep049 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep049 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep049 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep049 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep049 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep049 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep049 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep049 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep049 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep049 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 049: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 049 | Train Huber 0.2470 MAE 0.5641 | Val Huber 0.3315 MAE 0.6776 | LR 1.56e-07
+[MEM] ep050 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep050 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep050 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep050 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep050 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep050 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep050 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep050 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep050 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep050 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep050 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep050 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep050 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 050: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 050 | Train Huber 0.2474 MAE 0.5642 | Val Huber 0.3331 MAE 0.6791 | LR 1.56e-07
+[MEM] ep051 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep051 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep051 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep051 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep051 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep051 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep051 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep051 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep051 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep051 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep051 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep051 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep051 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 051: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 051 | Train Huber 0.2477 MAE 0.5645 | Val Huber 0.3324 MAE 0.6792 | LR 1.56e-07
+[MEM] ep052 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep052 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep052 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep052 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep052 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep052 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep052 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep052 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep052 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep052 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep052 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep052 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep052 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 052: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 052 | Train Huber 0.2466 MAE 0.5634 | Val Huber 0.3322 MAE 0.6790 | LR 1.56e-07
+[MEM] ep053 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep053 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep053 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep053 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep053 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep053 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep053 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep053 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep053 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep053 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep053 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep053 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep053 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep053 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 053: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 053 | Train Huber 0.2469 MAE 0.5638 | Val Huber 0.3332 MAE 0.6794 | LR 7.81e-08
+[MEM] ep054 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep054 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep054 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep054 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep054 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep054 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep054 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep054 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep054 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep054 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep054 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep054 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep054 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 054: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 054 | Train Huber 0.2471 MAE 0.5640 | Val Huber 0.3326 MAE 0.6784 | LR 7.81e-08
+[MEM] ep055 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep055 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep055 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep055 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep055 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep055 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep055 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep055 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep055 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep055 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep055 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep055 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep055 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 055: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 055 | Train Huber 0.2465 MAE 0.5634 | Val Huber 0.3335 MAE 0.6796 | LR 7.81e-08
+[MEM] ep056 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep056 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep056 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep056 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep056 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep056 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep056 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep056 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep056 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep056 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep056 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep056 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep056 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 056: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 056 | Train Huber 0.2471 MAE 0.5642 | Val Huber 0.3328 MAE 0.6792 | LR 7.81e-08
+[MEM] ep057 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep057 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep057 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep057 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep057 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep057 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep057 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep057 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep057 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep057 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep057 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep057 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep057 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 057: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 057 | Train Huber 0.2462 MAE 0.5631 | Val Huber 0.3333 MAE 0.6799 | LR 7.81e-08
+[MEM] ep058 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep058 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep058 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep058 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep058 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep058 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep058 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep058 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep058 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep058 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep058 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep058 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 058: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 058 | Train Huber 0.2462 MAE 0.5628 | Val Huber 0.3337 MAE 0.6804 | LR 7.81e-08
+[MEM] ep059 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep059 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep059 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep059 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep059 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep059 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep059 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep059 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep059 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep059 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep059 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep059 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep059 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 059: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 059 | Train Huber 0.2470 MAE 0.5641 | Val Huber 0.3330 MAE 0.6793 | LR 3.91e-08
+[MEM] ep060 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep060 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep060 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep060 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep060 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep060 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep060 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep060 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep060 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep060 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep060 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep060 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep060 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 060: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 060 | Train Huber 0.2462 MAE 0.5634 | Val Huber 0.3333 MAE 0.6798 | LR 3.91e-08
+[MEM] ep061 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep061 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep061 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep061 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep061 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep061 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep061 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep061 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep061 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep061 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep061 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep061 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep061 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 061: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 061 | Train Huber 0.2462 MAE 0.5626 | Val Huber 0.3331 MAE 0.6796 | LR 3.91e-08
+[MEM] ep062 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep062 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep062 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep062 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep062 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep062 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep062 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep062 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep062 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep062 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep062 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep062 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep062 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 062: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 062 | Train Huber 0.2469 MAE 0.5635 | Val Huber 0.3333 MAE 0.6799 | LR 3.91e-08
+[MEM] ep063 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep063 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep063 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep063 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep063 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep063 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep063 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep063 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep063 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep063 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep063 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep063 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep063 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 063: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 063 | Train Huber 0.2457 MAE 0.5619 | Val Huber 0.3326 MAE 0.6790 | LR 3.91e-08
+[MEM] ep064 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep064 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep064 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep064 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep064 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep064 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep064 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep064 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep064 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep064 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep064 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep064 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep064 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 064: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 064 | Train Huber 0.2469 MAE 0.5636 | Val Huber 0.3332 MAE 0.6794 | LR 3.91e-08
+[MEM] ep065 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep065 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep065 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep065 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep065 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep065 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep065 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep065 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep065 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep065 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep065 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep065 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep065 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 065: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 065 | Train Huber 0.2467 MAE 0.5634 | Val Huber 0.3332 MAE 0.6795 | LR 1.95e-08
+[MEM] ep066 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep066 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep066 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep066 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep066 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep066 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep066 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep066 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep066 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep066 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep066 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep066 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep066 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 066: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 066 | Train Huber 0.2463 MAE 0.5630 | Val Huber 0.3342 MAE 0.6802 | LR 1.95e-08
+[MEM] ep067 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep067 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep067 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep067 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep067 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep067 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep067 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep067 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep067 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep067 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep067 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep067 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep067 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 067: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 067 | Train Huber 0.2460 MAE 0.5623 | Val Huber 0.3328 MAE 0.6791 | LR 1.95e-08
+[MEM] ep068 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep068 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep068 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep068 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep068 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep068 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep068 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep068 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep068 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep068 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep068 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep068 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep068 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 068: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 068 | Train Huber 0.2464 MAE 0.5630 | Val Huber 0.3325 MAE 0.6794 | LR 1.95e-08
+[MEM] ep069 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep069 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep069 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep069 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep069 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep069 batch 5: use=2.7G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep069 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep069 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep069 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep069 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep069 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep069 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep069 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 069: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 069 | Train Huber 0.2458 MAE 0.5621 | Val Huber 0.3334 MAE 0.6799 | LR 1.95e-08
+[MEM] ep070 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep070 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep070 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep070 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep070 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep070 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep070 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep070 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep070 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep070 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep070 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep070 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep070 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 070: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 070 | Train Huber 0.2466 MAE 0.5634 | Val Huber 0.3322 MAE 0.6783 | LR 1.95e-08
+[MEM] ep071 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep071 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep071 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep071 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep071 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep071 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep071 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep071 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep071 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep071 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep071 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep071 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep071 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 071: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 071 | Train Huber 0.2463 MAE 0.5627 | Val Huber 0.3321 MAE 0.6790 | LR 1.95e-08
+[MEM] ep072 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep072 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep072 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep072 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep072 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep072 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep072 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep072 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep072 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep072 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep072 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep072 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep072 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 072: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 072 | Train Huber 0.2461 MAE 0.5626 | Val Huber 0.3327 MAE 0.6790 | LR 1.95e-08
+[MEM] ep073 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep073 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 2: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.1G file=0.2G slab=0.0G
+[MEM] ep073 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep073 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep073 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep073 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep073 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep073 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep073 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep073 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep073 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep073 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 073: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 073 | Train Huber 0.2464 MAE 0.5629 | Val Huber 0.3330 MAE 0.6796 | LR 1.95e-08
+[MEM] ep074 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep074 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep074 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep074 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep074 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep074 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep074 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep074 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep074 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep074 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep074 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep074 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep074 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 074: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 074 | Train Huber 0.2469 MAE 0.5635 | Val Huber 0.3340 MAE 0.6804 | LR 1.95e-08
+[MEM] ep075 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep075 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep075 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep075 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep075 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep075 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep075 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep075 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep075 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep075 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep075 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep075 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep075 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 075: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 075 | Train Huber 0.2461 MAE 0.5626 | Val Huber 0.3333 MAE 0.6801 | LR 1.95e-08
+[MEM] ep076 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep076 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep076 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep076 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep076 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep076 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep076 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep076 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep076 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep076 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep076 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep076 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep076 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 076: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 076 | Train Huber 0.2461 MAE 0.5626 | Val Huber 0.3330 MAE 0.6791 | LR 1.95e-08
+[MEM] ep077 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep077 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep077 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep077 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep077 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep077 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep077 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep077 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep077 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep077 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep077 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 077: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 077 | Train Huber 0.2465 MAE 0.5633 | Val Huber 0.3331 MAE 0.6789 | LR 1.95e-08
+[MEM] ep078 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep078 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep078 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep078 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep078 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep078 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep078 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep078 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep078 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep078 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep078 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep078 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep078 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 078: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 078 | Train Huber 0.2460 MAE 0.5624 | Val Huber 0.3322 MAE 0.6785 | LR 1.95e-08
+[MEM] ep079 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep079 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep079 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep079 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep079 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep079 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep079 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep079 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep079 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep079 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep079 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep079 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep079 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep079 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 079: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 079 | Train Huber 0.2459 MAE 0.5624 | Val Huber 0.3333 MAE 0.6798 | LR 1.95e-08
+[MEM] ep080 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep080 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep080 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep080 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep080 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep080 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep080 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep080 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep080 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep080 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep080 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep080 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep080 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 080: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 080 | Train Huber 0.2464 MAE 0.5632 | Val Huber 0.3337 MAE 0.6794 | LR 1.95e-08
+[MEM] ep081 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep081 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep081 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep081 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep081 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep081 batch 5: use=2.9G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep081 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep081 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep081 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep081 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep081 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep081 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep081 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 081: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 081 | Train Huber 0.2454 MAE 0.5615 | Val Huber 0.3328 MAE 0.6791 | LR 1.95e-08
+[MEM] ep082 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep082 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep082 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep082 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep082 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep082 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep082 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep082 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep082 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep082 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep082 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep082 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep082 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 082: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 082 | Train Huber 0.2464 MAE 0.5630 | Val Huber 0.3330 MAE 0.6802 | LR 1.95e-08
+[MEM] ep083 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep083 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep083 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep083 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep083 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep083 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep083 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep083 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep083 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep083 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep083 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep083 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep083 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 083: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 083 | Train Huber 0.2455 MAE 0.5617 | Val Huber 0.3324 MAE 0.6791 | LR 1.95e-08
+[MEM] ep084 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep084 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 2: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep084 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep084 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep084 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep084 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep084 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep084 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep084 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep084 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep084 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep084 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 084: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 084 | Train Huber 0.2458 MAE 0.5621 | Val Huber 0.3324 MAE 0.6789 | LR 1.95e-08
+[MEM] ep085 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep085 batch 1: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep085 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep085 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep085 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep085 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep085 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep085 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep085 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep085 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep085 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep085 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep085 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 085: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 085 | Train Huber 0.2458 MAE 0.5621 | Val Huber 0.3330 MAE 0.6798 | LR 1.95e-08
+[MEM] ep086 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep086 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep086 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep086 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep086 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep086 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep086 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep086 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep086 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep086 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep086 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 086: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 086 | Train Huber 0.2466 MAE 0.5631 | Val Huber 0.3329 MAE 0.6793 | LR 1.95e-08
+[MEM] ep087 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep087 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep087 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep087 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep087 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep087 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep087 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep087 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep087 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep087 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep087 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep087 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 3500: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep087 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 087: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 087 | Train Huber 0.2461 MAE 0.5624 | Val Huber 0.3330 MAE 0.6794 | LR 1.95e-08
+[MEM] ep088 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep088 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep088 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep088 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep088 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep088 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep088 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep088 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep088 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep088 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep088 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep088 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep088 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 088: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 088 | Train Huber 0.2456 MAE 0.5616 | Val Huber 0.3320 MAE 0.6787 | LR 1.95e-08
+[MEM] ep089 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep089 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep089 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep089 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep089 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep089 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep089 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep089 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep089 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep089 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep089 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep089 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep089 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep089 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 089: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 089 | Train Huber 0.2466 MAE 0.5632 | Val Huber 0.3322 MAE 0.6784 | LR 1.95e-08
+[MEM] ep090 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep090 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep090 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep090 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep090 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep090 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep090 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep090 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep090 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep090 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep090 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep090 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 090: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 090 | Train Huber 0.2462 MAE 0.5623 | Val Huber 0.3328 MAE 0.6796 | LR 1.95e-08
+[MEM] ep091 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep091 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep091 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep091 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep091 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep091 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep091 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep091 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep091 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep091 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep091 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep091 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep091 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 091: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 091 | Train Huber 0.2458 MAE 0.5622 | Val Huber 0.3340 MAE 0.6796 | LR 1.95e-08
+[MEM] ep092 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep092 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep092 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep092 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep092 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep092 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep092 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep092 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep092 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep092 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep092 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 092: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 092 | Train Huber 0.2462 MAE 0.5626 | Val Huber 0.3332 MAE 0.6797 | LR 1.95e-08
+[MEM] ep093 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep093 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep093 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep093 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep093 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep093 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep093 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep093 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep093 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep093 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep093 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep093 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep093 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep093 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 093: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 093 | Train Huber 0.2462 MAE 0.5629 | Val Huber 0.3332 MAE 0.6792 | LR 1.95e-08
+[MEM] ep094 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep094 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep094 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep094 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep094 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep094 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep094 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep094 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep094 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep094 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep094 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep094 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep094 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep094 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 094: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 094 | Train Huber 0.2459 MAE 0.5626 | Val Huber 0.3340 MAE 0.6805 | LR 1.95e-08
+[MEM] ep095 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep095 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 2: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep095 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep095 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep095 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep095 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep095 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep095 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep095 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep095 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep095 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep095 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 095: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 095 | Train Huber 0.2458 MAE 0.5618 | Val Huber 0.3337 MAE 0.6795 | LR 1.95e-08
+[MEM] ep096 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep096 batch 1: use=2.2G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep096 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep096 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep096 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.3G file=0.2G slab=0.0G
+[MEM] ep096 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep096 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep096 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep096 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep096 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep096 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep096 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep096 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 096: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 096 | Train Huber 0.2459 MAE 0.5624 | Val Huber 0.3324 MAE 0.6792 | LR 1.95e-08
+[MEM] ep097 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep097 batch 1: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 2: use=2.3G peak=3.3G limit=n/a anon=2.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep097 batch 4: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep097 batch 5: use=2.6G peak=3.3G limit=n/a anon=2.4G file=0.2G slab=0.0G
+[MEM] ep097 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep097 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep097 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep097 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep097 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep097 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep097 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 097: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 097 | Train Huber 0.2459 MAE 0.5623 | Val Huber 0.3331 MAE 0.6797 | LR 1.95e-08
+[MEM] ep098 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep098 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep098 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep098 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep098 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep098 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep098 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep098 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep098 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep098 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep098 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep098 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep098 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 098: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 098 | Train Huber 0.2455 MAE 0.5616 | Val Huber 0.3326 MAE 0.6790 | LR 1.95e-08
+[MEM] ep099 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep099 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep099 batch 2: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep099 batch 3: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep099 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep099 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.6G file=0.2G slab=0.0G
+[MEM] ep099 batch 500: use=3.0G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep099 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep099 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep099 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep099 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep099 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep099 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 099: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 099 | Train Huber 0.2462 MAE 0.5624 | Val Huber 0.3342 MAE 0.6811 | LR 1.95e-08
+[MEM] ep100 train-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] ep100 batch 1: use=2.4G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep100 batch 2: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep100 batch 3: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep100 batch 4: use=2.5G peak=3.3G limit=n/a anon=2.2G file=0.2G slab=0.0G
+[MEM] ep100 batch 5: use=2.8G peak=3.3G limit=n/a anon=2.5G file=0.2G slab=0.0G
+[MEM] ep100 batch 500: use=3.1G peak=3.3G limit=n/a anon=2.8G file=0.2G slab=0.0G
+[MEM] ep100 batch 1000: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep100 batch 1500: use=3.1G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep100 batch 2000: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep100 batch 2500: use=3.2G peak=3.3G limit=n/a anon=2.9G file=0.2G slab=0.0G
+[MEM] ep100 batch 3000: use=3.2G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 3500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 4000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 4500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 5000: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 5500: use=3.3G peak=3.3G limit=n/a anon=3.0G file=0.2G slab=0.0G
+[MEM] ep100 batch 6000: use=3.3G peak=3.3G limit=n/a anon=3.1G file=0.2G slab=0.0G
+[MEM] ep100 val-start: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+[MEM] end epoch 100: use=1.6G peak=3.3G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 100 | Train Huber 0.2455 MAE 0.5617 | Val Huber 0.3327 MAE 0.6792 | LR 1.95e-08
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/resnet18_version_12_fusion_geohash_month_koppen_withAttentionLayer_SAR_version_5_California_North_10_2021.pth

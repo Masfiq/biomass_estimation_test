@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=biomass_attn_kestrel
-#SBATCH --partition=kestrel-gpu
+#SBATCH --job-name=biomass_attn
+#SBATCH --partition=peregrine-gpu
 #SBATCH --qos=gpu_medium
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --gres=gpu:3090:1
+#SBATCH --gres=gpu:nvidia_a100_3g.40gb:1
 #SBATCH --cpus-per-task=10
-#SBATCH --mem=64G
+#SBATCH --mem=128G
 #SBATCH --time=71:50:00
 #SBATCH --output=out_and_err/tinyUnet_version_2_train_%j.out
 #SBATCH --error=out_and_err/tinyUnet_version_2_train_%j.err

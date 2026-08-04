@@ -712,13 +712,15 @@ def eval_attention_by_landcover(model, dataset, device, batch_size=256):
 def main():
     ap = argparse.ArgumentParser()
 
-    ap.add_argument("--csv", required=True)
-    ap.add_argument("--ckpt", required=True)
+    #ap.add_argument("--csv", required=True)
+    ap.add_argument("--csv", default="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_3.csv")
+    #ap.add_argument("--ckpt", required=True)
+    ap.add_argument("--ckpt", default="/s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_fusion_geohash_month_koppen_withAttentionLayer_version_3_California_North_10_2021.pth")
     ap.add_argument("--val-frac", type=float, default=0.2)
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--batch-size", type=int, default=256)
     ap.add_argument("--geohash-precision", type=int, default=7)
-    ap.add_argument("--out", default="tinyunet_attn_eval_summary.json")
+    ap.add_argument("--out", default="tinyUnet_version_2_eval_version_3.json")
 
     args = ap.parse_args()
 
@@ -735,7 +737,7 @@ def main():
     ds = GEDIHlsPatchDatasetFusion(
         args.csv,
         geohash_precision=args.geohash_precision,
-        target_col="agbd_center",
+        target_col="agbd_log",
         koppen_tif_path=koppen_tif,
         koppen_legend_path=legend,
     )
@@ -829,6 +831,10 @@ def main():
 
     y_true_all = np.concatenate(y_true_all)
     y_pred_all = np.concatenate(y_pred_all)
+
+    # Convert from log space back to Mg/ha for interpretable metrics
+    y_true_all = np.expm1(y_true_all)
+    y_pred_all = np.expm1(y_pred_all)
 
     mae = float(np.mean(np.abs(y_pred_all - y_true_all)))
     rmse = float(np.sqrt(np.mean((y_pred_all - y_true_all) ** 2)))

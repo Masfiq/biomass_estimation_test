@@ -1,0 +1,29 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyPixelVit_version_4_train.py:13: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/nn/modules/transformer.py:379: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1243, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/queue.py", line 179, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyPixelVit_version_4_train.py", line 1382, in <module>
+    model = train_model(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyPixelVit_version_4_train.py", line 1279, in train_model
+    for x_img, gh_idx, x_aux, y in train_loader:
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1448, in _next_data
+    idx, data = self._get_data()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1402, in _get_data
+    success, data = self._try_get_data()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1256, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1458178) exited unexpectedly
+[2026-07-26T13:30:40.998] error: Detected 1 oom_kill event in StepId=6661.0. Some of the step tasks have been OOM Killed.
+srun: error: peregrine1: task 0: Out Of Memory

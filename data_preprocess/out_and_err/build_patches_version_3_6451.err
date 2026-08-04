@@ -1,0 +1,13 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_3.py:13: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_3.py", line 443, in <module>
+    main()
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_3.py", line 430, in main
+    build_gedi_hls_patches_multiprocess(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_3.py", line 350, in build_gedi_hls_patches_multiprocess
+    field_geom = field.geometry.union_all()
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'GeoSeries' object has no attribute 'union_all'
+srun: error: peregrine0: task 0: Exited with exit code 1

@@ -1,0 +1,1 @@
+{"ckpt":"\/s\/chopin\/e\/proj\/hyperspec\/masfiq\/models\/tinyPixelViT_fusion_geohash_month_koppen_field_boundary_version_3.pth","csv":"\/s\/chopin\/e\/proj\/hyperspec\/masfiq\/csv_files\/gedi_field_boundary_2021_AprilToAugust_version_3.csv","seed":42,"val_frac":0.2,"metrics":{"mae":15.8535480499,"rmse":22.7134437561,"r2":0.0076869934}}

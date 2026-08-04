@@ -1,7 +1,7 @@
 # Similar to resnet18 version 6 with the implementation of the SAR 1 bands  
 
 
-# resnet18 model 
+# resnet101 model 
 # all 12 bands "B02","B03","B04","B05","B06","B07","B8A","B11","B12","EVI","NDVI","NLCD"
 # aux - koppen + month encoding + geohash + gridmet  
 
@@ -1032,7 +1032,7 @@ class ResNet101FusionRegressorAttn(nn.Module):
 # ----------------------------
 # 3) Dataloaders + training
 # ----------------------------
-def create_dataloaders(csv_path, batch_size=32, val_frac=0.2, geohash_precision=7, seed = 42):
+def create_dataloaders(csv_path, batch_size=32, val_frac=0.2, geohash_precision=GEOHASH_PRESITION, seed = 42):
     # koppen_tif = "/s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/1991_2020/koppen_geiger_0p00833333.tif"
     # legend     = "/s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt"
     koppen_tif = os.environ.get(
@@ -1044,7 +1044,7 @@ def create_dataloaders(csv_path, batch_size=32, val_frac=0.2, geohash_precision=
     ds = GEDIHlsPatchDatasetFusion(
         csv_path,
         target_col="agbd_center",
-        geohash_precision=GEOHASH_PRESITION,
+        geohash_precision=geohash_precision,
         koppen_tif_path=koppen_tif,
         koppen_legend_path=legend,
         gridmet_dir=GRIDMET_DIR,
@@ -1102,7 +1102,7 @@ def train_model(
     batch_size=32,
     lr=1e-3,
     val_frac=0.2,
-    geohash_precision=7,
+    geohash_precision=GEOHASH_PRESITION,
 ):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Device:", device)

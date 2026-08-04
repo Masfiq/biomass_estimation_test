@@ -6,6 +6,21 @@ Other version does not work
 The version needs to be matched
 
 
+///////////////////////////////////
+
+temp 
+
+current job ids 
+training
+resnet 18 - 6675
+tinyPixel vit  - 6687
+tinyUnet  - 6688
+
+eval 
+resnet 18 - 6652
+tinyPixel vit 6653
+tinyUnet  6654
+
 
 /////////////////////////////////
 Check this links 

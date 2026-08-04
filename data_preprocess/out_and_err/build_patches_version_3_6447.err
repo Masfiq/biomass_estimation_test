@@ -1,0 +1,2 @@
+srun: unrecognized option '--requeue'
+Try "srun --help" for more information

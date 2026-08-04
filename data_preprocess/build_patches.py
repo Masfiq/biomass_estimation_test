@@ -13,6 +13,7 @@ from rasterio.windows import Window
 from rasterio.warp import transform as rio_transform
 
 import shutil
+import re
 
 from pyproj import Transformer
 from collections import Counter
@@ -83,9 +84,13 @@ GEOJSON_FILE =  gpd.read_file("/s/chopin/e/proj/hyperspec/masfiq/biomass_estimat
 
 
 def load_gedi_shots_from_file(h5_path, min_quality=1):
-    #the path of h5 files 
+    #the path of h5 files
     h5_path = Path(h5_path)
     rows = []
+
+    # Extract DOY from filename: e.g. GEDI04_A_2021007070555_... → DOY 007 = Jan 7
+    doy_match = re.search(r'GEDI04_A_\d{4}(\d{3})', h5_path.name)
+    gedi_doy = int(doy_match.group(1)) if doy_match else -1
 
     # f.keys() is returning all the beam group like BEAMXXXX
     with h5py.File(h5_path, "r") as f:
@@ -154,6 +159,7 @@ def load_gedi_shots_from_file(h5_path, min_quality=1):
                         "lon": float(lo),
                         "agbd": float(a),
                         "l4_quality_flag": int(q),
+                        "gedi_doy": gedi_doy,
                     }
                 )
     # Pandas reads the keys of the dicts as column names and the values as row values, creating a exel like table.
@@ -470,8 +476,15 @@ def build_gedi_hls_patches_multiprocess(
     # 1) Load GEDI shots (same as your script)
     print("Loading GEDI shots from folder...")
     gedi_df = load_all_gedi_from_folder(gedi_folder, min_quality=min_quality)
-    # gedi df has exel like column  row , so the length means all the rows 
+    # gedi df has exel like column  row , so the length means all the rows
     print(f"Total good-quality shots across all files: {len(gedi_df)}")
+
+    # DOY filter: keep only shots from April–August (DOY 91–240) to match HLS seasonal window
+    # HLS data covers April–August only; winter/fall GEDI shots matched to summer imagery add noise
+    MIN_DOY, MAX_DOY = 91, 240
+    n_before = len(gedi_df)
+    gedi_df = gedi_df[(gedi_df["gedi_doy"] >= MIN_DOY) & (gedi_df["gedi_doy"] <= MAX_DOY)].reset_index(drop=True)
+    print(f"After DOY filter ({MIN_DOY}–{MAX_DOY}): {len(gedi_df)} shots kept, {n_before - len(gedi_df)} removed")
 
     # 2) Field polygon filtering (same as your script)
     import geopandas as gpd

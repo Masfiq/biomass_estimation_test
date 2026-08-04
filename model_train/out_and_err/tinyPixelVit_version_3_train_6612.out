@@ -1,0 +1,152 @@
+Thu Jul 23 18:40:25 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   28C    P0             61W /  500W |     724MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+
+[KOPPEN DEBUG] KoppenGeigerLookup initialized
+[KOPPEN DEBUG] koppen_tif_path: /tmp/koppen.tif
+[KOPPEN DEBUG] tif exists: True
+[KOPPEN DEBUG] legend_path: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] legend exists: True
+[KOPPEN DEBUG] real class count: 30
+[KOPPEN DEBUG] unknown_index: 30
+[KOPPEN DEBUG] num_classes: 31
+Sample x_img: torch.Size([12, 5, 5]) in_channels= 12
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([33]) aux_dim= 33
+Sample y: 2.179750680923462
+Epoch 001 | Train Huber 0.4670 MAE 0.8450 | Val Huber 0.3535 MAE 0.7096 | LR 1.00e-04
+Epoch 002 | Train Huber 0.3704 MAE 0.7351 | Val Huber 0.3345 MAE 0.6882 | LR 1.00e-04
+Epoch 003 | Train Huber 0.3581 MAE 0.7203 | Val Huber 0.3303 MAE 0.6829 | LR 1.00e-04
+Epoch 004 | Train Huber 0.3505 MAE 0.7103 | Val Huber 0.3314 MAE 0.6837 | LR 1.00e-04
+Epoch 005 | Train Huber 0.3456 MAE 0.7042 | Val Huber 0.3280 MAE 0.6744 | LR 1.00e-04
+Epoch 006 | Train Huber 0.3412 MAE 0.6983 | Val Huber 0.3199 MAE 0.6687 | LR 1.00e-04
+Epoch 007 | Train Huber 0.3373 MAE 0.6934 | Val Huber 0.3168 MAE 0.6604 | LR 1.00e-04
+Epoch 008 | Train Huber 0.3337 MAE 0.6883 | Val Huber 0.3163 MAE 0.6626 | LR 1.00e-04
+Epoch 009 | Train Huber 0.3309 MAE 0.6848 | Val Huber 0.3106 MAE 0.6566 | LR 1.00e-04
+Epoch 010 | Train Huber 0.3282 MAE 0.6813 | Val Huber 0.3119 MAE 0.6559 | LR 1.00e-04
+Epoch 011 | Train Huber 0.3253 MAE 0.6774 | Val Huber 0.3135 MAE 0.6564 | LR 1.00e-04
+Epoch 012 | Train Huber 0.3227 MAE 0.6738 | Val Huber 0.3053 MAE 0.6471 | LR 1.00e-04
+Epoch 013 | Train Huber 0.3197 MAE 0.6702 | Val Huber 0.3089 MAE 0.6521 | LR 1.00e-04
+Epoch 014 | Train Huber 0.3176 MAE 0.6673 | Val Huber 0.3055 MAE 0.6470 | LR 1.00e-04
+Epoch 015 | Train Huber 0.3152 MAE 0.6644 | Val Huber 0.3010 MAE 0.6436 | LR 1.00e-04
+Epoch 016 | Train Huber 0.3128 MAE 0.6608 | Val Huber 0.2950 MAE 0.6359 | LR 1.00e-04
+Epoch 017 | Train Huber 0.3113 MAE 0.6591 | Val Huber 0.2938 MAE 0.6357 | LR 1.00e-04
+Epoch 018 | Train Huber 0.3085 MAE 0.6553 | Val Huber 0.2921 MAE 0.6355 | LR 1.00e-04
+Epoch 019 | Train Huber 0.3075 MAE 0.6540 | Val Huber 0.2997 MAE 0.6453 | LR 1.00e-04
+Epoch 020 | Train Huber 0.3051 MAE 0.6506 | Val Huber 0.2915 MAE 0.6302 | LR 1.00e-04
+Epoch 021 | Train Huber 0.3042 MAE 0.6494 | Val Huber 0.2887 MAE 0.6302 | LR 1.00e-04
+Epoch 022 | Train Huber 0.3020 MAE 0.6466 | Val Huber 0.2879 MAE 0.6267 | LR 1.00e-04
+Epoch 023 | Train Huber 0.3008 MAE 0.6448 | Val Huber 0.2853 MAE 0.6242 | LR 1.00e-04
+Epoch 024 | Train Huber 0.2994 MAE 0.6424 | Val Huber 0.2871 MAE 0.6263 | LR 1.00e-04
+Epoch 025 | Train Huber 0.2982 MAE 0.6410 | Val Huber 0.2920 MAE 0.6315 | LR 1.00e-04
+Epoch 026 | Train Huber 0.2973 MAE 0.6402 | Val Huber 0.2862 MAE 0.6213 | LR 1.00e-04
+Epoch 027 | Train Huber 0.2956 MAE 0.6373 | Val Huber 0.2821 MAE 0.6178 | LR 1.00e-04
+Epoch 028 | Train Huber 0.2943 MAE 0.6357 | Val Huber 0.2844 MAE 0.6172 | LR 1.00e-04
+Epoch 029 | Train Huber 0.2935 MAE 0.6343 | Val Huber 0.2823 MAE 0.6175 | LR 1.00e-04
+Epoch 030 | Train Huber 0.2930 MAE 0.6335 | Val Huber 0.2833 MAE 0.6188 | LR 1.00e-04
+Epoch 031 | Train Huber 0.2916 MAE 0.6317 | Val Huber 0.2812 MAE 0.6160 | LR 1.00e-04
+Epoch 032 | Train Huber 0.2908 MAE 0.6304 | Val Huber 0.2811 MAE 0.6172 | LR 1.00e-04
+Epoch 033 | Train Huber 0.2899 MAE 0.6296 | Val Huber 0.2822 MAE 0.6180 | LR 1.00e-04
+Epoch 034 | Train Huber 0.2891 MAE 0.6282 | Val Huber 0.2805 MAE 0.6148 | LR 1.00e-04
+Epoch 035 | Train Huber 0.2879 MAE 0.6266 | Val Huber 0.2803 MAE 0.6175 | LR 1.00e-04
+Epoch 036 | Train Huber 0.2876 MAE 0.6261 | Val Huber 0.2788 MAE 0.6112 | LR 1.00e-04
+Epoch 037 | Train Huber 0.2864 MAE 0.6248 | Val Huber 0.2760 MAE 0.6097 | LR 1.00e-04
+Epoch 038 | Train Huber 0.2856 MAE 0.6234 | Val Huber 0.2773 MAE 0.6098 | LR 1.00e-04
+Epoch 039 | Train Huber 0.2848 MAE 0.6226 | Val Huber 0.2774 MAE 0.6098 | LR 1.00e-04
+Epoch 040 | Train Huber 0.2841 MAE 0.6213 | Val Huber 0.2767 MAE 0.6104 | LR 1.00e-04
+Epoch 041 | Train Huber 0.2836 MAE 0.6207 | Val Huber 0.2750 MAE 0.6101 | LR 1.00e-04
+Epoch 042 | Train Huber 0.2830 MAE 0.6196 | Val Huber 0.2746 MAE 0.6087 | LR 1.00e-04
+Epoch 043 | Train Huber 0.2823 MAE 0.6186 | Val Huber 0.2761 MAE 0.6057 | LR 1.00e-04
+Epoch 044 | Train Huber 0.2818 MAE 0.6185 | Val Huber 0.2732 MAE 0.6061 | LR 1.00e-04
+Epoch 045 | Train Huber 0.2812 MAE 0.6173 | Val Huber 0.2747 MAE 0.6071 | LR 1.00e-04
+Epoch 046 | Train Huber 0.2808 MAE 0.6168 | Val Huber 0.2748 MAE 0.6073 | LR 1.00e-04
+Epoch 047 | Train Huber 0.2798 MAE 0.6154 | Val Huber 0.2734 MAE 0.6029 | LR 1.00e-04
+Epoch 048 | Train Huber 0.2792 MAE 0.6148 | Val Huber 0.2728 MAE 0.6071 | LR 1.00e-04
+Epoch 049 | Train Huber 0.2793 MAE 0.6146 | Val Huber 0.2719 MAE 0.6058 | LR 1.00e-04
+Epoch 050 | Train Huber 0.2785 MAE 0.6136 | Val Huber 0.2723 MAE 0.6058 | LR 1.00e-04
+Epoch 051 | Train Huber 0.2779 MAE 0.6131 | Val Huber 0.2723 MAE 0.6025 | LR 1.00e-04
+Epoch 052 | Train Huber 0.2776 MAE 0.6122 | Val Huber 0.2709 MAE 0.6024 | LR 1.00e-04
+Epoch 053 | Train Huber 0.2773 MAE 0.6119 | Val Huber 0.2699 MAE 0.6029 | LR 1.00e-04
+Epoch 054 | Train Huber 0.2770 MAE 0.6118 | Val Huber 0.2724 MAE 0.6020 | LR 1.00e-04
+Epoch 055 | Train Huber 0.2766 MAE 0.6112 | Val Huber 0.2721 MAE 0.6011 | LR 1.00e-04
+Epoch 056 | Train Huber 0.2758 MAE 0.6101 | Val Huber 0.2694 MAE 0.6015 | LR 1.00e-04
+Epoch 057 | Train Huber 0.2751 MAE 0.6091 | Val Huber 0.2707 MAE 0.6012 | LR 1.00e-04
+Epoch 058 | Train Huber 0.2752 MAE 0.6092 | Val Huber 0.2704 MAE 0.6012 | LR 1.00e-04
+Epoch 059 | Train Huber 0.2742 MAE 0.6080 | Val Huber 0.2695 MAE 0.6000 | LR 1.00e-04
+Epoch 060 | Train Huber 0.2739 MAE 0.6073 | Val Huber 0.2697 MAE 0.6014 | LR 1.00e-04
+Epoch 061 | Train Huber 0.2730 MAE 0.6060 | Val Huber 0.2732 MAE 0.6028 | LR 1.00e-04
+Epoch 062 | Train Huber 0.2732 MAE 0.6065 | Val Huber 0.2674 MAE 0.5973 | LR 1.00e-04
+Epoch 063 | Train Huber 0.2728 MAE 0.6060 | Val Huber 0.2676 MAE 0.5955 | LR 1.00e-04
+Epoch 064 | Train Huber 0.2724 MAE 0.6049 | Val Huber 0.2689 MAE 0.6017 | LR 1.00e-04
+Epoch 065 | Train Huber 0.2723 MAE 0.6052 | Val Huber 0.2734 MAE 0.6045 | LR 1.00e-04
+Epoch 066 | Train Huber 0.2721 MAE 0.6049 | Val Huber 0.2718 MAE 0.6018 | LR 1.00e-04
+Epoch 067 | Train Huber 0.2713 MAE 0.6043 | Val Huber 0.2685 MAE 0.5974 | LR 1.00e-04
+Epoch 068 | Train Huber 0.2710 MAE 0.6035 | Val Huber 0.2665 MAE 0.5963 | LR 1.00e-04
+Epoch 069 | Train Huber 0.2707 MAE 0.6032 | Val Huber 0.2662 MAE 0.5961 | LR 1.00e-04
+Epoch 070 | Train Huber 0.2701 MAE 0.6024 | Val Huber 0.2668 MAE 0.5967 | LR 1.00e-04
+Epoch 071 | Train Huber 0.2703 MAE 0.6023 | Val Huber 0.2700 MAE 0.5985 | LR 1.00e-04
+Epoch 072 | Train Huber 0.2700 MAE 0.6023 | Val Huber 0.2682 MAE 0.5991 | LR 1.00e-04
+Epoch 073 | Train Huber 0.2694 MAE 0.6015 | Val Huber 0.2672 MAE 0.5988 | LR 1.00e-04
+Epoch 074 | Train Huber 0.2690 MAE 0.6003 | Val Huber 0.2650 MAE 0.5964 | LR 1.00e-04
+Epoch 075 | Train Huber 0.2691 MAE 0.6008 | Val Huber 0.2662 MAE 0.5948 | LR 1.00e-04
+Epoch 076 | Train Huber 0.2686 MAE 0.6003 | Val Huber 0.2650 MAE 0.5950 | LR 1.00e-04
+Epoch 077 | Train Huber 0.2677 MAE 0.5989 | Val Huber 0.2650 MAE 0.5941 | LR 1.00e-04
+Epoch 078 | Train Huber 0.2680 MAE 0.5991 | Val Huber 0.2683 MAE 0.5978 | LR 1.00e-04
+Epoch 079 | Train Huber 0.2682 MAE 0.5994 | Val Huber 0.2645 MAE 0.5924 | LR 1.00e-04
+Epoch 080 | Train Huber 0.2673 MAE 0.5982 | Val Huber 0.2641 MAE 0.5918 | LR 1.00e-04
+Epoch 081 | Train Huber 0.2668 MAE 0.5973 | Val Huber 0.2688 MAE 0.5953 | LR 1.00e-04
+Epoch 082 | Train Huber 0.2667 MAE 0.5972 | Val Huber 0.2650 MAE 0.5921 | LR 1.00e-04
+Epoch 083 | Train Huber 0.2672 MAE 0.5978 | Val Huber 0.2643 MAE 0.5942 | LR 1.00e-04
+Epoch 084 | Train Huber 0.2665 MAE 0.5971 | Val Huber 0.2690 MAE 0.5983 | LR 1.00e-04
+Epoch 085 | Train Huber 0.2659 MAE 0.5966 | Val Huber 0.2658 MAE 0.5959 | LR 1.00e-04
+Epoch 086 | Train Huber 0.2661 MAE 0.5965 | Val Huber 0.2667 MAE 0.5970 | LR 5.00e-05
+Epoch 087 | Train Huber 0.2638 MAE 0.5929 | Val Huber 0.2648 MAE 0.5928 | LR 5.00e-05
+Epoch 088 | Train Huber 0.2633 MAE 0.5927 | Val Huber 0.2623 MAE 0.5908 | LR 5.00e-05
+Epoch 089 | Train Huber 0.2633 MAE 0.5925 | Val Huber 0.2644 MAE 0.5916 | LR 5.00e-05
+Epoch 090 | Train Huber 0.2628 MAE 0.5918 | Val Huber 0.2627 MAE 0.5908 | LR 5.00e-05
+Epoch 091 | Train Huber 0.2630 MAE 0.5920 | Val Huber 0.2639 MAE 0.5914 | LR 5.00e-05
+Epoch 092 | Train Huber 0.2627 MAE 0.5916 | Val Huber 0.2622 MAE 0.5901 | LR 5.00e-05
+Epoch 093 | Train Huber 0.2629 MAE 0.5921 | Val Huber 0.2639 MAE 0.5900 | LR 5.00e-05
+Epoch 094 | Train Huber 0.2627 MAE 0.5915 | Val Huber 0.2622 MAE 0.5902 | LR 5.00e-05
+Epoch 095 | Train Huber 0.2622 MAE 0.5911 | Val Huber 0.2629 MAE 0.5898 | LR 5.00e-05
+Epoch 096 | Train Huber 0.2622 MAE 0.5913 | Val Huber 0.2623 MAE 0.5881 | LR 5.00e-05
+Epoch 097 | Train Huber 0.2618 MAE 0.5902 | Val Huber 0.2629 MAE 0.5899 | LR 5.00e-05
+Epoch 098 | Train Huber 0.2617 MAE 0.5902 | Val Huber 0.2630 MAE 0.5902 | LR 2.50e-05
+Epoch 099 | Train Huber 0.2608 MAE 0.5888 | Val Huber 0.2621 MAE 0.5895 | LR 2.50e-05
+Epoch 100 | Train Huber 0.2610 MAE 0.5894 | Val Huber 0.2627 MAE 0.5909 | LR 2.50e-05
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_version_3_fusion_geohash_month_koppen_version_5_California_North_10_2021.pth

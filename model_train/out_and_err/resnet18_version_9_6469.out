@@ -1,0 +1,113 @@
+Fri Jul 10 16:45:51 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   44C    P0            190W /  500W |   10772MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Gridmet dir added 
+
+Sample x_img: torch.Size([14, 3, 3]) in_channels= 14
+Sample S1_VV patch: tensor([[0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.]])
+Sample S1_VH patch: tensor([[0., 0., 0.],
+        [0., 0., 0.],
+        [0., 0., 0.]])
+Sample S1_VV center: 0.0
+Sample S1_VH center: 0.0
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([39]) aux_dim= 39
+Sample y: 26.998353958129883
+Epoch 001 | Train MSE 4649.0520 MAE 41.4058 | Val MSE 6050.9636 MAE 43.1056
+Epoch 002 | Train MSE 3882.8351 MAE 39.1606 | Val MSE 6844.5733 MAE 44.1151
+Epoch 003 | Train MSE 3597.6969 MAE 37.2243 | Val MSE 4518.9211 MAE 40.8737
+Epoch 004 | Train MSE 3501.1769 MAE 36.4490 | Val MSE 4641.1794 MAE 38.6742
+Epoch 005 | Train MSE 3448.5466 MAE 35.9152 | Val MSE 4304.6250 MAE 39.9247
+Epoch 006 | Train MSE 3418.4606 MAE 35.5719 | Val MSE 3897.9403 MAE 37.5781
+Epoch 007 | Train MSE 3395.3208 MAE 35.3180 | Val MSE 4170.5909 MAE 38.7850
+Epoch 008 | Train MSE 3384.0228 MAE 35.1509 | Val MSE 3683.5059 MAE 36.0786
+Epoch 009 | Train MSE 3363.2586 MAE 34.9994 | Val MSE 4301.4575 MAE 37.3892
+Epoch 010 | Train MSE 3344.0624 MAE 34.8467 | Val MSE 4502.2574 MAE 36.6170
+Epoch 011 | Train MSE 3339.0793 MAE 34.7669 | Val MSE 4882.4635 MAE 38.3768
+Epoch 012 | Train MSE 3325.3222 MAE 34.6422 | Val MSE 3800.0640 MAE 35.2560
+Epoch 013 | Train MSE 3323.9999 MAE 34.6684 | Val MSE 5618.9089 MAE 38.0053
+Epoch 014 | Train MSE 3306.7510 MAE 34.5560 | Val MSE 4363.1163 MAE 38.7091
+Epoch 015 | Train MSE 3298.0219 MAE 34.5098 | Val MSE 3738.5278 MAE 36.0726
+Epoch 016 | Train MSE 3290.3174 MAE 34.4562 | Val MSE 3560.0559 MAE 34.7093
+Epoch 017 | Train MSE 3291.2817 MAE 34.4284 | Val MSE 3594.2118 MAE 36.8021
+Epoch 018 | Train MSE 3278.1927 MAE 34.3585 | Val MSE 4124.1356 MAE 37.5674
+Epoch 019 | Train MSE 3271.6161 MAE 34.3092 | Val MSE 3917.6751 MAE 36.0788
+Epoch 020 | Train MSE 3273.2210 MAE 34.2849 | Val MSE 3681.5968 MAE 34.5086
+Epoch 021 | Train MSE 3264.2401 MAE 34.2107 | Val MSE 3326.7983 MAE 36.0100
+Epoch 022 | Train MSE 3260.2163 MAE 34.1709 | Val MSE 3518.9421 MAE 34.1428
+Epoch 023 | Train MSE 3256.0216 MAE 34.1506 | Val MSE 3453.1409 MAE 33.7900
+Epoch 024 | Train MSE 3252.8148 MAE 34.1001 | Val MSE 3423.3381 MAE 33.5294
+Epoch 025 | Train MSE 3247.7627 MAE 34.0869 | Val MSE 3355.7696 MAE 34.2123
+Epoch 026 | Train MSE 3239.8057 MAE 33.9927 | Val MSE 3322.8895 MAE 33.1787
+Epoch 027 | Train MSE 3232.5019 MAE 33.9944 | Val MSE 3346.1609 MAE 33.3250
+Epoch 028 | Train MSE 3225.5242 MAE 33.9398 | Val MSE 3231.1083 MAE 34.1693
+Epoch 029 | Train MSE 3226.8246 MAE 33.8867 | Val MSE 3245.6644 MAE 34.6848
+Epoch 030 | Train MSE 3216.8056 MAE 33.8334 | Val MSE 4273.5761 MAE 37.2981
+Epoch 031 | Train MSE 3222.3236 MAE 33.8818 | Val MSE 3275.2468 MAE 34.0066
+Epoch 032 | Train MSE 3215.8615 MAE 33.8389 | Val MSE 3337.8924 MAE 33.0209
+Epoch 033 | Train MSE 3208.2880 MAE 33.7514 | Val MSE 3245.6262 MAE 33.4592
+Epoch 034 | Train MSE 3206.7103 MAE 33.7825 | Val MSE 3269.9632 MAE 32.8562
+Epoch 035 | Train MSE 3201.5882 MAE 33.7123 | Val MSE 3433.7504 MAE 32.9884
+Epoch 036 | Train MSE 3197.8993 MAE 33.7003 | Val MSE 3375.1188 MAE 33.1044
+Epoch 037 | Train MSE 3196.8219 MAE 33.7022 | Val MSE 3273.0722 MAE 33.3441
+Epoch 038 | Train MSE 3186.5463 MAE 33.6171 | Val MSE 3250.9404 MAE 33.9809
+Epoch 039 | Train MSE 3189.8425 MAE 33.6108 | Val MSE 3256.7940 MAE 32.7357
+Epoch 040 | Train MSE 3180.9804 MAE 33.5667 | Val MSE 3286.3127 MAE 33.9627
+Epoch 041 | Train MSE 3183.0130 MAE 33.5599 | Val MSE 3344.9726 MAE 32.9788
+Epoch 042 | Train MSE 3173.7767 MAE 33.5295 | Val MSE 3187.2853 MAE 33.8090
+Epoch 043 | Train MSE 3178.9198 MAE 33.5120 | Val MSE 3267.0538 MAE 33.7318
+Epoch 044 | Train MSE 3167.8539 MAE 33.4783 | Val MSE 3270.5856 MAE 33.1746
+Epoch 045 | Train MSE 3170.7708 MAE 33.5083 | Val MSE 3332.2174 MAE 32.5399
+Epoch 046 | Train MSE 3166.6741 MAE 33.4290 | Val MSE 3260.9152 MAE 32.7229
+Epoch 047 | Train MSE 3160.2538 MAE 33.3362 | Val MSE 3188.3814 MAE 33.2121
+Epoch 048 | Train MSE 3163.3600 MAE 33.4059 | Val MSE 3279.7619 MAE 32.6738
+Epoch 049 | Train MSE 3162.6183 MAE 33.3670 | Val MSE 3183.3179 MAE 32.8141
+Epoch 050 | Train MSE 3154.3762 MAE 33.3194 | Val MSE 3232.8452 MAE 34.3252
+Epoch 051 | Train MSE 3153.6919 MAE 33.3323 | Val MSE 3241.8035 MAE 32.7904
+Epoch 052 | Train MSE 3148.3034 MAE 33.3055 | Val MSE 3215.2411 MAE 32.9282
+Epoch 053 | Train MSE 3143.2567 MAE 33.2753 | Val MSE 3311.8613 MAE 32.4429
+Epoch 054 | Train MSE 3151.0492 MAE 33.2457 | Val MSE 3263.9945 MAE 32.4862
+Epoch 055 | Train MSE 3148.7146 MAE 33.3090 | Val MSE 3243.5739 MAE 32.4918
+Epoch 056 | Train MSE 3146.7462 MAE 33.2654 | Val MSE 3371.7553 MAE 31.8725
+Epoch 057 | Train MSE 3137.5112 MAE 33.2108 | Val MSE 3226.3726 MAE 32.7195
+Epoch 058 | Train MSE 3143.5413 MAE 33.1899 | Val MSE 3181.4445 MAE 33.7057
+Epoch 059 | Train MSE 3135.8887 MAE 33.1883 | Val MSE 3176.8686 MAE 33.0839
+Epoch 060 | Train MSE 3136.6632 MAE 33.1587 | Val MSE 3376.4175 MAE 32.4447
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/resnet18_version_9_fusion_geohash_month_koppen_withAttentionLayer_version_3_California_North_10_2021.pth

@@ -1,0 +1,70 @@
+Sun Jul 26 02:17:42 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   27C    P0             59W /  500W |     602MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+in_channels = 12 aux_dim = 33
+
+=== VAL METRICS (Mg/ha) ===
+MAE  = 34.0241
+RMSE = 60.8787
+R^2  = 0.3893
+
+Saved summary to: /s/chopin/e/proj/hyperspec/masfiq/models/json/tinyPixelViT_version_3_eval_version_5.json
+
+=== LAND COVER PERFORMANCE ANALYSIS ===
+Overall MAE  from land-cover eval = 34.0241
+Overall RMSE from land-cover eval = 60.8787
+Overall R^2  from land-cover eval = 0.3893
+
+Per-land-cover results:
+ nlcd_class     n       mae      rmse       bias                    nlcd_name
+         42 25088 50.704385 77.767265 -16.484873             Evergreen Forest
+         52 14432 16.689137 35.247708  -6.863063                  Shrub/Scrub
+         71  6598 22.750795 45.681062  -8.900787         Grassland/Herbaceous
+         82  1106  1.756794  3.147399  -0.507139             Cultivated Crops
+         21   795 31.133340 49.506575 -10.465226        Developed, Open Space
+         81   792  4.625782 17.813485  -1.834476                  Pasture/Hay
+         95   721  1.663395  5.493975   0.332105 Emergent Herbaceous Wetlands
+         22   358 18.927355 34.055029  -1.278443     Developed, Low Intensity
+         43   309 50.713892 68.338748 -18.102309                 Mixed Forest
+         31   249  6.348001 21.324054  -0.653545                  Barren Land
+         90   222 24.936521 48.809092 -15.488261               Woody Wetlands
+         41   197 35.963768 47.940205   3.873967             Deciduous Forest
+         23    18 16.626505 29.488505  -2.731461  Developed, Medium Intensity
+         11    10 11.493279 14.410457   9.133141                   Open Water
+
+Saved land-cover metrics to: /s/chopin/e/proj/hyperspec/masfiq/models/json/tinyPixelViT_version_3_eval_version_5_landcover_metrics.csv

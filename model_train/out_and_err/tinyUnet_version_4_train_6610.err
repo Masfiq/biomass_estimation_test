@@ -1,0 +1,15 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py:22: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py", line 984, in <module>
+    model = train_model(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py", line 873, in train_model
+    train_loader, val_loader, in_channels, aux_dim = create_dataloaders(
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py", line 851, in create_dataloaders
+    x_img, gh_idx, x_aux, y = ds[0]
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py", line 401, in __getitem__
+    x_img_np, crs, transform = self._load_patch_fixed_channels(patch_path, bands_str)
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_4_train.py", line 353, in _load_patch_fixed_channels
+    out[j] = raw[i]
+ValueError: could not broadcast input array from shape (5,5) into shape (3,3)
+srun: error: peregrine1: task 0: Exited with exit code 1
