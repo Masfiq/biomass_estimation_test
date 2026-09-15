@@ -1,0 +1,56 @@
+#!/bin/bash
+#SBATCH --job-name=eval_tinyUnet_v8
+#SBATCH --account=standard
+#SBATCH --partition=peregrine-gpu
+#SBATCH --qos=gpu_short
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:nvidia_a100_3g.40gb:1
+#SBATCH --cpus-per-task=10
+#SBATCH --mem=128G
+#SBATCH --time=23:30:00
+#SBATCH --output=out_and_err/eval_tinyUnet_version_8_%j.out
+#SBATCH --error=out_and_err/eval_tinyUnet_version_8_%j.err
+
+
+############################ edit variable here
+PYTHON_FILE="eval_tinyUnet_version_8.py"
+
+CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_6.csv"
+
+# CHANGE A/B: version_8 checkpoint (DEM aux features + sqrt target). Best epoch 056,
+# Val Huber 4.0115. Not comparable to version_7's Huber -- different target space.
+CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_8_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_version_6_California_North_10_2021_best.pth"
+
+# Must match tinyUnet_version_8_train.py exactly or the val split will not be the
+# same 20% the model never saw.
+VAL_FRAC=0.2
+SEED=42
+BATCH_SIZE=256
+
+OUT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/json/tinyUnet_version_8_eval_version_6.json"
+
+###################################
+
+# The conda env ships a newer libstdc++ than /lib64 (libgdal needs GLIBCXX_3.4.30).
+export LD_LIBRARY_PATH="/s/chopin/e/proj/hyperspec/masfiq/projenv/lib:${LD_LIBRARY_PATH}"
+
+# Cap per-process GDAL block cache (MB). version_8 reads the Copernicus DEM VRT as a
+# SECOND raster source per sample on top of the patch tif, so this cap matters more
+# here than it did in version_7.
+export GDAL_CACHEMAX=256
+export VSI_CACHE=FALSE
+
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+
+SCRATCH_DIR="${SLURM_TMPDIR:-${TMPDIR:-/tmp/${USER}/slurm-${SLURM_JOB_ID}}}"
+mkdir -p "${SCRATCH_DIR}"
+cp "/s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/1991_2020/koppen_geiger_0p00833333.tif" "${SCRATCH_DIR}/koppen.tif"
+export KOPPEN_TIF="${SCRATCH_DIR}/koppen.tif"
+
+nvidia-smi
+
+srun python -u "${PYTHON_FILE}" --csv "${CSV_PATH}" --ckpt "${CKPT_PATH}" --val-frac "${VAL_FRAC}" --seed "${SEED}" --batch-size "${BATCH_SIZE}" --out "${OUT_PATH}"

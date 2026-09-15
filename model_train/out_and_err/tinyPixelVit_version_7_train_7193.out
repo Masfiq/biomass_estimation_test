@@ -1,0 +1,90 @@
+Mon Sep 14 16:47:46 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   38C    P0             85W /  500W |     916MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    1   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+[MEM] startup: use=0.4G peak=0.4G limit=n/a anon=0.4G file=0.0G slab=0.0G
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+
+[KOPPEN DEBUG] KoppenGeigerLookup initialized
+[KOPPEN DEBUG] koppen_tif_path: /tmp/koppen.tif
+[KOPPEN DEBUG] tif exists: True
+[KOPPEN DEBUG] legend_path: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] legend exists: True
+[KOPPEN DEBUG] real class count: 30
+[KOPPEN DEBUG] unknown_index: 30
+[KOPPEN DEBUG] num_classes: 31
+Gridmet dir added 
+
+[GRIDMET] loaded subset cube (6, 365, 36, 125) (39.4 MB) lat 41.025..42.483 lon -124.683..-119.517
+DEM path added
+
+[LOADER] train workers=4 val workers=2 persistent=False prefetch=2
+Sample x_img: torch.Size([14, 5, 5]) in_channels= 14
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([43]) aux_dim= 43
+Sample y: 2.800732374191284
+[MEM] ep001 train-start: use=0.9G peak=0.9G limit=n/a anon=0.6G file=0.3G slab=0.0G
+[MEM] ep001 batch 1: use=1.3G peak=1.3G limit=n/a anon=1.0G file=0.3G slab=0.0G
+[MEM] ep001 batch 2: use=1.8G peak=1.8G limit=n/a anon=1.5G file=0.3G slab=0.0G
+[MEM] ep001 batch 3: use=1.8G peak=1.8G limit=n/a anon=1.5G file=0.3G slab=0.0G
+[MEM] ep001 batch 4: use=1.8G peak=1.8G limit=n/a anon=1.5G file=0.3G slab=0.0G
+[MEM] ep001 batch 5: use=1.9G peak=1.9G limit=n/a anon=1.5G file=0.4G slab=0.0G
+[MEM] ep001 batch 500: use=2.4G peak=2.4G limit=n/a anon=2.0G file=0.4G slab=0.0G
+[MEM] ep001 batch 1000: use=2.5G peak=2.5G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep001 batch 1500: use=2.5G peak=2.5G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep001 batch 2000: use=2.5G peak=2.5G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep001 batch 2500: use=2.6G peak=2.6G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep001 batch 3000: use=2.6G peak=2.6G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 batch 3500: use=2.6G peak=2.6G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 batch 4000: use=2.6G peak=2.6G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 batch 4500: use=2.7G peak=2.7G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 batch 5000: use=2.7G peak=2.7G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 batch 5500: use=2.7G peak=2.7G limit=n/a anon=2.2G file=0.4G slab=0.0G
+[MEM] ep001 val-start: use=1.5G peak=2.7G limit=n/a anon=1.0G file=0.4G slab=0.0G
+[MEM] end epoch 001: use=1.5G peak=2.7G limit=n/a anon=1.1G file=0.4G slab=0.0G
+Epoch 001 | Train Huber 5.7670 MAE 2.6968 | Val Huber 5.1695 MAE 2.5655 | LR 1.00e-04
+  New best model (epoch 001, Val Huber 5.1695), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_version_7_fusion_geohash_month_koppen_SAR_DEM_sqrt_version_6_California_North_10_2021_best.pth
+[MEM] ep002 train-start: use=1.5G peak=2.7G limit=n/a anon=1.1G file=0.4G slab=0.0G
+[MEM] ep002 batch 1: use=1.9G peak=2.7G limit=n/a anon=1.5G file=0.4G slab=0.0G
+[MEM] ep002 batch 2: use=1.9G peak=2.7G limit=n/a anon=1.5G file=0.4G slab=0.0G
+[MEM] ep002 batch 3: use=2.0G peak=2.7G limit=n/a anon=1.5G file=0.4G slab=0.0G
+[MEM] ep002 batch 4: use=2.0G peak=2.7G limit=n/a anon=1.5G file=0.4G slab=0.0G
+[MEM] ep002 batch 5: use=2.0G peak=2.7G limit=n/a anon=1.6G file=0.4G slab=0.0G
+[MEM] ep002 batch 500: use=2.5G peak=2.7G limit=n/a anon=2.0G file=0.4G slab=0.0G
+[MEM] ep002 batch 1000: use=2.5G peak=2.7G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep002 batch 1500: use=2.5G peak=2.7G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep002 batch 2000: use=2.6G peak=2.7G limit=n/a anon=2.1G file=0.4G slab=0.0G
+[MEM] ep002 batch 2500: use=2.6G peak=2.7G limit=n/a anon=2.2G file=0.4G slab=0.0G

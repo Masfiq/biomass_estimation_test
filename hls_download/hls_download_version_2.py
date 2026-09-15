@@ -10,11 +10,16 @@
 # --- DEFAULT PATHS / SETTINGS (edit these) ---
 #DEFAULT_GEOJSON = "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/geojson_files/california_north_10.geojson"
 
-DEFAULT_GEOJSON = "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/geojson_files/california_top_half.geojson"
+#DEFAULT_GEOJSON = "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/geojson_files/california_top_half.geojson"
+
+# held-out TEST strip: directly south of california_north_10 with a ~5.6 km buffer gap
+DEFAULT_GEOJSON = "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/geojson_files/california_north_10_south_test.geojson"
 
 # DEFAULT_OUT_DIR = "/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_field_boundary_2021_AprilToAugust"
 
-DEFAULT_OUT_DIR = "/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_california_top_half_2021_AprilToAugust"
+#DEFAULT_OUT_DIR = "/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_california_top_half_2021_AprilToAugust"
+
+DEFAULT_OUT_DIR = "/s/chopin/e/proj/hyperspec/masfiq/dataset/hls_data_california_north_10_south_test_2021_AprilToAugust"
 DEFAULT_START   = "2021-04-01T00:00:00" # year month day time  #April to August 
 DEFAULT_END     = "2021-08-30T23:59:59"
 DEFAULT_SKIP_EXISTING = True

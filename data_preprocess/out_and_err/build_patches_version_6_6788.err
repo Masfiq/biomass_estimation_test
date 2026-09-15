@@ -1,0 +1,9 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_6.py:44: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/data_preprocess/build_patches_version_6.py", line 46, in <module>
+    import rasterio
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/__init__.py", line 9, in <module>
+    from rasterio._base import gdal_version
+ImportError: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.30' not found (required by /s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/site-packages/rasterio/../../../libgdal.so.31)
+srun: error: peregrine1: task 0: Exited with exit code 1
