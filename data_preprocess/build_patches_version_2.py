@@ -660,6 +660,7 @@ def build_gedi_hls_patches_multiprocess(
     out_csv_path = Path(out_csv_path)
 
     # CLEAN START (same behavior as your script)
+
     if patches_root.exists():
         import shutil
         shutil.rmtree(patches_root)
@@ -677,6 +678,18 @@ def build_gedi_hls_patches_multiprocess(
     import geopandas as gpd
     field = GEOJSON_FILE
     field_geom = field.geometry.unary_union
+    # adding the geometry column in the panda dataframe 
+    # before 
+    #           shot_number        lat         lon  agbd_center
+    # 0  130340000300182824  41.923456 -124.204134     7.844102
+    # 1  130340000300182837  41.919593 -124.196841     4.769652
+
+
+    #     after
+    #     shot_number lat  lonagbd_center                     geometry
+    # 0  130340000300182824  41.923456 -124.204134     7.844102  POINT (-124.20413 41.92346)
+    # 1  130340000300182837  41.919593 -124.196841     4.769652  POINT (-124.19684 41.91959)
+
 
     gedi_gdf = gpd.GeoDataFrame(
         gedi_df,
@@ -771,9 +784,11 @@ def build_gedi_hls_patches_multiprocess(
 
 
 def main():
-
+    #if the folder exists , prints true / false
     print("HLS exists:", Path(HLS_FOLDER).exists())
+     # printing how many tif files are there
     print("HLS tif count:", len(list(Path(HLS_FOLDER).glob("*.tif"))))
+   
     print("First 5 tif files:", list(Path(HLS_FOLDER).glob("*.tif"))[:5])
     # this method is doing all the jobs
     build_gedi_hls_patches_multiprocess(

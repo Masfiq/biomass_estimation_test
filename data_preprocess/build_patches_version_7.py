@@ -14,6 +14,11 @@
 
 #     incremental CSV flush every 500 patches.
 
+# gedi filter 
+# min quality =1  
+# degrade = 0
+
+
 
 import h5py
 import numpy as np
@@ -291,16 +296,59 @@ def load_gedi_shots_from_file(h5_path, min_quality=1):
                 agbd = beam["agbd"][:]
                 quality = beam["l4_quality_flag"][:]
                 shot_number = beam["shot_number"][:]
+                degrade = beam["degrade_flag"][:]
+                # v7: recorded, NOT filtered on. See the note above the rows.append below.
+                agbd_se = beam["agbd_se"][:]
+                sensitivity = beam["sensitivity"][:]
             except KeyError:
                 print(f"Warning: missing vars in {h5_path.name}, {beam_name}")
                 continue
-            mask = (quality >= min_quality) & np.isfinite(agbd)
+            # v7 filter changes vs v6:
+            #   agbd > 0      replaces np.isfinite(agbd). GEDI marks missing biomass with
+            #                 -9999, not NaN, and np.isfinite(-9999) is True, so the old
+            #                 check removed exactly zero rows -- only the quality flag was
+            #                 keeping fill values out. This is the guard it looked like.
+            #   degrade == 0  new. Measured over 10 sampled granules, 35.3% of the shots
+            #                 passing l4_quality_flag alone carry a non-zero degrade_flag
+            #                 (25.0% are 80, 8.3% are 30, 2.0% are 70), meaning GEDI's own
+            #                 pointing/orbit solution was degraded and the 25m footprint may
+            #                 not be where the file says it is. Requiring both flags is
+            #                 standard practice in the L4A literature.
+            mask = (quality >= min_quality) & (agbd > 0) & (degrade == 0)
+
             lat = lat[mask]
             lon = lon[mask]
             agbd = agbd[mask]
             shot_number = shot_number[mask]
             quality = quality[mask]
-            for la, lo, a, q, sn in zip(lat, lon, agbd, quality, shot_number):
+            agbd_se = agbd_se[mask]
+            sensitivity = sensitivity[mask]
+
+            # agbd_se and sensitivity are RECORDED ONLY -- they are never filtered on and
+            # must never become model inputs. Both exist only where GEDI actually flew, so
+            # feeding either to the network would leak information about the label and
+            # leave an empty slot when predicting anywhere GEDI did not sample.
+            #
+            #   agbd_se      Standard error of GEDI's own biomass prediction, in Mg/ha
+            #                (median ~11.1 inside this ROI). Two legitimate uses: as an
+            #                error floor when reporting accuracy ("MAE 37.9 against a label
+            #                uncertainty of 11.1"), and as a per-sample loss weight. Note
+            #                plain inverse-variance weighting (1/se^2) BACKFIRES here: se
+            #                tracks prediction stratum, not data quality (shrub ~3, forest
+            #                ~11), so it would hand 67.7% of total influence to the 0-25
+            #                Mg/ha band and drop the 200+ band to 4.5%. Weight within
+            #                stratum if weighting at all.
+            #
+            #   sensitivity  Max canopy cover at which this shot could still detect the
+            #                ground return. Diagnostic only: lets us test whether large
+            #                residuals coincide with weak measurements, and lets us compare
+            #                shot difficulty between the north train ROI and the south test
+            #                strip. Do NOT filter on it -- it correlates strongly with
+            #                biomass (mean AGBD 47 at 0.95-0.96 vs 210 at 0.99+), so a
+            #                >0.98 cut would delete 82% of shots and skew the set high.
+            for la, lo, a, q, sn, se, sens in zip(
+                lat, lon, agbd, quality, shot_number, agbd_se, sensitivity
+            ):
                 rows.append(
                     {
                         "gedi_file": h5_path.name,
@@ -309,6 +357,8 @@ def load_gedi_shots_from_file(h5_path, min_quality=1):
                         "lat": float(la),
                         "lon": float(lo),
                         "agbd": float(a),
+                        "agbd_se": float(se),
+                        "sensitivity": float(sens),
                         "l4_quality_flag": int(q),
                         "gedi_doy": gedi_doy,
                     }
@@ -478,6 +528,10 @@ def _process_one_shot(task):
         agbd = float(row["agbd"])
         shot_number = int(row["shot_number"])
         gedi_file = row["gedi_file"]
+        # v7: carried through from load_gedi_shots_from_file. Recorded only, never filtered
+        # on and never a model input -- see the note in that function.
+        agbd_se = float(row.get("agbd_se", float("nan")))
+        sensitivity = float(row.get("sensitivity", float("nan")))
 
         # Still predicting center pixel biomass, same as v3/v4/v5
         HLS_PIXEL_AREA_M2 = 30.0 * 30.0
@@ -528,7 +582,19 @@ def _process_one_shot(task):
             "agbd_raw": agbd,
             "agbd_center": float(agbd_center),
             "agbd_log": float(np.log1p(agbd_center)),
+            "agbd_sqrt": float(np.sqrt(agbd_center)),
             "center_frac": float(frac),
+            # GEDI's own uncertainty on agbd_raw, in Mg/ha (median ~11.1 in this ROI).
+            "agbd_se": agbd_se,
+            # The SAME uncertainty rescaled by center_frac so it is in the units the model
+            # is actually trained and scored in. agbd_center = agbd_raw * frac, and scaling
+            # is linear, so the matching standard error is agbd_se * frac. Comparing a
+            # raw agbd_se against an MAE measured on agbd_center mixes two scales and
+            # overstates the label-noise share by 1/frac = 2.25x.
+            "agbd_se_center": agbd_se * float(frac),
+            # Max canopy cover at which this shot could still find the ground. Diagnostic
+            # only: never filter on it, it correlates strongly with biomass.
+            "sensitivity": sensitivity,
             "hls_granule": granule_id,
             "row": int(r),
             "col": int(c),
