@@ -1,0 +1,9 @@
+/s/chopin/e/proj/hyperspec/masfiq/biomass_estimation_test/model_train/tinyUnet_version_14_train.py:45: DeprecationWarning: GeoPandas is set to use PyGEOS over Shapely. PyGEOS support is deprecatedand will be removed in GeoPandas 1.0, released in the Q1 of 2024. Please migrate to Shapely 2.0 (https://geopandas.org/en/stable/docs/user_guide/pygeos_to_shapely.html).
+  import geopandas as gpd
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-09-28T12:38:06.329] error: *** STEP 7771.0 ON peregrine1 CANCELLED AT 2026-09-28T12:38:06 DUE to SIGNAL Terminated ***
+[2026-09-28T12:38:06.330] error: *** JOB 7771 ON peregrine1 CANCELLED AT 2026-09-28T12:38:06 DUE to SIGNAL Terminated ***
+Traceback (most recent call last):
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/multiprocessing/resource_sharer.py", line 138, in _serve
+    with self._listener.accept() as conn:
+  File "/s/chopin/e/proj/hyperspec/masfiq/projenv/lib/python3.10/multiprocessing/connection.py", line 465, in accept

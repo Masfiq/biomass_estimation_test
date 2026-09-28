@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=eval_resnet18_v12
+#SBATCH --job-name=eval_tinyUnet_v12
 #SBATCH --account=standard
 #SBATCH --partition=peregrine-gpu
 #SBATCH --qos=gpu_short
@@ -9,29 +9,35 @@
 #SBATCH --cpus-per-task=10
 #SBATCH --mem=128G
 #SBATCH --time=23:30:00
-#SBATCH --output=out_and_err/eval_resnet18_version_12_%j.out
-#SBATCH --error=out_and_err/eval_resnet18_version_12_%j.err
+#SBATCH --output=out_and_err/eval_tinyUnet_version_12_%j.out
+#SBATCH --error=out_and_err/eval_tinyUnet_version_12_%j.err
 
 
 ############################ edit variable here
-PYTHON_FILE="eval_resnet18_version_12.py"
+PYTHON_FILE="eval_tinyUnet_version_12.py"
 
-CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_5.csv"
+CSV_PATH="/s/chopin/e/proj/hyperspec/masfiq/csv_files/gedi_california_north_10_2021_AprilToAugust_version_8.csv"
 
-CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/resnet18_version_12_fusion_geohash_month_koppen_withAttentionLayer_SAR_version_5_California_North_10_2021.pth"
+# CHANGE A/B: version_8 checkpoint (DEM aux features + sqrt target). Best epoch 056,
+# Val Huber 4.0115. Not comparable to version_7's Huber -- different target space.
+CKPT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_12_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDaux_delta2p5_version_8_California_North_10_2021_best.pth"
 
+# Must match tinyUnet_version_8_train.py exactly or the val split will not be the
+# same 20% the model never saw.
 VAL_FRAC=0.2
 SEED=42
 BATCH_SIZE=256
 
-OUT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/json/resnet18_version_12_eval_version_5.json"
+OUT_PATH="/s/chopin/e/proj/hyperspec/masfiq/models/json/tinyUnet_version_12_eval_version_8.json"
 
 ###################################
 
 # The conda env ships a newer libstdc++ than /lib64 (libgdal needs GLIBCXX_3.4.30).
 export LD_LIBRARY_PATH="/s/chopin/e/proj/hyperspec/masfiq/projenv/lib:${LD_LIBRARY_PATH}"
 
-# Cap per-process GDAL block cache (MB) -- Sentinel-1 COG reads across workers.
+# Cap per-process GDAL block cache (MB). version_8 reads the Copernicus DEM VRT as a
+# SECOND raster source per sample on top of the patch tif, so this cap matters more
+# here than it did in version_7.
 export GDAL_CACHEMAX=256
 export VSI_CACHE=FALSE
 

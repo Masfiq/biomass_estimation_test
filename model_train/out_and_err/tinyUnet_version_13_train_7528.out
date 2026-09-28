@@ -1,0 +1,271 @@
+Wed Sep 23 10:39:28 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.18             Driver Version: 580.126.18     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          Off |   00000000:01:00.0 Off |                   On |
+| N/A   42C    P0             69W /  500W |     486MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    2   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Device: cuda
+[MEM] startup: use=0.4G peak=0.4G limit=n/a anon=0.3G file=0.0G slab=0.0G
+
+[KOPPEN DEBUG] Loading legend from: /s/chopin/e/proj/hyperspec/masfiq/dataset/koppen_geiger_tif/legend.txt
+[KOPPEN DEBUG] Legend exists: True
+[KOPPEN DEBUG] Parsed legend class count: 30
+[KOPPEN DEBUG] First 20 parsed codes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[KOPPEN DEBUG] First 20 code_to_label: [(1, 'Af'), (2, 'Am'), (3, 'Aw'), (4, 'BWh'), (5, 'BWk'), (6, 'BSh'), (7, 'BSk'), (8, 'Csa'), (9, 'Csb'), (10, 'Csc'), (11, 'Cwa'), (12, 'Cwb'), (13, 'Cwc'), (14, 'Cfa'), (15, 'Cfb'), (16, 'Cfc'), (17, 'Dsa'), (18, 'Dsb'), (19, 'Dsc'), (20, 'Dsd')]
+Gridmet dir added 
+
+[GRIDMET] loaded subset cube (6, 365, 36, 125) (39.4 MB) lat 41.025..42.483 lon -124.683..-119.517
+DEM path added
+
+[LOADER] train workers=4 val workers=2 persistent=False prefetch=2
+Sample x_img: torch.Size([13, 5, 5]) in_channels= 13
+Sample gh_idx: torch.Size([7]) geohash_precision= 7
+Sample x_aux: torch.Size([60]) aux_dim= 60
+Sample y: 2.800732374191284
+[MEM] end epoch 001: use=1.5G peak=2.5G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 001 | Train Huber 4.1665 MAE 2.6258 | Val Huber 3.5450 MAE 2.3286 | LR 1.00e-04
+  New best model (epoch 001, Val Huber 3.5450), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 002: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 002 | Train Huber 3.5486 MAE 2.3479 | Val Huber 3.4228 MAE 2.3029 | LR 1.00e-04
+  New best model (epoch 002, Val Huber 3.4228), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 003: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 003 | Train Huber 3.4908 MAE 2.3199 | Val Huber 3.3744 MAE 2.2722 | LR 1.00e-04
+  New best model (epoch 003, Val Huber 3.3744), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 004: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 004 | Train Huber 3.4443 MAE 2.2970 | Val Huber 3.3181 MAE 2.2455 | LR 1.00e-04
+  New best model (epoch 004, Val Huber 3.3181), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 005: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 005 | Train Huber 3.4034 MAE 2.2776 | Val Huber 3.2845 MAE 2.2271 | LR 1.00e-04
+  New best model (epoch 005, Val Huber 3.2845), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 006: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 006 | Train Huber 3.3612 MAE 2.2566 | Val Huber 3.3019 MAE 2.2212 | LR 1.00e-04
+[MEM] end epoch 007: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 007 | Train Huber 3.3415 MAE 2.2459 | Val Huber 3.2347 MAE 2.1972 | LR 1.00e-04
+  New best model (epoch 007, Val Huber 3.2347), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 008: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 008 | Train Huber 3.3159 MAE 2.2329 | Val Huber 3.2182 MAE 2.1890 | LR 1.00e-04
+  New best model (epoch 008, Val Huber 3.2182), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 009: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 009 | Train Huber 3.2897 MAE 2.2201 | Val Huber 3.1955 MAE 2.1826 | LR 1.00e-04
+  New best model (epoch 009, Val Huber 3.1955), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 010: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 010 | Train Huber 3.2690 MAE 2.2103 | Val Huber 3.1861 MAE 2.1754 | LR 1.00e-04
+  New best model (epoch 010, Val Huber 3.1861), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 011: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 011 | Train Huber 3.2506 MAE 2.2005 | Val Huber 3.1780 MAE 2.1771 | LR 1.00e-04
+  New best model (epoch 011, Val Huber 3.1780), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 012: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 012 | Train Huber 3.2382 MAE 2.1946 | Val Huber 3.2161 MAE 2.2009 | LR 1.00e-04
+[MEM] end epoch 013: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 013 | Train Huber 3.2114 MAE 2.1819 | Val Huber 3.1523 MAE 2.1675 | LR 1.00e-04
+  New best model (epoch 013, Val Huber 3.1523), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 014: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 014 | Train Huber 3.1979 MAE 2.1750 | Val Huber 3.1484 MAE 2.1603 | LR 1.00e-04
+  New best model (epoch 014, Val Huber 3.1484), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 015: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 015 | Train Huber 3.1871 MAE 2.1699 | Val Huber 3.1460 MAE 2.1438 | LR 1.00e-04
+  New best model (epoch 015, Val Huber 3.1460), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 016: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 016 | Train Huber 3.1768 MAE 2.1645 | Val Huber 3.1178 MAE 2.1409 | LR 1.00e-04
+  New best model (epoch 016, Val Huber 3.1178), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 017: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 017 | Train Huber 3.1613 MAE 2.1562 | Val Huber 3.1111 MAE 2.1468 | LR 1.00e-04
+  New best model (epoch 017, Val Huber 3.1111), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 018: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 018 | Train Huber 3.1506 MAE 2.1529 | Val Huber 3.1075 MAE 2.1319 | LR 1.00e-04
+  New best model (epoch 018, Val Huber 3.1075), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 019: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 019 | Train Huber 3.1413 MAE 2.1466 | Val Huber 3.1401 MAE 2.1630 | LR 1.00e-04
+[MEM] end epoch 020: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 020 | Train Huber 3.1287 MAE 2.1407 | Val Huber 3.0990 MAE 2.1294 | LR 1.00e-04
+  New best model (epoch 020, Val Huber 3.0990), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 021: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 021 | Train Huber 3.1187 MAE 2.1358 | Val Huber 3.0883 MAE 2.1274 | LR 1.00e-04
+  New best model (epoch 021, Val Huber 3.0883), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 022: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 022 | Train Huber 3.1051 MAE 2.1288 | Val Huber 3.1135 MAE 2.1369 | LR 1.00e-04
+[MEM] end epoch 023: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 023 | Train Huber 3.0984 MAE 2.1258 | Val Huber 3.1006 MAE 2.1217 | LR 1.00e-04
+[MEM] end epoch 024: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 024 | Train Huber 3.0899 MAE 2.1215 | Val Huber 3.0896 MAE 2.1327 | LR 1.00e-04
+[MEM] end epoch 025: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 025 | Train Huber 3.0772 MAE 2.1158 | Val Huber 3.1037 MAE 2.1233 | LR 1.00e-04
+[MEM] end epoch 026: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 026 | Train Huber 3.0659 MAE 2.1105 | Val Huber 3.0884 MAE 2.1277 | LR 1.00e-04
+[MEM] end epoch 027: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 027 | Train Huber 3.0533 MAE 2.1040 | Val Huber 3.0648 MAE 2.1089 | LR 1.00e-04
+  New best model (epoch 027, Val Huber 3.0648), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 028: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 028 | Train Huber 3.0446 MAE 2.0994 | Val Huber 3.0650 MAE 2.1142 | LR 1.00e-04
+[MEM] end epoch 029: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 029 | Train Huber 3.0296 MAE 2.0932 | Val Huber 3.0690 MAE 2.1044 | LR 1.00e-04
+[MEM] end epoch 030: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 030 | Train Huber 3.0204 MAE 2.0879 | Val Huber 3.0659 MAE 2.1013 | LR 1.00e-04
+[MEM] end epoch 031: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 031 | Train Huber 3.0126 MAE 2.0842 | Val Huber 3.0483 MAE 2.1039 | LR 1.00e-04
+  New best model (epoch 031, Val Huber 3.0483), saved to /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+[MEM] end epoch 032: use=1.5G peak=2.6G limit=n/a anon=1.3G file=0.2G slab=0.0G
+Epoch 032 | Train Huber 3.0005 MAE 2.0790 | Val Huber 3.0712 MAE 2.1129 | LR 1.00e-04
+[MEM] end epoch 033: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 033 | Train Huber 2.9914 MAE 2.0745 | Val Huber 3.1797 MAE 2.1744 | LR 1.00e-04
+[MEM] end epoch 034: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 034 | Train Huber 2.9740 MAE 2.0658 | Val Huber 3.0666 MAE 2.1025 | LR 1.00e-04
+[MEM] end epoch 035: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 035 | Train Huber 2.9646 MAE 2.0618 | Val Huber 3.0718 MAE 2.1220 | LR 1.00e-04
+[MEM] end epoch 036: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 036 | Train Huber 2.9619 MAE 2.0598 | Val Huber 3.0507 MAE 2.0950 | LR 1.00e-04
+[MEM] end epoch 037: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 037 | Train Huber 2.9392 MAE 2.0496 | Val Huber 3.0515 MAE 2.0970 | LR 5.00e-05
+[MEM] end epoch 038: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 038 | Train Huber 2.8777 MAE 2.0185 | Val Huber 3.0561 MAE 2.1000 | LR 5.00e-05
+[MEM] end epoch 039: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 039 | Train Huber 2.8593 MAE 2.0093 | Val Huber 3.0532 MAE 2.1011 | LR 5.00e-05
+[MEM] end epoch 040: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 040 | Train Huber 2.8426 MAE 2.0021 | Val Huber 3.0666 MAE 2.1022 | LR 5.00e-05
+[MEM] end epoch 041: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 041 | Train Huber 2.8281 MAE 1.9950 | Val Huber 3.0803 MAE 2.1093 | LR 5.00e-05
+[MEM] end epoch 042: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 042 | Train Huber 2.8091 MAE 1.9872 | Val Huber 3.0762 MAE 2.1123 | LR 5.00e-05
+[MEM] end epoch 043: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 043 | Train Huber 2.7983 MAE 1.9821 | Val Huber 3.1119 MAE 2.1292 | LR 2.50e-05
+[MEM] end epoch 044: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 044 | Train Huber 2.7455 MAE 1.9557 | Val Huber 3.1180 MAE 2.1338 | LR 2.50e-05
+[MEM] end epoch 045: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 045 | Train Huber 2.7244 MAE 1.9449 | Val Huber 3.1200 MAE 2.1371 | LR 2.50e-05
+[MEM] end epoch 046: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 046 | Train Huber 2.7130 MAE 1.9401 | Val Huber 3.1195 MAE 2.1296 | LR 2.50e-05
+[MEM] end epoch 047: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 047 | Train Huber 2.7005 MAE 1.9337 | Val Huber 3.1097 MAE 2.1252 | LR 2.50e-05
+[MEM] end epoch 048: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 048 | Train Huber 2.6880 MAE 1.9292 | Val Huber 3.1210 MAE 2.1319 | LR 2.50e-05
+[MEM] end epoch 049: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 049 | Train Huber 2.6791 MAE 1.9249 | Val Huber 3.1463 MAE 2.1480 | LR 1.25e-05
+[MEM] end epoch 050: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 050 | Train Huber 2.6369 MAE 1.9041 | Val Huber 3.1347 MAE 2.1383 | LR 1.25e-05
+[MEM] end epoch 051: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 051 | Train Huber 2.6284 MAE 1.9001 | Val Huber 3.1431 MAE 2.1410 | LR 1.25e-05
+[MEM] end epoch 052: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 052 | Train Huber 2.6218 MAE 1.8966 | Val Huber 3.1527 MAE 2.1455 | LR 1.25e-05
+[MEM] end epoch 053: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 053 | Train Huber 2.6124 MAE 1.8923 | Val Huber 3.1717 MAE 2.1568 | LR 1.25e-05
+[MEM] end epoch 054: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 054 | Train Huber 2.6073 MAE 1.8900 | Val Huber 3.1684 MAE 2.1528 | LR 1.25e-05
+[MEM] end epoch 055: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 055 | Train Huber 2.5958 MAE 1.8842 | Val Huber 3.1738 MAE 2.1589 | LR 6.25e-06
+[MEM] end epoch 056: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 056 | Train Huber 2.5723 MAE 1.8729 | Val Huber 3.1716 MAE 2.1551 | LR 6.25e-06
+[MEM] end epoch 057: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 057 | Train Huber 2.5711 MAE 1.8722 | Val Huber 3.1700 MAE 2.1514 | LR 6.25e-06
+[MEM] end epoch 058: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 058 | Train Huber 2.5672 MAE 1.8698 | Val Huber 3.1737 MAE 2.1591 | LR 6.25e-06
+[MEM] end epoch 059: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 059 | Train Huber 2.5615 MAE 1.8676 | Val Huber 3.1789 MAE 2.1570 | LR 6.25e-06
+[MEM] end epoch 060: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 060 | Train Huber 2.5562 MAE 1.8655 | Val Huber 3.1736 MAE 2.1550 | LR 6.25e-06
+[MEM] end epoch 061: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 061 | Train Huber 2.5541 MAE 1.8645 | Val Huber 3.1782 MAE 2.1594 | LR 3.13e-06
+[MEM] end epoch 062: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 062 | Train Huber 2.5408 MAE 1.8569 | Val Huber 3.1860 MAE 2.1615 | LR 3.13e-06
+[MEM] end epoch 063: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 063 | Train Huber 2.5410 MAE 1.8571 | Val Huber 3.1853 MAE 2.1611 | LR 3.13e-06
+[MEM] end epoch 064: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 064 | Train Huber 2.5376 MAE 1.8558 | Val Huber 3.1990 MAE 2.1685 | LR 3.13e-06
+[MEM] end epoch 065: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 065 | Train Huber 2.5342 MAE 1.8543 | Val Huber 3.1899 MAE 2.1635 | LR 3.13e-06
+[MEM] end epoch 066: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 066 | Train Huber 2.5342 MAE 1.8548 | Val Huber 3.1955 MAE 2.1655 | LR 3.13e-06
+[MEM] end epoch 067: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 067 | Train Huber 2.5280 MAE 1.8514 | Val Huber 3.1951 MAE 2.1664 | LR 1.56e-06
+[MEM] end epoch 068: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 068 | Train Huber 2.5181 MAE 1.8467 | Val Huber 3.1948 MAE 2.1661 | LR 1.56e-06
+[MEM] end epoch 069: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 069 | Train Huber 2.5212 MAE 1.8477 | Val Huber 3.1934 MAE 2.1642 | LR 1.56e-06
+[MEM] end epoch 070: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 070 | Train Huber 2.5220 MAE 1.8482 | Val Huber 3.1973 MAE 2.1646 | LR 1.56e-06
+[MEM] end epoch 071: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 071 | Train Huber 2.5204 MAE 1.8472 | Val Huber 3.1987 MAE 2.1664 | LR 1.56e-06
+[MEM] end epoch 072: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 072 | Train Huber 2.5173 MAE 1.8455 | Val Huber 3.2001 MAE 2.1684 | LR 1.56e-06
+[MEM] end epoch 073: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 073 | Train Huber 2.5193 MAE 1.8473 | Val Huber 3.2011 MAE 2.1683 | LR 7.81e-07
+[MEM] end epoch 074: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 074 | Train Huber 2.5108 MAE 1.8432 | Val Huber 3.1985 MAE 2.1667 | LR 7.81e-07
+[MEM] end epoch 075: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 075 | Train Huber 2.5123 MAE 1.8431 | Val Huber 3.1992 MAE 2.1667 | LR 7.81e-07
+[MEM] end epoch 076: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 076 | Train Huber 2.5136 MAE 1.8437 | Val Huber 3.2001 MAE 2.1672 | LR 7.81e-07
+[MEM] end epoch 077: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 077 | Train Huber 2.5161 MAE 1.8461 | Val Huber 3.2007 MAE 2.1676 | LR 7.81e-07
+[MEM] end epoch 078: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 078 | Train Huber 2.5089 MAE 1.8422 | Val Huber 3.2048 MAE 2.1698 | LR 7.81e-07
+[MEM] end epoch 079: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 079 | Train Huber 2.5121 MAE 1.8440 | Val Huber 3.2015 MAE 2.1678 | LR 3.91e-07
+[MEM] end epoch 080: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 080 | Train Huber 2.5097 MAE 1.8423 | Val Huber 3.2010 MAE 2.1674 | LR 3.91e-07
+[MEM] end epoch 081: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 081 | Train Huber 2.5104 MAE 1.8421 | Val Huber 3.2023 MAE 2.1683 | LR 3.91e-07
+[MEM] end epoch 082: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 082 | Train Huber 2.5034 MAE 1.8396 | Val Huber 3.1996 MAE 2.1661 | LR 3.91e-07
+[MEM] end epoch 083: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 083 | Train Huber 2.5087 MAE 1.8415 | Val Huber 3.2006 MAE 2.1670 | LR 3.91e-07
+[MEM] end epoch 084: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 084 | Train Huber 2.5058 MAE 1.8413 | Val Huber 3.2024 MAE 2.1683 | LR 3.91e-07
+[MEM] end epoch 085: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 085 | Train Huber 2.5073 MAE 1.8418 | Val Huber 3.2038 MAE 2.1691 | LR 1.95e-07
+[MEM] end epoch 086: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 086 | Train Huber 2.5069 MAE 1.8411 | Val Huber 3.2035 MAE 2.1686 | LR 1.95e-07
+[MEM] end epoch 087: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 087 | Train Huber 2.5104 MAE 1.8436 | Val Huber 3.2040 MAE 2.1690 | LR 1.95e-07
+[MEM] end epoch 088: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 088 | Train Huber 2.5068 MAE 1.8412 | Val Huber 3.2037 MAE 2.1689 | LR 1.95e-07
+[MEM] end epoch 089: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 089 | Train Huber 2.4992 MAE 1.8373 | Val Huber 3.2036 MAE 2.1689 | LR 1.95e-07
+[MEM] end epoch 090: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 090 | Train Huber 2.5077 MAE 1.8421 | Val Huber 3.2034 MAE 2.1687 | LR 1.95e-07
+[MEM] end epoch 091: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 091 | Train Huber 2.5058 MAE 1.8410 | Val Huber 3.2042 MAE 2.1693 | LR 9.77e-08
+[MEM] end epoch 092: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 092 | Train Huber 2.5040 MAE 1.8391 | Val Huber 3.2036 MAE 2.1688 | LR 9.77e-08
+[MEM] end epoch 093: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 093 | Train Huber 2.5045 MAE 1.8400 | Val Huber 3.2034 MAE 2.1687 | LR 9.77e-08
+[MEM] end epoch 094: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 094 | Train Huber 2.5043 MAE 1.8410 | Val Huber 3.2026 MAE 2.1681 | LR 9.77e-08
+[MEM] end epoch 095: use=1.5G peak=2.7G limit=n/a anon=1.4G file=0.2G slab=0.0G
+Epoch 095 | Train Huber 2.5032 MAE 1.8393 | Val Huber 3.2036 MAE 2.1688 | LR 9.77e-08
+[MEM] end epoch 096: use=1.4G peak=2.7G limit=n/a anon=1.4G file=0.0G slab=0.0G
+Epoch 096 | Train Huber 2.5014 MAE 1.8377 | Val Huber 3.2034 MAE 2.1685 | LR 9.77e-08
+[MEM] end epoch 097: use=1.4G peak=2.7G limit=n/a anon=1.4G file=0.0G slab=0.0G
+Epoch 097 | Train Huber 2.5056 MAE 1.8400 | Val Huber 3.2039 MAE 2.1689 | LR 4.88e-08
+[MEM] end epoch 098: use=1.4G peak=2.7G limit=n/a anon=1.4G file=0.0G slab=0.0G
+Epoch 098 | Train Huber 2.5024 MAE 1.8385 | Val Huber 3.2039 MAE 2.1689 | LR 4.88e-08
+[MEM] end epoch 099: use=1.4G peak=2.7G limit=n/a anon=1.4G file=0.0G slab=0.0G
+Epoch 099 | Train Huber 2.5048 MAE 1.8403 | Val Huber 3.2034 MAE 2.1686 | LR 4.88e-08
+[MEM] end epoch 100: use=1.4G peak=2.7G limit=n/a anon=1.4G file=0.0G slab=0.0G
+Epoch 100 | Train Huber 2.5072 MAE 1.8415 | Val Huber 3.2034 MAE 2.1685 | LR 4.88e-08
+Best epoch: 031 (Val Huber 3.0483) -> /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021_best.pth
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyUnet_version_13_fusion_geohash_month_koppen_withAttentionLayer_SAR_DEM_sqrt_NLCDfrac_delta2p5_version_8_California_North_10_2021.pth
