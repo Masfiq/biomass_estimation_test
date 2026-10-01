@@ -1,16 +1,24 @@
-# eval for tinyUnet_version_12 — 5x5 patches, version_8 CSV, Huber-trained
-# Copied from eval_tinyUnet_version_11.py. New edits tagged CHANGE I / J.
+# eval for tinyUnet_version_17 — 5x5 patches, version_10 CSV, Huber-trained
+# Copied from eval_tinyUnet_version_15.py. Must mirror tinyUnet_version_17_train.py:
+#   * 13 image channels: 11 spectral + S1_VV + S1_VH (raw NLCD loaded last, then deleted)
+#   * SAR scaled log10(x)/3
+#   * NLCD aux = patch class FRACTIONS
+#   * winsorisation OFF and EOF OFF in training -- neither appears in any eval anyway
 #
-# ---- CHANGE I: Sentinel-1 restored -------------------------------------------------
-# S1_VV/S1_VH read again, placed before "NLCD" so the raw code band stays last.
-#     in_channels: 11 -> 13      (aux unchanged at 60)
+# ---- NEW vs eval_15: version_10 data + the clean-patch filter ------------------------
+# tinyUnet_version_17 trained on build_patches_version_10 (a clean granule chosen per
+# shot; 99.2% fully clean patches, vs ~82% blank in version_8). The training Dataset
+# drops rows with hls_finite_px < 25 BEFORE the 80/20 split, so this eval applies the
+# identical filter in the identical place. Without it len(ds) differs, the seeded
+# permutation differs, and the "validation" set would include shots the model trained on.
 #
-# ---- CHANGE J: SAR normalisation ---------------------------------------------------
-# NONE APPLIED. version_12 was trained without SAR scaling, so this eval must feed
-# raw GRD digital numbers (~30..900) to match. See the note in _load_patch_fixed_channels.
-#
-# NLCD is still the CENTRE-PIXEL one-hot, same as version_11.
-
+# ---- professor's land-cover sensitivity breakdown (unchanged from eval_15) -----------
+#   (1) Planted pasture/hay 81  (2) Cropland 82  (3) Deciduous forest 41
+#   (4) Evergreen forest 42     (5) Mixed forest 43
+#   (6) Forest = 41+42+43       (7) Agriculture = 81+82
+# Grouped by the NLCD class of the CENTRE pixel; reports n, mean true/pred AGBD, MAE,
+# RMSE, nRMSE, bias, R2 and patch purity. Saved as <out>_professor_landcover.csv.
+# -------------------------------------------------------------------------------------
 
 import os
 import math
@@ -35,6 +43,9 @@ import xarray as xr
 from rasterio.errors import RasterioIOError
 from pyproj import Transformer
 
+
+# Must equal HLS_MIN_FINITE_PX_TRAIN in tinyUnet_version_17_train.py.
+HLS_MIN_FINITE_PX_TRAIN = 25
 
 BASE32 = "0123456789bcdefghjkmnpqrstuvwxyz"
 BASE32_MAP = {c: i for i, c in enumerate(BASE32)}
@@ -530,6 +541,8 @@ class GEDIHlsPatchDatasetFusion(Dataset):
     # CHANGE G: identical to tinyUnet_version_11_train.py and build_patches_version_8.
     NLCD_CLASSES = (11, 12, 21, 22, 23, 24, 31, 41, 42, 43, 52, 71, 81, 82, 90, 95)
     NLCD_AUX_DIM = len(NLCD_CLASSES) + 1      # + NLCD_OTHER catch-all
+    # CHANGE K: dict lookup, because version_13 resolves a class per PIXEL.
+    NLCD_CLASS_TO_IDX = {c: i for i, c in enumerate(NLCD_CLASSES)}
 
     def __init__(
         self,
@@ -543,6 +556,14 @@ class GEDIHlsPatchDatasetFusion(Dataset):
     ):
         self.csv_path = Path(csv_path)
         self.df = pd.read_csv(self.csv_path)
+        # Same filter, same place as tinyUnet_version_17_train.py, so the seeded split
+        # reproduces the training run's validation set exactly.
+        if HLS_MIN_FINITE_PX_TRAIN is not None and "hls_finite_px" in self.df.columns:
+            n0 = len(self.df)
+            self.df = self.df[self.df["hls_finite_px"] >= HLS_MIN_FINITE_PX_TRAIN].reset_index(drop=True)
+            print(f"[HLS FILTER] kept {len(self.df):,} of {n0:,} rows with "
+                  f"hls_finite_px >= {HLS_MIN_FINITE_PX_TRAIN} "
+                  f"({n0 - len(self.df):,} dropped)", flush=True)
         self.geohash_precision = geohash_precision
         self.target_col = target_col
 
@@ -605,24 +626,16 @@ class GEDIHlsPatchDatasetFusion(Dataset):
             c = min(raw.shape[0], out.shape[0])
             out[:c] = raw[:c]
 
-        # Scaling: MUST mirror the training script exactly. tinyUnet_version_12/13 were
-        # trained WITHOUT any SAR normalisation, so S1_VV/S1_VH reach the network as raw
-        # GRD digital numbers (~30..900) while optical sits at 0-1. Applying a log scale
-        # here instead would load cleanly and score nonsense -- measured on 500 shots,
-        # matched raw SAR gives R2 0.4109 and mismatched log SAR gives R2 0.1828.
-        #
-        # The /10000 branch below is inherited and never fires: the HLS download already
-        # applies scale_factor=0.0001, so no optical band exceeds 2.0 (checked over 4,800
-        # band-patches). Kept only so this file stays byte-faithful to what was trained.
-        for b in self.FIXED_BANDS:
-            if b.startswith("NLCD") or b in ("S1_VV", "S1_VH"):
-                continue
-
-            j = self.FIXED_BANDS.index(b)
-            mx = float(np.max(np.abs(out[j])))
-
-            if mx > 2.0:
-                out[j] = out[j] / 10000.0
+        # CHANGE J: per-source normalisation, identical to tinyUnet_version_14/15_train.
+        # Optical is already 0-1 from download time. SAR is raw GRD digital numbers
+        # (~30..900) -> log10(x)/3. Feeding RAW SAR to this log-trained model would load
+        # without error and score nonsense (the reverse mismatch measured R2 0.41 -> 0.18).
+        S1_SCALE = 3.0
+        for b in ("S1_VV", "S1_VH"):
+            if b in self.FIXED_BANDS:
+                j = self.FIXED_BANDS.index(b)
+                v = out[j]
+                out[j] = np.where(v > 0, np.log10(np.maximum(v, 1e-6)) / S1_SCALE, 0.0)
 
         return out, crs, transform
 
@@ -637,13 +650,14 @@ class GEDIHlsPatchDatasetFusion(Dataset):
         bands_str = row["bands"] if "bands" in self.df.columns else None
         x_img_np, crs, transform = self._load_patch_fixed_channels(patch_path, bands_str)
 
-        # --- CHANGE G: centre-pixel NLCD -> aux one-hot, then drop the band ---
-        nlcd_code = int(np.rint(float(x_img_np[self.NLCD_RAW_IDX, 2, 2])))
-        nlcd_onehot = np.zeros((self.NLCD_AUX_DIM,), dtype=np.float32)
-        try:
-            nlcd_onehot[self.NLCD_CLASSES.index(nlcd_code)] = 1.0
-        except ValueError:
-            nlcd_onehot[-1] = 1.0          # nodata (-1) or a class outside the legend
+        # --- CHANGE K: NLCD class FRACTIONS over the whole 5x5, then drop the band ---
+        # Count how many of the 25 pixels are each class, divide by 25. MUST match
+        # tinyUnet_version_13_train.py exactly.
+        nlcd_codes = np.rint(x_img_np[self.NLCD_RAW_IDX]).astype(np.int32).ravel()
+        nlcd_frac = np.zeros((self.NLCD_AUX_DIM,), dtype=np.float32)
+        w = np.float32(1.0 / nlcd_codes.size)
+        for code in nlcd_codes:
+            nlcd_frac[self.NLCD_CLASS_TO_IDX.get(int(code), self.NLCD_AUX_DIM - 1)] += w
         x_img_np = np.delete(x_img_np, self.NLCD_RAW_IDX, axis=0)
 
         x_img = torch.from_numpy(np.ascontiguousarray(x_img_np))
@@ -706,7 +720,7 @@ class GEDIHlsPatchDatasetFusion(Dataset):
         # CHANGE A: dem_features appended last, matching the training-time order exactly.
         # CHANGE G: nlcd_onehot appended LAST -- same order as the training script.
         x_aux_np = np.concatenate(
-            [m_sc, koppen_onehot, gridmet_features, dem_features, nlcd_onehot], axis=0
+            [m_sc, koppen_onehot, gridmet_features, dem_features, nlcd_frac], axis=0
         ).astype(np.float32)
         x_aux = torch.from_numpy(x_aux_np)
 
@@ -946,6 +960,71 @@ def nlcd_code_from_aux(x_aux, base_ds):
     blk = x_aux[:, -base_ds.NLCD_AUX_DIM:].detach().cpu().numpy()
     codes = np.array(list(base_ds.NLCD_CLASSES) + [-1], dtype=np.int64)
     return codes[blk.argmax(axis=1)]
+
+
+PROFESSOR_CATEGORIES = [
+    ("(1) Planted pasture/hay [81]", {81}),
+    ("(2) Cropland [82]",            {82}),
+    ("(3) Deciduous forest [41]",    {41}),
+    ("(4) Evergreen forest [42]",    {42}),
+    ("(5) Mixed forest [43]",        {43}),
+    ("(6) Forest [41+42+43]",        {41, 42, 43}),
+    ("(7) Agriculture [81+82]",      {81, 82}),
+]
+
+
+def center_nlcd_codes(df, rows):
+    """NLCD class of the CENTRE pixel [2,2] for each row, read from the patch tif.
+
+    The centre class is not in the aux vector (version_13+ stores patch FRACTIONS), so it
+    is read directly: one 1x1 window read per validation patch.
+    """
+    out = np.full(len(rows), -1, dtype=np.int64)
+    for k, ridx in enumerate(rows):
+        r = df.iloc[int(ridx)]
+        try:
+            bl = [b.strip() for b in str(r["bands"]).split(",")]
+            with rasterio.open(r["patch_tifs"]) as src:
+                v = src.read(bl.index("NLCD") + 1, window=((2, 3), (2, 3)))[0, 0]
+            if np.isfinite(v):
+                out[k] = int(np.rint(v))
+        except Exception:
+            pass
+    return out
+
+
+def professor_landcover_table(y_true, y_pred, center_codes, nlcd_frac, class_to_idx):
+    """Metrics per requested category. y_* in Mg/ha, row-aligned with center_codes."""
+    rows = []
+    for name, codes in PROFESSOR_CATEGORIES:
+        m = np.isin(center_codes, list(codes))
+        n = int(m.sum())
+        row = {"category": name,
+               "nlcd_codes": "+".join(str(c) for c in sorted(codes)),
+               "n": n}
+        if n == 0:
+            rows.append(row)
+            continue
+        yt, yp = y_true[m], y_pred[m]
+        err = yp - yt
+        mean_t = float(yt.mean())
+        rmse = float(np.sqrt(np.mean(err ** 2)))
+        ss_tot = float(((yt - mean_t) ** 2).sum())
+        # patch purity: share of the 5x5 window made up of this category's classes
+        cols = [class_to_idx[c] for c in codes if c in class_to_idx]
+        purity = float(nlcd_frac[m][:, cols].sum(axis=1).mean()) if cols else float("nan")
+        row.update({
+            "mean_true_agbd": mean_t,
+            "mean_pred_agbd": float(yp.mean()),
+            "mae": float(np.mean(np.abs(err))),
+            "rmse": rmse,
+            "nrmse": rmse / mean_t if mean_t > 0 else float("nan"),
+            "bias": float(err.mean()),
+            "r2": (1.0 - float((err ** 2).sum()) / ss_tot) if (n >= 2 and ss_tot > 0) else float("nan"),
+            "mean_patch_purity": purity,
+        })
+        rows.append(row)
+    return pd.DataFrame(rows)
 
 
 def eval_by_landcover(model, dataset, device, batch_size=256):
@@ -1200,6 +1279,7 @@ def main():
 
     y_true_all = []
     y_pred_all = []
+    nlcd_frac_all = []      # NEW: aux NLCD fractions, for patch purity per category
 
     n_seen = 0
 
@@ -1214,6 +1294,7 @@ def main():
 
             y_true_all.append(y.detach().cpu().numpy())
             y_pred_all.append(pred.detach().cpu().numpy())
+            nlcd_frac_all.append(x_aux[:, -ds.NLCD_AUX_DIM:].detach().cpu().numpy())
 
             bsz = x_img.size(0)
             n_seen += bsz
@@ -1286,6 +1367,23 @@ def main():
             "aux": float(fuse_mean[2]),
         },
     }
+
+    # ---- professor's land-cover sensitivity breakdown ----
+    # val_loader has shuffle=False over Subset(val_idx), so predictions come out in
+    # val_idx order and the centre codes below line up with them row for row.
+    print("\n=== LAND-COVER SENSITIVITY (professor's categories, centre-pixel NLCD) ===")
+    center_codes = center_nlcd_codes(ds.df, val_idx)
+    nlcd_frac_all = np.concatenate(nlcd_frac_all)
+    assert len(center_codes) == len(y_true_all) == len(nlcd_frac_all), "row alignment broken"
+    prof_df = professor_landcover_table(y_true_all, y_pred_all, center_codes,
+                                        nlcd_frac_all, ds.NLCD_CLASS_TO_IDX)
+    with pd.option_context("display.width", 220, "display.max_columns", 20,
+                           "display.float_format", "{:.4f}".format):
+        print(prof_df.to_string(index=False))
+    prof_csv = Path(args.out).with_name(Path(args.out).stem + "_professor_landcover.csv")
+    prof_df.to_csv(prof_csv, index=False)
+    print("Saved:", prof_csv)
+    out["professor_landcover"] = prof_df.to_dict(orient="records")
 
     Path(args.out).write_text(pd.Series(out).to_json(), encoding="utf-8")
     print("\nSaved summary to:", args.out)
