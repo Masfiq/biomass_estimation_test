@@ -370,3 +370,101 @@ Epoch 150 | Train Huber 2.2100 MAE 1.6977 | Val Huber 2.2483 MAE 1.7143 | LR 1.2
 Epoch 151 | Train Huber 2.2066 MAE 1.6962 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
 [MEM] end epoch 152: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
 Epoch 152 | Train Huber 2.2111 MAE 1.6989 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 153: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 153 | Train Huber 2.2103 MAE 1.6985 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 154: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 154 | Train Huber 2.2112 MAE 1.6988 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 155: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 155 | Train Huber 2.2104 MAE 1.6975 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 156: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 156 | Train Huber 2.2114 MAE 1.6978 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 157: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 157 | Train Huber 2.2071 MAE 1.6971 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 158: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 158 | Train Huber 2.2078 MAE 1.6963 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 159: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 159 | Train Huber 2.2097 MAE 1.6972 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 160: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 160 | Train Huber 2.2140 MAE 1.6988 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 161: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 161 | Train Huber 2.2075 MAE 1.6971 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 162: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 162 | Train Huber 2.2097 MAE 1.6977 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 163: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 163 | Train Huber 2.2059 MAE 1.6966 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 164: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 164 | Train Huber 2.2089 MAE 1.6973 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 165: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 165 | Train Huber 2.2123 MAE 1.6982 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 166: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 166 | Train Huber 2.2063 MAE 1.6956 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 167: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 167 | Train Huber 2.2115 MAE 1.6975 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 168: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 168 | Train Huber 2.2114 MAE 1.6992 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 169: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 169 | Train Huber 2.2045 MAE 1.6961 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 170: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 170 | Train Huber 2.2092 MAE 1.6975 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 171: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 171 | Train Huber 2.2092 MAE 1.6978 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 172: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 172 | Train Huber 2.2088 MAE 1.6965 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 173: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 173 | Train Huber 2.2048 MAE 1.6946 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 174: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 174 | Train Huber 2.2130 MAE 1.6997 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 175: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 175 | Train Huber 2.2044 MAE 1.6952 | Val Huber 2.2483 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 176: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 176 | Train Huber 2.2122 MAE 1.6978 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 177: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 177 | Train Huber 2.2086 MAE 1.6970 | Val Huber 2.2482 MAE 1.7142 | LR 1.22e-08
+[MEM] end epoch 178: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 178 | Train Huber 2.2116 MAE 1.6980 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 179: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 179 | Train Huber 2.2101 MAE 1.6973 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 180: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 180 | Train Huber 2.2086 MAE 1.6979 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 181: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 181 | Train Huber 2.2074 MAE 1.6967 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 182: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 182 | Train Huber 2.2061 MAE 1.6968 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 183: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 183 | Train Huber 2.2132 MAE 1.6991 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 184: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 184 | Train Huber 2.2120 MAE 1.6990 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 185: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 185 | Train Huber 2.2106 MAE 1.6978 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 186: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 186 | Train Huber 2.2098 MAE 1.6980 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 187: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 187 | Train Huber 2.2080 MAE 1.6967 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 188: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 188 | Train Huber 2.2111 MAE 1.6981 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 189: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 189 | Train Huber 2.2105 MAE 1.6962 | Val Huber 2.2485 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 190: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 190 | Train Huber 2.2092 MAE 1.6972 | Val Huber 2.2485 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 191: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 191 | Train Huber 2.2103 MAE 1.6981 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 192: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 192 | Train Huber 2.2071 MAE 1.6971 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 193: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 193 | Train Huber 2.2083 MAE 1.6966 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 194: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 194 | Train Huber 2.2039 MAE 1.6948 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 195: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 195 | Train Huber 2.2107 MAE 1.6985 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 196: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 196 | Train Huber 2.2122 MAE 1.6992 | Val Huber 2.2483 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 197: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 197 | Train Huber 2.2109 MAE 1.6987 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 198: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 198 | Train Huber 2.2064 MAE 1.6955 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 199: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 199 | Train Huber 2.2074 MAE 1.6962 | Val Huber 2.2485 MAE 1.7143 | LR 1.22e-08
+[MEM] end epoch 200: use=2.7G peak=5.1G limit=n/a anon=1.1G file=1.0G slab=0.6G
+Epoch 200 | Train Huber 2.2027 MAE 1.6945 | Val Huber 2.2484 MAE 1.7143 | LR 1.22e-08
+Best epoch: 078 (Val Huber 2.2420) -> /s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_version_8_fusion_geohash_month_koppen_SARlog_DEM_sqrt_NLCDfrac_delta2p5_version_10_California_North_10_2021_best.pth
+Saved: /s/chopin/e/proj/hyperspec/masfiq/models/tinyPixelViT_version_8_fusion_geohash_month_koppen_SARlog_DEM_sqrt_NLCDfrac_delta2p5_version_10_California_North_10_2021.pth
